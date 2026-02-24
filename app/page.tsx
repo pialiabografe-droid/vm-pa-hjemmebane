@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import Reveal from "../components/Reveal";
 
 export default function FotballVMJordal() {
@@ -18,42 +19,36 @@ export default function FotballVMJordal() {
     []
   );
 
-  const VIF = {
-    blue: "#044EA2",
-    red: "#BC1823",
-  } as const;
-
   const BG = {
-    hero: "/media/vm-jordal.png",
+    hero: "/media/vm-jordal.jpeg",
   } as const;
 
   const ticketcoUrl =
     "https://vif-hockey.ticketco.events/no/nb/events/1032852/seating_arrangement/3737d866-eb04-4b0c-8934-a84b6c732c42/";
 
-const quick = [
-  { 
-    title: "Fotball handler om mer enn de 90 minuttene.", 
-    desc: "For Vålerenga handler det om å samle folk og bygge felleskap. Vi ønsker å ta samfunnsansvar og gi noe tilbake til nærmiljøet vårt." 
-  },
-  { 
-    title: "VM-fest på ekte Jordal-vis", 
-    desc: (
-      <>
-        Når Jordal fylles, gjør vi det på ordentlig. Dette blir mer enn visning. 
-        Vi rigger til med DJ, full lyd- og lysproduksjon og ekte stadionstemning inne i arenaen. 
-        Før kamp, i pauser og etter sluttsignalet sørger vi for show, energi og overraskelser som gjør kvelden komplett.
-        <br />
-        <br />
-        Og vi holder prisene lave, slik at flest mulig kan være med. 
-  
-      </>
-    )
-  },
-  { 
-    title: "Hjertet av Oslo", 
-    desc: "Jordal Amfi." 
-  },
-];
+  const quick = [
+    {
+      title: "Fotball handler om mer enn de 90 minuttene.",
+      desc: "For Vålerenga handler det om å samle folk og bygge felleskap. Vi ønsker å ta samfunnsansvar og gi noe tilbake til nærmiljøet vårt.",
+    },
+    {
+      title: "VM-fest på ekte Jordal-vis",
+      desc: (
+        <>
+          Når Jordal fylles, gjør vi det på ordentlig. Dette blir mer enn visning.
+          Vi rigger til med DJ, full lyd- og lysproduksjon og ekte stadionstemning inne i arenaen.
+          Før kamp, i pauser og etter sluttsignalet sørger vi for show, energi og overraskelser som gjør kvelden komplett.
+          <br />
+          <br />
+          Og vi holder prisene lave, slik at flest mulig kan være med.
+        </>
+      ),
+    },
+    {
+      title: "Hjertet av Oslo",
+      desc: "Jordal Amfi.",
+    },
+  ];
 
   const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];
 
@@ -92,7 +87,6 @@ const quick = [
         { label: "Bord med drikkepakke - 8 stykker", href: "#" },
         { label: "Bord med drikkepakke - 16 stykker", href: "#" },
         { label: "Losje", href: "#" },
-
       ],
     },
   ];
@@ -113,35 +107,85 @@ const quick = [
                 onError={() => setBgOk(false)}
               />
             ) : null}
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-black/35" />
           </div>
 
-          <div className="relative mx-auto max-w-6xl px-4 py-24 text-center">
-            <Reveal>
-          
+          <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
+            {/* DESKTOP MENY OVER HERO */}
+            <div className="hidden md:flex justify-center gap-3">
+              <Link
+                href="/om"
+                className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+              >
+                Om oss
+              </Link>
 
-              <h1 className="mt-6 text-4xl md:text-6xl font-semibold text-white">
-                FOTBALL VM PÅ <br /> JORDAL
-              </h1>
+              <Link
+                href="/program"
+                className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+              >
+                Program
+              </Link>
 
-              <p className="mt-10 text-white/90">Alle Norges kamper, og hele sluttspillet. <br /> Uansett vær.</p>
+              <a
+                href="#billetter"
+                className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+              >
+                Billetter
+              </a>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href={ticketcoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 rounded-2xl font-semibold text-white"
-                  style={{ backgroundColor: VIF.blue }}
-                >
-                  Sikre plass
-                </a>
+              <Link
+                href="/q&a"
+                className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+              >
+                Q&amp;A
+              </Link>
+            </div>
 
-                <a href="#billetter" className="px-6 py-3 rounded-2xl bg-white/90 border border-black/10">
-                  Velg kamp
-                </a>
-              </div>
-            </Reveal>
+            <div className="mt-12 text-center">
+              <Reveal>
+                <h1 className="text-4xl md:text-6xl font-semibold text-white tracking-tight">
+                  FOTBALL VM PÅ <br /> JORDAL
+                </h1>
+
+                <p className="mt-6 text-base md:text-lg text-white/90">
+                  Alle Norges kamper, og hele sluttspillet. <br /> Uansett vær.
+                </p>
+
+                {/* PARTNERE PÅ MOBIL */}
+                <div className="mt-8 flex justify-center md:hidden">
+                  <div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-3xl px-5 py-3">
+                    <img
+                      src="/media/sparebank1-logo.png"
+                      alt="SpareBank 1"
+                      className="h-6 w-auto object-contain"
+                    />
+                    <div className="h-6 w-px bg-white/20" />
+                    <span className="text-xs font-semibold text-white/80">P2</span>
+                    <div className="h-6 w-px bg-white/20" />
+                    <span className="text-xs font-semibold text-white/80">P3</span>
+                  </div>
+                </div>
+
+                <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href={ticketcoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-7 py-3 rounded-2xl font-semibold bg-white text-[#1A2238] shadow-md hover:bg-white/90 transition"
+                  >
+                    Sikre plass
+                  </a>
+
+                  <a
+                    href="#billetter"
+                    className="px-7 py-3 rounded-2xl bg-white/10 text-white border border-white/25 font-medium hover:bg-white/20 transition"
+                  >
+                    Velg kamp
+                  </a>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
 
@@ -152,7 +196,7 @@ const quick = [
               {quick.map((q) => (
                 <div key={q.title} className="rounded-3xl p-8 bg-white border border-black/10">
                   <div className="text-lg font-semibold">{q.title}</div>
-                  <div className="mt-3 text-sm text-black/70">{q.desc}</div>
+                  <div className="mt-3 text-sm text-black/70 leading-relaxed">{q.desc}</div>
                 </div>
               ))}
             </div>
@@ -173,7 +217,7 @@ const quick = [
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-6 py-3 rounded-2xl font-semibold text-white"
-                      style={{ backgroundColor: VIF.blue }}
+                      style={{ backgroundColor: "#044EA2" }}
                     >
                       Kjøp billetter
                     </a>
@@ -228,7 +272,7 @@ const quick = [
                                   href={it.href}
                                   target={isExternal ? "_blank" : undefined}
                                   rel={isExternal ? "noopener noreferrer" : undefined}
-                                  className="block px-3 py-2 rounded-xl bg-white border border-black/10 text-sm"
+                                  className="block px-3 py-2 rounded-xl bg-white border border-black/10 text-sm hover:bg-black/[0.02]"
                                   onClick={() => setOpenKey(null)}
                                 >
                                   {it.label}
@@ -255,7 +299,7 @@ const quick = [
               {practical.map((f) => (
                 <div key={f.title} className="rounded-3xl p-8 bg-white border border-black/10">
                   <div className="font-semibold">{f.title}</div>
-                  <div className="mt-2 text-sm text-black/70">{f.desc}</div>
+                  <div className="mt-2 text-sm text-black/70 leading-relaxed">{f.desc}</div>
                 </div>
               ))}
             </div>
