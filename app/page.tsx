@@ -67,7 +67,7 @@ const quick = [
       ],
     },
     {
-      k: "Program",
+      k: "Kamper",
       v: "Velg kamp",
       items: [
         { label: "Playoff 2 - Norge", href: ticketcoUrl },
@@ -92,7 +92,7 @@ const quick = [
         { label: "Bord med drikkepakke - 8 stykker", href: "#" },
         { label: "Bord med drikkepakke - 16 stykker", href: "#" },
         { label: "Losje", href: "#" },
-        { label: "Kontakt oss", href: "mailto:kontoret@vif-hockey.no" },
+        
       ],
     },
   ];
