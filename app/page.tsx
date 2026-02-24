@@ -24,7 +24,7 @@ export default function FotballVMJordal() {
   } as const;
 
   const BG = {
-    hero: "/media/bakgrunn-jordal-vm.jpg",
+    hero: "/media/vm-jordal.png",
   } as const;
 
   const ticketcoUrl =
@@ -92,7 +92,7 @@ const quick = [
         { label: "Bord med drikkepakke - 8 stykker", href: "#" },
         { label: "Bord med drikkepakke - 16 stykker", href: "#" },
         { label: "Losje", href: "#" },
-        
+
       ],
     },
   ];
