@@ -110,7 +110,7 @@ export default function FotballVMJordal() {
             <div className="absolute inset-0 bg-black/35" />
           </div>
 
-          <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
             {/* DESKTOP MENY OVER HERO */}
             <div className="hidden md:flex justify-center gap-3">
               <Link
@@ -142,7 +142,7 @@ export default function FotballVMJordal() {
               </Link>
             </div>
 
-            <div className="mt-12 text-center">
+            <div className="mt-10 text-center md:mt-12">
               <Reveal>
                 <h1 className="text-4xl md:text-6xl font-semibold text-white tracking-tight">
                   FOTBALL VM PÅ <br /> JORDAL
@@ -154,16 +154,16 @@ export default function FotballVMJordal() {
 
                 {/* PARTNERE PÅ MOBIL */}
                 <div className="mt-8 flex justify-center md:hidden">
-                  <div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-3xl px-5 py-3">
+                  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
                     <img
                       src="/media/sparebank1-logo.png"
                       alt="SpareBank 1"
                       className="h-6 w-auto object-contain"
                     />
-                    <div className="h-6 w-px bg-white/20" />
-                    <span className="text-xs font-semibold text-white/80">P2</span>
-                    <div className="h-6 w-px bg-white/20" />
-                    <span className="text-xs font-semibold text-white/80">P3</span>
+                    <div className="h-6 w-px bg-black/10" />
+                    <span className="text-xs font-semibold text-black/70">P2</span>
+                    <div className="h-6 w-px bg-black/10" />
+                    <span className="text-xs font-semibold text-black/70">P3</span>
                   </div>
                 </div>
 
@@ -174,7 +174,7 @@ export default function FotballVMJordal() {
                     rel="noopener noreferrer"
                     className="px-7 py-3 rounded-2xl font-semibold bg-white text-[#1A2238] shadow-md hover:bg-white/90 transition"
                   >
-                    Sikre plass
+                    Kjøp billetter
                   </a>
 
                   <a

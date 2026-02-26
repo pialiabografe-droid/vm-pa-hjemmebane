@@ -13,9 +13,13 @@ export const metadata = {
   description: "Sommer, storskjerm og stadionfølelse",
 }
 
+export const viewport = {
+  themeColor: "#044EA2",
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="no">
+    <html lang="no" className="bg-[#044EA2]">
       <body className={`${space.className} min-h-screen bg-[#044EA2] text-white antialiased`}>
         <Header />
         {children}
