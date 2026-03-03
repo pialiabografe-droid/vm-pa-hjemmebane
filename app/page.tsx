@@ -69,7 +69,7 @@ export default function FotballVMJordal() {
     {
       title: "FAMILIETRIBUNEN",
       subtitle: "Barn i følge med voksen.",
-      price: "69",
+      price: "100",
       currency: "NOK",
       unit: "per person",
       items: ["Inngang til familieområdet", "Tribune", "Kiosk", "Fast track"],

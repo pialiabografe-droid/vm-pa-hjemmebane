@@ -20,7 +20,7 @@ export default function OmPage() {
 {`Jordal Amfi blir sommerarena når vi viser VM-kamper på storskjerm.
 Med lyd, lys og ekte kampstemning inviterer vi hele Oslo til fotballfest – uansett vær.
 
-VM spilles i USA og Mexico.
+VM spilles i USA, Canada og Mexico.
 Men for oss spilles det hjemme, på Jordal.
 I 18 dager samles vi for å se kampene sammen.
 Alle Norges kamper. Og sluttspillet så klart.
