@@ -176,11 +176,11 @@ export default function FotballVMJordal() {
 
               <div className="mt-10 text-center md:mt-12">
                 <h1 className="text-4xl md:text-6xl font-semibold text-white tracking-tight">
-                  FOTBALL VM PÅ <br /> JORDAL
+                  FOTBALL PÅ JORDAL
                 </h1>
 
                 <p className="mt-6 text-base md:text-lg text-white/90">
-                  Alle Norges kamper, og hele sluttspillet. <br /> Uansett vær.
+                  De beste kampene, og hele sluttspillet. <br /> Uansett vær.
                 </p>
 
                 {/* PARTNERE PÅ MOBIL */}

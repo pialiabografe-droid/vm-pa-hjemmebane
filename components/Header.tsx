@@ -32,7 +32,7 @@ export default function Header() {
           {/* Left */}
           <div className="flex items-center">
             <Link href="/" className="font-semibold text-lg">
-              VM PÅ HJEMMEBANE
+              FOTBALL PÅ JORDAL
             </Link>
           </div>
 
