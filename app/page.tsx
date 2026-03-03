@@ -49,11 +49,11 @@ export default function FotballVMJordal() {
   const packages = [
     {
       title: "FAMILIEOMRÅDE",
-      subtitle: "Aldersgrense 12+ i følge med voksen. Gir ikke tilgang til andre områder.",
+      subtitle: "Barn i følge med voksen.",
       price: "100",
       currency: "NOK",
       unit: "per person",
-      items: ["Inngang til familieområdet", "Kiosk"],
+      items: ["Inngang til familieområdet", "Kiosk", "Tribune"],
       href: ticketcoUrl,
     },
     {
@@ -184,23 +184,8 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
-        {/* QUICK */}
-        <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="grid md:grid-cols-3 gap-6 items-stretch">
-            {quick.map((q, i) => (
-              <Reveal key={q.title} delayMs={i * 90}>
-                <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
-                  <div className="text-lg font-semibold">{q.title}</div>
-                  <div className="mt-3 text-sm text-black/70 leading-relaxed">{q.desc}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
         {/* PAKKER */}
-        <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16">
-          <Reveal>
+          <section id="pakker" className="mx-auto max-w-6xl px-4 pt-16 pb-16">          <Reveal>
             <div className="flex items-end justify-between gap-6 flex-wrap">
               <div>
                 <h2 className="text-3xl font-semibold">Pakker</h2>
@@ -280,6 +265,40 @@ export default function FotballVMJordal() {
             ))}
           </div>
         </section>
+
+{/* SALKART */}
+<section className="mx-auto max-w-6xl px-4 pb-24">
+  <Reveal>
+    <h2 className="text-3xl font-semibold">Salkart</h2>
+  </Reveal>
+
+  <Reveal delayMs={120}>
+    <div className="mt-8 max-w-3xl rounded-3xl overflow-hidden border border-black/10 bg-white">
+      <img
+        src="/media/salkart.png"
+        alt="Salkart Jordal"
+        className="w-full h-auto object-contain"
+      />
+    </div>
+  </Reveal>
+</section>
+
+
+        {/* QUICK */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
+            {quick.map((q, i) => (
+              <Reveal key={q.title} delayMs={i * 90}>
+                <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
+                  <div className="text-lg font-semibold">{q.title}</div>
+                  <div className="mt-3 text-sm text-black/70 leading-relaxed">{q.desc}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+    
 
         {/* PRAKTISK */}
         <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-16">

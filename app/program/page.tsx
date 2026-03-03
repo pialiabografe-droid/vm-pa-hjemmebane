@@ -17,8 +17,8 @@ export default function ProgramPage() {
   const matches: Match[] = [
     {
       slug: "playoff-2-norge",
-      title: "Playoff 2",
-      subtitle: "Norge",
+      title: "Playoff 2 vs Norge",
+      subtitle: "VM visning på storskjerm",
       ticketUrl: "",
     },
     {
@@ -46,13 +46,7 @@ export default function ProgramPage() {
       <main className="mx-auto max-w-6xl px-4 py-16">
         <div className="flex items-start justify-between gap-6 flex-wrap">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium bg-white border border-black/10 text-black/70">
-              <span
-                className="h-2 w-2 rounded-full"
-                style={{ backgroundColor: VIF.red }}
-              />
-              Program
-            </p>
+           
 
             <h1 className="mt-5 text-4xl md:text-5xl font-semibold">
               Velg kamp
