@@ -61,8 +61,8 @@ export default function Header() {
             {isHome ? (
               <div className="flex items-center gap-4">
                 <img
-                  src="/media/sparebank1-logo.png"
-                  alt="SpareBank 1"
+                  src="/media/obos-logo.png"
+                  alt="OBOS"
                   className="h-6 w-auto object-contain"
                 />
                 <span className="text-xs font-semibold text-black/60">P2</span>
@@ -97,8 +97,8 @@ export default function Header() {
             {!isHome && (
               <div className="flex items-center gap-3">
                 <img
-                  src="/media/sparebank1-logo.png"
-                  alt="SpareBank 1"
+                  src="/media/obos-logo.png"
+                  alt="OBOS"
                   className="h-6 w-auto object-contain"
                 />
                 <span className="text-xs font-semibold text-black/60">P2</span>

@@ -63,7 +63,17 @@ export default function FotballVMJordal() {
       price: "1 499",
       currency: "NOK",
       unit: "per bord",
-      items: ["Reservert langbord med drikkepakke", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
+      items: ["Reservert langbord", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
+      href: ticketcoUrl,
+    },
+    {
+      title: "VIP RESTAURANT",
+      subtitle: "4 personer per bord.",
+      price: "25 000",
+      currency: "NOK",
+      unit: "per bord",
+      pricePrefix: "Fra",
+      items: ["Bord til Norge - Senegal og Norge - Frankrike", "Inngang til VIP-området", "3 enheter drikke", "Middag og dessert", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
       href: ticketcoUrl,
     },
     {
@@ -76,16 +86,6 @@ export default function FotballVMJordal() {
       href: ticketcoUrl,
     },
 
-    {
-      title: "LOSJE",
-      subtitle: "10-16 personer.",
-      price: "25 000",
-      currency: "NOK",
-      unit: "per bord",
-      pricePrefix: "Fra",
-      items: ["Inngang til VIP-området", "2 enheter drikke", "Matservering", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
-      href: ticketcoUrl,
-    },
   ];
 
   const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];
@@ -153,10 +153,10 @@ export default function FotballVMJordal() {
                 <div className="mt-8 flex justify-center md:hidden">
                   <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
                     <img
-                      src="/media/sparebank1-logo.png"
-                      alt="SpareBank 1"
-                      className="h-6 w-auto object-contain"
-                    />
+                  src="/media/obos-logo.png"
+                  alt="OBOS"
+                  className="h-6 w-auto object-contain block origin-center scale-150 translate-y-[1px]"
+/>
                     <div className="h-6 w-px bg-black/10" />
                     <span className="text-xs font-semibold text-black/70">P2</span>
                     <div className="h-6 w-px bg-black/10" />
@@ -277,7 +277,7 @@ export default function FotballVMJordal() {
   <Reveal delayMs={120}>
     <div className="mt-8 max-w-3xl rounded-3xl overflow-hidden border border-black/10 bg-white">
       <img
-        src="/media/salkart.png"
+        src="/media/salkart-med-tribune2.png"
         alt="Salkart Jordal"
         className="w-full h-auto object-contain"
       />
