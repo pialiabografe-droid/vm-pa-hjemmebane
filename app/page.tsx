@@ -60,7 +60,7 @@ export default function FotballVMJordal() {
     {
       title: "PREMIUM BORD",
       subtitle: "8 personer. Aldersgrense 18+.",
-      price: "1 500",
+      price: "1 499",
       currency: "NOK",
       unit: "per bord",
       items: ["Reservert langbord med drikkepakke", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
@@ -69,7 +69,7 @@ export default function FotballVMJordal() {
     {
       title: "FAMILIETRIBUNEN",
       subtitle: "Barn i følge med voksen.",
-      price: "100",
+      price: "69",
       currency: "NOK",
       unit: "per person",
       items: ["Inngang til familieområdet", "Tribune", "Kiosk", "Fast track"],
@@ -83,7 +83,7 @@ export default function FotballVMJordal() {
       currency: "NOK",
       unit: "per bord",
       pricePrefix: "Fra",
-      items: ["Inngang til VIP-området", "2 enheter drikke", "Matservering", "Egen VIP-bar", "Norge skjerf", "Fast track"],
+      items: ["Inngang til VIP-området", "2 enheter drikke", "Matservering", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
       href: ticketcoUrl,
     },
   ];
