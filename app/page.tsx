@@ -6,15 +6,11 @@ import Reveal from "../components/Reveal";
 
 export default function FotballVMJordal() {
   const [bgOk, setBgOk] = useState(true);
-  const [openKey, setOpenKey] = useState<string | null>(null);
 
   const palette = useMemo(
     () => ({
       page: "#F3F7FF",
-      panel: "#FFFFFF",
-      border: "rgba(20, 30, 60, 0.18)",
       text: "#1A2238",
-      muted: "rgba(26, 34, 56, 0.65)",
     }),
     []
   );
@@ -50,46 +46,78 @@ export default function FotballVMJordal() {
     },
   ];
 
-  const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];
-
-  const details = [
+  const packages = [
     {
-      k: "Sted",
-      v: "Veibeskrivelse til Jordal Amfi",
-      items: [
-        { label: "Åpne i Google Maps", href: "https://maps.google.com/?q=Jordal+Amfi" },
-        { label: "Åpne i Apple Kart", href: "https://maps.apple.com/?q=Jordal+Amfi,+Jordalgata+12,+Oslo" },
-      ],
+      title: "FAMILIEOMRÅDE",
+      subtitle:
+        "Aldersgrense 12+ i følge med voksen. Gir ikke tilgang til andre områder.",
+      price: "50",
+      currency: "NOK",
+      unit: "per person",
+      items: ["Inngang til familieområdet", "Matservering", "Kiosk"],
+      href: ticketcoUrl,
     },
     {
-      k: "Kamper",
-      v: "Velg kamp",
+      title: "VOKSEN",
+      subtitle: "Aldersgrense 18+.",
+      price: "100",
+      currency: "NOK",
+      unit: "per person",
       items: [
-        { label: "Playoff 2 - Norge", href: ticketcoUrl },
-        { label: "Norge - Senegal", href: ticketcoUrl },
-        { label: "Norge - Frankrike", href: ticketcoUrl },
-        { label: "Flere kamper", href: "/program" },
+        "Inngang til 18+-området",
+        "Bar",
+        "Matservering",
+        "Kiosk",
+        "Tribune",
       ],
+      href: ticketcoUrl,
     },
     {
-      k: "Soner",
-      v: "Velg sone",
+      title: "GOLDEN CIRCLE BORD",
+      subtitle: "8 personer. Aldersgrense 18+.",
+      price: "1500",
+      currency: "NOK",
+      unit: "per bord",
       items: [
-        { label: "Tribunebiletter", href: "#billetter" },
-        { label: "Bord med drikkepakke", href: "#praktisk" },
-        { label: "Familietribunen", href: "#praktisk" },
+        "Reservert bord i sone nærmest skjerm",
+        "Bar",
+        "Matservering",
+        "Kiosk",
+        "Langbord",
+        "Fast-track",
       ],
+      href: ticketcoUrl,
     },
     {
-      k: "Bordpakker",
-      v: "Se pakker",
+      title: "VIP PAKKE",
+      subtitle: "10 personer. Aldersgrense 18+.",
+      price: "15000",
+      currency: "NOK",
+      unit: "per bord",
       items: [
-        { label: "Bord med drikkepakke - 8 stykker", href: "#" },
-        { label: "Bord med drikkepakke - 16 stykker", href: "#" },
-        { label: "Losje", href: "#" },
+        "Inngang til VIP-området",
+        "2 enheter drikke",
+        "Tapastallerken",
+        "Egen VIP-bar",
+        "Fast track",
+        "Vikinghjelm og supporterskjerf",
       ],
+      href: ticketcoUrl,
     },
   ];
+
+  const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];
+
+  const Check = () => (
+    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#044EA2] text-white shrink-0">
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path
+          d="M7.9 13.7 4.8 10.6a1 1 0 0 1 1.4-1.4l1.7 1.7 5-5a1 1 0 0 1 1.4 1.4l-5.7 5.7a1 1 0 0 1-1.4 0Z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  );
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: palette.page, color: palette.text }}>
@@ -97,53 +125,53 @@ export default function FotballVMJordal() {
 
       <main id="top">
         {/* HERO */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            {bgOk ? (
-              <img
-                src={BG.hero}
-                alt="Publikum ser VM på storskjerm"
-                className="h-full w-full object-cover"
-                onError={() => setBgOk(false)}
-              />
-            ) : null}
-            <div className="absolute inset-0 bg-black/35" />
-          </div>
-
-          <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
-            {/* DESKTOP MENY OVER HERO */}
-            <div className="hidden md:flex justify-center gap-3">
-              <Link
-                href="/om"
-                className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
-              >
-                Om oss
-              </Link>
-
-              <Link
-                href="/program"
-                className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
-              >
-                Program
-              </Link>
-
-              <a
-                href="#billetter"
-                className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
-              >
-                Billetter
-              </a>
-
-              <Link
-                href="/q&a"
-                className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
-              >
-                Q&amp;A
-              </Link>
+        <Reveal>
+          <section className="relative overflow-hidden">
+            <div className="absolute inset-0">
+              {bgOk ? (
+                <img
+                  src={BG.hero}
+                  alt="Publikum ser VM på storskjerm"
+                  className="h-full w-full object-cover"
+                  onError={() => setBgOk(false)}
+                />
+              ) : null}
+              <div className="absolute inset-0 bg-black/35" />
             </div>
 
-            <div className="mt-10 text-center md:mt-12">
-              <Reveal>
+            <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
+              {/* DESKTOP MENY OVER HERO */}
+              <div className="hidden md:flex justify-center gap-3">
+                <Link
+                  href="/om"
+                  className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+                >
+                  Om oss
+                </Link>
+
+                <Link
+                  href="/program"
+                  className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+                >
+                  Program
+                </Link>
+
+                <a
+                  href="#pakker"
+                  className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+                >
+                  Billetter
+                </a>
+
+                <Link
+                  href="/q&a"
+                  className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+                >
+                  Q&amp;A
+                </Link>
+              </div>
+
+              <div className="mt-10 text-center md:mt-12">
                 <h1 className="text-4xl md:text-6xl font-semibold text-white tracking-tight">
                   FOTBALL VM PÅ <br /> JORDAL
                 </h1>
@@ -153,19 +181,19 @@ export default function FotballVMJordal() {
                 </p>
 
                 {/* PARTNERE PÅ MOBIL */}
-                <div className="mt-8 flex justify-center md:hidden">
-                  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
-                    <img
-                      src="/media/sparebank1-logo.png"
-                      alt="SpareBank 1"
-                      className="h-6 w-auto object-contain"
-                    />
-                    <div className="h-6 w-px bg-black/10" />
-                    <span className="text-xs font-semibold text-black/70">P2</span>
-                    <div className="h-6 w-px bg-black/10" />
-                    <span className="text-xs font-semibold text-black/70">P3</span>
-                  </div>
-                </div>
+<div className="mt-8 flex justify-center md:hidden">
+  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
+    <img
+      src="/media/sparebank1-logo.png"
+      alt="SpareBank 1"
+      className="h-6 w-auto object-contain"
+    />
+    <div className="h-6 w-px bg-black/10" />
+    <span className="text-xs font-semibold text-black/70">P2</span>
+    <div className="h-6 w-px bg-black/10" />
+    <span className="text-xs font-semibold text-black/70">P3</span>
+  </div>
+</div>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -178,133 +206,122 @@ export default function FotballVMJordal() {
                   </a>
 
                   <a
-                    href="#billetter"
+                    href="#pakker"
                     className="px-7 py-3 rounded-2xl bg-white/10 text-white border border-white/25 font-medium hover:bg-white/20 transition"
                   >
-                    Velg kamp
+                    Velg pakke
                   </a>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
-        {/* OM / QUICK */}
-        <Reveal>
-          <section id="om" className="mx-auto max-w-6xl px-4 py-16">
-            <div className="grid md:grid-cols-3 gap-6">
-              {quick.map((q) => (
-                <div key={q.title} className="rounded-3xl p-8 bg-white border border-black/10">
-                  <div className="text-lg font-semibold">{q.title}</div>
-                  <div className="mt-3 text-sm text-black/70 leading-relaxed">{q.desc}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </Reveal>
-
-        {/* BILLETTER */}
-        <Reveal>
-          <section id="billetter" className="mx-auto max-w-6xl px-4 py-16">
-            <div className="rounded-3xl p-10 bg-white border border-black/10">
-              <div className="grid md:grid-cols-2 gap-10">
-                <div>
-                  <h2 className="text-3xl font-semibold">Billetter</h2>
-
-                  <div className="mt-6 flex gap-4 flex-wrap">
-                    <a
-                      href={ticketcoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-6 py-3 rounded-2xl font-semibold text-white"
-                      style={{ backgroundColor: "#044EA2" }}
-                    >
-                      Kjøp billetter
-                    </a>
-                  </div>
-                </div>
-
-                {/* DROPDOWNS */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-                  {details.map((x) => {
-                    const isOpen = openKey === x.k;
-
-                    return (
-                      <div
-                        key={x.k}
-                        className="relative w-full min-w-0 rounded-2xl p-4 border border-black/10 bg-white/80"
-                        style={{ zIndex: isOpen ? 40 : 1 }}
-                      >
-                        <button
-                          type="button"
-                          onClick={() => setOpenKey(isOpen ? null : x.k)}
-                          className="w-full text-left flex justify-between items-start gap-3"
-                          aria-expanded={isOpen}
-                          aria-controls={`panel-${x.k}`}
-                        >
-                          <div className="min-w-0">
-                            <div className="font-semibold">{x.k}</div>
-                            <div className="text-xs text-black/60 mt-1">{x.v}</div>
-                          </div>
-
-                          <span
-                            className={`text-xs transition-transform ${isOpen ? "rotate-180" : ""}`}
-                            style={{ color: "rgba(0,0,0,0.55)" }}
-                            aria-hidden="true"
-                          >
-                            ▼
-                          </span>
-                        </button>
-
-                        {isOpen ? (
-                          <div
-                            id={`panel-${x.k}`}
-                            className="absolute left-0 right-0 mt-2 space-y-2 rounded-2xl border border-black/10 bg-white p-3 shadow-[0_18px_60px_rgba(0,0,0,0.18)] max-h-72 overflow-auto"
-                            style={{ top: "100%" }}
-                          >
-                            {x.items.map((it) => {
-                              const isExternal =
-                                /^https?:\/\//.test(it.href) || it.href.startsWith("mailto:");
-
-                              return (
-                                <a
-                                  key={it.label}
-                                  href={it.href}
-                                  target={isExternal ? "_blank" : undefined}
-                                  rel={isExternal ? "noopener noreferrer" : undefined}
-                                  className="block px-3 py-2 rounded-xl bg-white border border-black/10 text-sm hover:bg-black/[0.02]"
-                                  onClick={() => setOpenKey(null)}
-                                >
-                                  {it.label}
-                                </a>
-                              );
-                            })}
-                          </div>
-                        ) : null}
-                      </div>
-                    );
-                  })}
                 </div>
               </div>
             </div>
           </section>
         </Reveal>
 
-        {/* PRAKTISK */}
-        <Reveal>
-          <section id="praktisk" className="mx-auto max-w-6xl px-4 py-16">
-            <h2 className="text-3xl font-semibold">Praktisk</h2>
+        {/* QUICK */}
+        <section className="mx-auto max-w-6xl px-4 py-16">
+         <div className="grid md:grid-cols-3 gap-6 items-stretch">
+            {quick.map((q, i) => (
+              <Reveal key={q.title} delayMs={i * 90}>
+                  <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
+                  <div className="text-lg font-semibold">{q.title}</div>
+                  <div className="mt-3 text-sm text-black/70 leading-relaxed">{q.desc}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
 
-            <div className="mt-8 grid md:grid-cols-3 gap-6">
-              {practical.map((f) => (
-                <div key={f.title} className="rounded-3xl p-8 bg-white border border-black/10">
+        {/* PAKKER */}
+        <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16">
+          <Reveal>
+            <div className="flex items-end justify-between gap-6 flex-wrap">
+              <div>
+                <h2 className="text-3xl font-semibold">Pakker</h2>
+                <p className="mt-2 text-sm text-black/60">
+                  Velg område eller bordpakke. Alle kjøp går via TicketCo.
+                </p>
+              </div>
+
+              <a
+                href={ticketcoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-3 rounded-2xl bg-white border border-black/10 text-sm font-semibold hover:bg-black/[0.02] transition"
+              >
+                Kjøp billett
+              </a>
+            </div>
+          </Reveal>
+
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            {packages.map((p, i) => (
+              <Reveal key={p.title} delayMs={i * 110}>
+                <div className="rounded-3xl bg-white border border-black/10 p-8 flex flex-col h-full">
+                  {/* Fast høyde topp */}
+                  <div className="min-h-[110px]">
+                    <div className="text-sm font-semibold tracking-wide text-[#1A2238]">
+                      {p.title}
+                    </div>
+                    <div className="mt-2 text-sm text-black/60 leading-relaxed">
+                      {p.subtitle}
+                    </div>
+                  </div>
+
+                  {/* Pris */}
+                  <div className="mt-8">
+                    <div className="flex items-end gap-3">
+                      <div className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none">
+                        {p.price} {p.currency}
+                      </div>
+                      <div className="pb-2 text-sm text-black/60">/ {p.unit}</div>
+                    </div>
+                    <div className="mt-6 h-px bg-black/10" />
+                  </div>
+
+                  {/* Liste */}
+                  <div className="mt-6 space-y-4">
+                    {p.items.map((it) => (
+                      <div key={it} className="flex items-start gap-3">
+                        <Check />
+                        <div className="text-sm text-black/70">{it}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Knapp alltid nederst */}
+                  <div className="mt-auto pt-8">
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
+                    >
+                      KJØP HER!
+                    </a>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* PRAKTISK */}
+        <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-16">
+          <Reveal>
+            <h2 className="text-3xl font-semibold">Praktisk</h2>
+          </Reveal>
+
+          <div className="mt-8 grid md:grid-cols-3 gap-6">
+            {practical.map((f, i) => (
+              <Reveal key={f.title} delayMs={i * 120}>
+                <div className="rounded-3xl p-8 bg-white border border-black/10">
                   <div className="font-semibold">{f.title}</div>
                   <div className="mt-2 text-sm text-black/70 leading-relaxed">{f.desc}</div>
                 </div>
-              ))}
-            </div>
-          </section>
-        </Reveal>
+              </Reveal>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );
