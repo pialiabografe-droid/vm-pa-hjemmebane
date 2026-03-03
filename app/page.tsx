@@ -73,7 +73,7 @@ export default function FotballVMJordal() {
       currency: "NOK",
       unit: "per bord",
       pricePrefix: "Fra",
-      items: ["Bord til Norge - Playoff 2 og Norge - Frankrike", "Inngang til VIP-området", "3 drikkeenheter", "Middag og dessert", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
+      items: ["Bord til Norge - Playoff 2 og Norge - Frankrike", "Inngang til VIP-området", "Tre drikkeenheter", "Middag og dessert", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
       href: ticketcoUrl,
     },
     {
