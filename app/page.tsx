@@ -49,15 +49,11 @@ export default function FotballVMJordal() {
   const packages = [
     {
       title: "FAMILIEOMRÅDE",
-      subtitle:
-        "Aldersgrense 12+ i følge med voksen. Gir ikke tilgang til andre områder.",
+      subtitle: "Aldersgrense 12+ i følge med voksen. Gir ikke tilgang til andre områder.",
       price: "100",
       currency: "NOK",
       unit: "per person",
-      items: 
-        ["Inngang til familieområdet",  
-        "Kiosk",
-      ],
+      items: ["Inngang til familieområdet", "Kiosk"],
       href: ticketcoUrl,
     },
     {
@@ -66,61 +62,31 @@ export default function FotballVMJordal() {
       price: "100",
       currency: "NOK",
       unit: "per person",
-      items: [
-        "Inngang til 18+-området",
-        "Bar",
-        "Serveringstilbud",
-        "Kiosk",
-        "Tribune",
-      ],
+      items: ["Inngang til 18+-området", "Bar", "Serveringstilbud", "Kiosk", "Tribune"],
       href: ticketcoUrl,
     },
     {
       title: "GOLDEN CIRCLE BORD",
       subtitle: "8 personer. Aldersgrense 18+.",
-      price: "1500",
+      price: "1 500",
       currency: "NOK",
       unit: "per bord",
-      items: [
-        "Reservert bord i sone nærmest skjerm",
-        "Bar",
-        "Serveringstilbud",
-        "Kiosk",
-        "Langbord",
-        "Fast track",
-      ],
+      items: ["Reservert bord i sone nærmest skjerm", "Bar", "Serveringstilbud", "Kiosk", "Langbord", "Fast track"],
       href: ticketcoUrl,
     },
     {
       title: "LOSJE",
       subtitle: "10-16 personer.",
-      price: "25000",
+      price: "25 000",
       currency: "NOK",
       unit: "per bord",
-      items: [
-        "Inngang til VIP-området",
-        "2 enheter drikke",
-        "Matservering",
-        "Egen VIP-bar",
-        "Norge skjerf",
-        "Fast track",
-      ],
+      pricePrefix: "Fra",
+      items: ["Inngang til VIP-området", "2 enheter drikke", "Matservering", "Egen VIP-bar", "Norge skjerf", "Fast track"],
       href: ticketcoUrl,
     },
   ];
 
   const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];
-
-  const Check = () => (
-    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#044EA2] text-white shrink-0">
-      <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-        <path
-          d="M7.9 13.7 4.8 10.6a1 1 0 0 1 1.4-1.4l1.7 1.7 5-5a1 1 0 0 1 1.4 1.4l-5.7 5.7a1 1 0 0 1-1.4 0Z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-  );
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: palette.page, color: palette.text }}>
@@ -175,28 +141,26 @@ export default function FotballVMJordal() {
               </div>
 
               <div className="mt-10 text-center md:mt-12">
-                <h1 className="text-4xl md:text-6xl font-semibold text-white tracking-tight">
-                  FOTBALL PÅ JORDAL
-                </h1>
+                <h1 className="text-4xl md:text-6xl font-semibold text-white tracking-tight">FOTBALL PÅ JORDAL</h1>
 
                 <p className="mt-6 text-base md:text-lg text-white/90">
                   De beste kampene, og hele sluttspillet. <br /> Uansett vær.
                 </p>
 
                 {/* PARTNERE PÅ MOBIL */}
-<div className="mt-8 flex justify-center md:hidden">
-  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
-    <img
-      src="/media/sparebank1-logo.png"
-      alt="SpareBank 1"
-      className="h-6 w-auto object-contain"
-    />
-    <div className="h-6 w-px bg-black/10" />
-    <span className="text-xs font-semibold text-black/70">P2</span>
-    <div className="h-6 w-px bg-black/10" />
-    <span className="text-xs font-semibold text-black/70">P3</span>
-  </div>
-</div>
+                <div className="mt-8 flex justify-center md:hidden">
+                  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
+                    <img
+                      src="/media/sparebank1-logo.png"
+                      alt="SpareBank 1"
+                      className="h-6 w-auto object-contain"
+                    />
+                    <div className="h-6 w-px bg-black/10" />
+                    <span className="text-xs font-semibold text-black/70">P2</span>
+                    <div className="h-6 w-px bg-black/10" />
+                    <span className="text-xs font-semibold text-black/70">P3</span>
+                  </div>
+                </div>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -222,10 +186,10 @@ export default function FotballVMJordal() {
 
         {/* QUICK */}
         <section className="mx-auto max-w-6xl px-4 py-16">
-         <div className="grid md:grid-cols-3 gap-6 items-stretch">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
             {quick.map((q, i) => (
               <Reveal key={q.title} delayMs={i * 90}>
-                  <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
+                <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
                   <div className="text-lg font-semibold">{q.title}</div>
                   <div className="mt-3 text-sm text-black/70 leading-relaxed">{q.desc}</div>
                 </div>
@@ -240,9 +204,7 @@ export default function FotballVMJordal() {
             <div className="flex items-end justify-between gap-6 flex-wrap">
               <div>
                 <h2 className="text-3xl font-semibold">Pakker</h2>
-                <p className="mt-2 text-sm text-black/60">
-                  Velg område eller bordpakke. Alle kjøp går via TicketCo.
-                </p>
+                <p className="mt-2 text-sm text-black/60">Velg område eller bordpakke. Alle kjøp går via TicketCo.</p>
               </div>
 
               <a
@@ -262,30 +224,41 @@ export default function FotballVMJordal() {
                 <div className="rounded-3xl bg-white border border-black/10 p-8 flex flex-col h-full">
                   {/* Fast høyde topp */}
                   <div className="min-h-[110px]">
-                    <div className="text-sm font-semibold tracking-wide text-[#1A2238]">
-                      {p.title}
-                    </div>
-                    <div className="mt-2 text-sm text-black/60 leading-relaxed">
-                      {p.subtitle}
-                    </div>
+                    <div className="text-sm font-semibold tracking-wide text-[#1A2238]">{p.title}</div>
+                    <div className="mt-2 text-sm text-black/60 leading-relaxed">{p.subtitle}</div>
                   </div>
 
-                  {/* Pris */}
-                  <div className="mt-8">
-                    <div className="flex items-end gap-3">
-                      <div className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none">
-                        {p.price} {p.currency}
-                      </div>
-                      <div className="pb-2 text-sm text-black/60">/ {p.unit}</div>
-                    </div>
-                    <div className="mt-6 h-px bg-black/10" />
-                  </div>
+                 {/* Pris */}
+                <div className="mt-8">
+                {/* Prefix (Fra) – fast høyde så alt står likt */}
+                <div className="min-h-[20px] text-sm font-semibold text-black/50">
+                {p.pricePrefix ? p.pricePrefix : "\u00A0"}
+                </div>
 
-                  {/* Liste */}
+                {/* Selve summen */}
+                <div className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none tabular-nums whitespace-nowrap">
+               {p.price}
+               </div>
+
+               {/* NOK stor + per enhet liten */}
+               <div className="mt-1 flex items-end justify-between">
+              <span className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none">
+               {p.currency}
+                </span>
+
+               <span className="text-sm text-black/60 pb-1">
+                {p.unit}
+               </span>
+              </div>
+
+               <div className="mt-6 h-px bg-black/10" />
+              </div>
+
+                  {/* Store blå bullets uten check */}
                   <div className="mt-6 space-y-4">
                     {p.items.map((it) => (
-                      <div key={it} className="flex items-start gap-3">
-                        <Check />
+                      <div key={it} className="flex items-start gap-4">
+                        <span className="mt-1 h-6 w-6 rounded-full bg-[#044EA2] shrink-0" />
                         <div className="text-sm text-black/70">{it}</div>
                       </div>
                     ))}
