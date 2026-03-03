@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 type Match = {
@@ -14,24 +16,27 @@ export default function ProgramPage() {
     red: "#BC1823",
   } as const;
 
+  const ticketcoUrl =
+    "https://testestsetset.ticketco.events/no/nb/events/1069019/sections/672328?";
+
   const matches: Match[] = [
     {
       slug: "playoff-2-norge",
       title: "Playoff 2 vs Norge",
       subtitle: "VM visning på storskjerm",
-      ticketUrl: "",
+      ticketUrl: ticketcoUrl,
     },
     {
       slug: "norge-senegal",
       title: "Norge vs Senegal",
       subtitle: "VM visning på storskjerm",
-      ticketUrl: "",
+      ticketUrl: ticketcoUrl,
     },
     {
       slug: "norge-frankrike",
       title: "Norge vs Frankrike",
       subtitle: "VM visning på storskjerm",
-      ticketUrl: "",
+      ticketUrl: ticketcoUrl,
     },
     {
       slug: "flere-kamper",
@@ -46,8 +51,6 @@ export default function ProgramPage() {
       <main className="mx-auto max-w-6xl px-4 py-16">
         <div className="flex items-start justify-between gap-6 flex-wrap">
           <div>
-           
-
             <h1 className="mt-5 text-4xl md:text-5xl font-semibold">
               Velg kamp
             </h1>
@@ -87,7 +90,7 @@ export default function ProgramPage() {
                   >
                     Se program
                   </Link>
-                ) : m.ticketUrl ? (
+                ) : (
                   <a
                     href={m.ticketUrl}
                     target="_blank"
@@ -97,10 +100,6 @@ export default function ProgramPage() {
                   >
                     Kjøp billett
                   </a>
-                ) : (
-                  <div className="px-5 py-3 rounded-2xl bg-black/5 border border-black/10 text-sm text-black/60 inline-block">
-                    TicketCo lenke kommer
-                  </div>
                 )}
               </div>
             </section>

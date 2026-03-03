@@ -20,7 +20,7 @@ export default function FotballVMJordal() {
   } as const;
 
   const ticketcoUrl =
-    "https://vif-hockey.ticketco.events/no/nb/events/1032852/seating_arrangement/3737d866-eb04-4b0c-8934-a84b6c732c42/";
+    "https://testestsetset.ticketco.events/no/nb/events/1069019/sections/672328?";
 
   const quick = [
     {
@@ -47,33 +47,35 @@ export default function FotballVMJordal() {
   ];
 
   const packages = [
-    {
-      title: "FAMILIEOMRÅDE",
-      subtitle: "Barn i følge med voksen.",
-      price: "100",
-      currency: "NOK",
-      unit: "per person",
-      items: ["Inngang til familieområdet", "Kiosk", "Tribune"],
-      href: ticketcoUrl,
-    },
-    {
+
+  {
       title: "VOKSEN",
       subtitle: "Aldersgrense 18+.",
       price: "100",
       currency: "NOK",
       unit: "per person",
-      items: ["Inngang til 18+-området", "Bar", "Serveringstilbud", "Kiosk", "Tribune"],
+      items: ["Inngang til 18+ området", "Tribune", "Bar", "Serveringstilbud", "Kiosk", "Fast track",],
       href: ticketcoUrl,
     },
     {
-      title: "GOLDEN CIRCLE BORD",
+      title: "PREMIUM BORD",
       subtitle: "8 personer. Aldersgrense 18+.",
       price: "1 500",
       currency: "NOK",
       unit: "per bord",
-      items: ["Reservert bord i sone nærmest skjerm", "Bar", "Serveringstilbud", "Kiosk", "Langbord", "Fast track"],
+      items: ["Reservert langbord med drikkepakke", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
       href: ticketcoUrl,
     },
+    {
+      title: "FAMILIETRIBUNEN",
+      subtitle: "Barn i følge med voksen.",
+      price: "100",
+      currency: "NOK",
+      unit: "per person",
+      items: ["Inngang til familieområdet", "Tribune", "Kiosk", "Fast track"],
+      href: ticketcoUrl,
+    },
+
     {
       title: "LOSJE",
       subtitle: "10-16 personer.",
@@ -188,7 +190,7 @@ export default function FotballVMJordal() {
           <section id="pakker" className="mx-auto max-w-6xl px-4 pt-16 pb-16">          <Reveal>
             <div className="flex items-end justify-between gap-6 flex-wrap">
               <div>
-                <h2 className="text-3xl font-semibold">Pakker</h2>
+                <h2 className="text-3xl font-semibold">Biletter og pakker</h2>
                 <p className="mt-2 text-sm text-black/60">Velg område eller bordpakke. Alle kjøp går via TicketCo.</p>
               </div>
 
@@ -206,61 +208,61 @@ export default function FotballVMJordal() {
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {packages.map((p, i) => (
               <Reveal key={p.title} delayMs={i * 110}>
-                <div className="rounded-3xl bg-white border border-black/10 p-8 flex flex-col h-full">
-                  {/* Fast høyde topp */}
-                  <div className="min-h-[110px]">
-                    <div className="text-sm font-semibold tracking-wide text-[#1A2238]">{p.title}</div>
-                    <div className="mt-2 text-sm text-black/60 leading-relaxed">{p.subtitle}</div>
-                  </div>
+              <div className="rounded-3xl bg-white border border-black/10 p-8 flex flex-col h-full">
+  {/* Fast høyde topp (litt mindre) */}
+  <div className="min-h-[96px]">
+    <div className="text-sm font-semibold tracking-wide text-[#1A2238]">{p.title}</div>
+    <div className="mt-1 text-sm text-black/60 leading-relaxed">{p.subtitle}</div>
+  </div>
 
-                 {/* Pris */}
-                <div className="mt-8">
-                {/* Prefix (Fra) – fast høyde så alt står likt */}
-                <div className="min-h-[20px] text-sm font-semibold text-black/50">
-                {p.pricePrefix ? p.pricePrefix : "\u00A0"}
-                </div>
+  {/* Pris (mindre toppmargin) */}
+  <div className="mt-6">
+    {/* Prefix (Fra) – behold fast høyde, men litt strammere */}
+    <div className="min-h-[18px] text-sm font-semibold text-black/50 leading-none">
+      {p.pricePrefix ? p.pricePrefix : "\u00A0"}
+    </div>
 
-                {/* Selve summen */}
-                <div className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none tabular-nums whitespace-nowrap">
-               {p.price}
-               </div>
+    {/* Selve summen */}
+    <div className="mt-1 text-5xl font-semibold tracking-tight text-[#0E2433] leading-none tabular-nums whitespace-nowrap">
+      {p.price}
+    </div>
 
-               {/* NOK stor + per enhet liten */}
-               <div className="mt-1 flex items-end justify-between">
-              <span className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none">
-               {p.currency}
-                </span>
+    {/* NOK stor + per enhet liten */}
+    <div className="mt-0.5 flex items-end justify-between">
+      <span className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none">
+        {p.currency}
+      </span>
 
-               <span className="text-sm text-black/60 pb-1">
-                {p.unit}
-               </span>
-              </div>
+      <span className="text-sm text-black/60 pb-1">
+        {p.unit}
+      </span>
+    </div>
 
-               <div className="mt-6 h-px bg-black/10" />
-              </div>
+    <div className="mt-5 h-px bg-black/10" />
+  </div>
 
-                  {/* Store blå bullets uten check */}
-                  <div className="mt-6 space-y-4">
-                    {p.items.map((it) => (
-                      <div key={it} className="flex items-start gap-4">
-                        <span className="mt-1 h-6 w-6 rounded-full bg-[#044EA2] shrink-0" />
-                        <div className="text-sm text-black/70">{it}</div>
-                      </div>
-                    ))}
-                  </div>
+  {/* Bullets */}
+  <div className="mt-6 space-y-4">
+    {p.items.map((it) => (
+      <div key={it} className="flex items-start gap-4">
+        <span className="mt-1 h-6 w-6 rounded-full bg-[#044EA2] shrink-0" />
+        <div className="text-sm text-black/70">{it}</div>
+      </div>
+    ))}
+  </div>
 
-                  {/* Knapp alltid nederst */}
-                  <div className="mt-auto pt-8">
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
-                    >
-                      KJØP HER!
-                    </a>
-                  </div>
-                </div>
+  {/* Knapp alltid nederst */}
+  <div className="mt-auto pt-8">
+    <a
+      href={p.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
+    >
+      KJØP HER!
+    </a>
+  </div>
+</div>
               </Reveal>
             ))}
           </div>
@@ -284,19 +286,35 @@ export default function FotballVMJordal() {
 </section>
 
 
-        {/* QUICK */}
-        <section className="mx-auto max-w-6xl px-4 py-16">
-          <div className="grid md:grid-cols-3 gap-6 items-stretch">
-            {quick.map((q, i) => (
-              <Reveal key={q.title} delayMs={i * 90}>
-                <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
-                  <div className="text-lg font-semibold">{q.title}</div>
-                  <div className="mt-3 text-sm text-black/70 leading-relaxed">{q.desc}</div>
-                </div>
-              </Reveal>
-            ))}
+       {/* QUICK */}
+<section className="mx-auto max-w-6xl px-4 py-16">
+
+  {/* Overskrift */}
+  <div className="mb-10">
+    <h2 className="text-3xl font-semibold">Om arrangementet</h2>
+  </div>
+
+  <div className="grid md:grid-cols-3 gap-6 items-stretch">
+    {quick.map((q, i) => (
+      <Reveal key={q.title} delayMs={i * 90}>
+        <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
+
+          {/* Fast høyde på overskrift */}
+          <div className="min-h-[56px]">
+            <div className="text-lg font-semibold leading-snug">
+              {q.title}
+            </div>
           </div>
-        </section>
+
+          <div className="mt-3 text-sm text-black/70 leading-relaxed">
+            {q.desc}
+          </div>
+
+        </div>
+      </Reveal>
+    ))}
+  </div>
+</section>
 
     
 
