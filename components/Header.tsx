@@ -86,7 +86,7 @@ export default function Header() {
         {/* MOBILE LAYOUT */}
         <div className="md:hidden flex items-center justify-between">
           <Link href="/" className="font-semibold text-lg">
-            VM PÅ HJEMMEBANE
+            FOTBALL PÅ JORDAL
           </Link>
 
           <button
