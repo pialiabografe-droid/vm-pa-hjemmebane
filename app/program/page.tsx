@@ -22,29 +22,30 @@ export default function ProgramPage() {
   const matches: Match[] = [
     {
       slug: "playoff-2-norge",
-      title: "Playoff 2 vs Norge",
+      title: "Playoff 2 - Norge",
       subtitle: "VM visning på storskjerm",
       ticketUrl: ticketcoUrl,
     },
     {
-      slug: "norge-senegal",
-      title: "Norge vs Senegal",
+      slug: "england-panama",
+      title: "England - Panama",
       subtitle: "VM visning på storskjerm",
       ticketUrl: ticketcoUrl,
     },
     {
       slug: "norge-frankrike",
-      title: "Norge vs Frankrike",
+      title: "Norge - Frankrike",
       subtitle: "VM visning på storskjerm",
       ticketUrl: ticketcoUrl,
     },
-    {
-      slug: "flere-kamper",
-      title: "Flere kamper",
-      subtitle: "Se hele programmet",
-      href: "/program",
-    },
   ];
+
+  const more: Match = {
+    slug: "flere-kamper",
+    title: "Flere kamper",
+    subtitle: "Se hele programmet",
+    href: "/program",
+  };
 
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
@@ -76,34 +77,55 @@ export default function ProgramPage() {
               <div className="text-lg font-semibold">{m.title}</div>
 
               {m.subtitle && (
-                <div className="mt-2 text-sm text-black/70">
-                  {m.subtitle}
-                </div>
+                <div className="mt-2 text-sm text-black/70">{m.subtitle}</div>
               )}
 
               <div className="mt-6">
-                {m.href ? (
-                  <Link
-                    href={m.href}
-                    className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
-                    style={{ backgroundColor: VIF.blue }}
-                  >
-                    Se program
-                  </Link>
-                ) : (
-                  <a
-                    href={m.ticketUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
-                    style={{ backgroundColor: VIF.blue }}
-                  >
-                    Kjøp billett
-                  </a>
-                )}
+                <a
+                  href={m.ticketUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
+                  style={{ backgroundColor: VIF.blue }}
+                >
+                  Kjøp billett
+                </a>
               </div>
             </section>
           ))}
+
+          {/* ØVRIG PROGRAM */}
+<section className="md:col-span-3 rounded-3xl p-8 bg-white border border-black/10">
+  <div className="text-lg font-semibold">Øvrig program</div>
+  <div className="mt-2 text-sm text-black/70 leading-relaxed">
+    Kom tidlig og få med deg mer enn selve kampen. Gratis aktiviteter,
+    underholdning før avspark og uteservering når været tillater det.
+    Opplevelser for både store og små!
+    Se billettsiden for hver kamp for detaljer og tidspunkt.
+  </div>
+</section>
+
+          {/* FLERE KAMPER */}
+          <section
+            key={more.slug}
+            className="rounded-3xl p-8 bg-white border border-black/10"
+          >
+            <div className="text-lg font-semibold">{more.title}</div>
+
+            {more.subtitle && (
+              <div className="mt-2 text-sm text-black/70">{more.subtitle}</div>
+            )}
+
+            <div className="mt-6">
+              <Link
+                href={more.href as string}
+                className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
+                style={{ backgroundColor: VIF.blue }}
+              >
+                Kampoversikt
+              </Link>
+            </div>
+          </section>
         </div>
       </main>
     </div>

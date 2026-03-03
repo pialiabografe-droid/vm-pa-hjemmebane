@@ -67,13 +67,13 @@ export default function FotballVMJordal() {
       href: ticketcoUrl,
     },
     {
-      title: "VIP RESTAURANT",
-      subtitle: "4 personer per bord.",
+      title: "TO KVELDER PÅ VIP RESTAURANT",
+      subtitle: "Norges kamper for 4 personer.",
       price: "25 000",
       currency: "NOK",
       unit: "per bord",
       pricePrefix: "Fra",
-      items: ["Bord til Norge - Senegal og Norge - Frankrike", "Inngang til VIP-området", "3 enheter drikke", "Middag og dessert", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
+      items: ["Bord til Norge - Playoff 2 og Norge - Frankrike", "Inngang til VIP-området", "3 enheter drikke", "Middag og dessert", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
       href: ticketcoUrl,
     },
     {
@@ -269,7 +269,7 @@ export default function FotballVMJordal() {
         </section>
 
 {/* SALKART */}
-<section className="mx-auto max-w-6xl px-4 pb-24">
+<section className="mx-auto max-w-6xl px-4 pb-12">
   <Reveal>
     <h2 className="text-3xl font-semibold">Salkart</h2>
   </Reveal>
@@ -277,9 +277,9 @@ export default function FotballVMJordal() {
   <Reveal delayMs={120}>
     <div className="mt-8 max-w-3xl rounded-3xl overflow-hidden border border-black/10 bg-white">
       <img
-        src="/media/salkart-med-tribune2.png"
+        src="/media/salkart-med-tribune3.png"
         alt="Salkart Jordal"
-        className="w-full h-auto object-contain"
+        className="w-full h-auto object-contain block"
       />
     </div>
   </Reveal>
@@ -287,9 +287,7 @@ export default function FotballVMJordal() {
 
 
        {/* QUICK */}
-<section className="mx-auto max-w-6xl px-4 py-16">
-
-  {/* Overskrift */}
+<section className="mx-auto max-w-6xl px-4 pt-10 pb-16">
   <div className="mb-10">
     <h2 className="text-3xl font-semibold">Om arrangementet</h2>
   </div>
@@ -298,28 +296,22 @@ export default function FotballVMJordal() {
     {quick.map((q, i) => (
       <Reveal key={q.title} delayMs={i * 90}>
         <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
-
-          {/* Fast høyde på overskrift */}
           <div className="min-h-[56px]">
-            <div className="text-lg font-semibold leading-snug">
-              {q.title}
-            </div>
+            <div className="text-lg font-semibold leading-snug">{q.title}</div>
           </div>
 
           <div className="mt-3 text-sm text-black/70 leading-relaxed">
             {q.desc}
           </div>
-
         </div>
       </Reveal>
     ))}
   </div>
 </section>
-
     
 
         {/* PRAKTISK */}
-        <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-16">
+        <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-12">
           <Reveal>
             <h2 className="text-3xl font-semibold">Praktisk</h2>
           </Reveal>
