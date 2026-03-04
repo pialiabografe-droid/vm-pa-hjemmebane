@@ -42,7 +42,7 @@ export default function QaPage() {
             </h1>
 
             <p className="mt-3 text-black/70 max-w-2xl">
-              Her finner du raske svar. Hvis du ikke finner det du lurer på, kontakt oss.
+              Her finner du raske svar. Om du ikke finner svar på det du lurer på, ta kontakt.
             </p>
           </div>
 

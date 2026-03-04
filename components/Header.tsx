@@ -52,7 +52,10 @@ export default function Header() {
         {/* DESKTOP */}
         <div className="hidden md:grid grid-cols-3 items-center">
           <div className="flex items-center">
-            <Link href="/" className="font-semibold text-lg hover:opacity-75 transition-opacity">
+            <Link
+              href="/"
+              className="font-semibold text-lg hover:opacity-75 transition-opacity"
+            >
               FOTBALL PÅ JORDAL
             </Link>
           </div>
@@ -61,12 +64,18 @@ export default function Header() {
             {isHome ? (
               <div className="flex items-center gap-4">
                 <img
-                  src="/media/obos-logo.png"
+                  src="/media/sparebank1-logo2.png"
+                  alt="SpareBank 1"
+                  className="h-6 w-auto object-contain"
+                />
+
+                <div className="h-6 w-px bg-black/10" />
+
+                <img
+                  src="/media/obos-logo2.png"
                   alt="OBOS"
                   className="h-6 w-auto object-contain"
                 />
-                <span className="text-xs font-semibold text-black/60">P2</span>
-                <span className="text-xs font-semibold text-black/60">P3</span>
               </div>
             ) : (
               <nav className="flex gap-6 text-sm text-black/70">
@@ -74,7 +83,10 @@ export default function Header() {
                   Om oss
                 </Link>
 
-                <Link href="/program" className="hover:text-black transition-colors">
+                <Link
+                  href="/program"
+                  className="hover:text-black transition-colors"
+                >
                   Program
                 </Link>
 
@@ -95,14 +107,20 @@ export default function Header() {
 
           <div className="flex justify-end items-center gap-4">
             {!isHome && (
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
                 <img
-                  src="/media/obos-logo.png"
+                  src="/media/sparebank1-logo2.png"
+                  alt="SpareBank 1"
+                  className="h-6 w-auto object-contain"
+                />
+
+                <div className="h-6 w-px bg-black/10" />
+
+                <img
+                  src="/media/obos-logo2.png"
                   alt="OBOS"
                   className="h-6 w-auto object-contain"
                 />
-                <span className="text-xs font-semibold text-black/60">P2</span>
-                <span className="text-xs font-semibold text-black/60">P3</span>
               </div>
             )}
 
@@ -119,7 +137,11 @@ export default function Header() {
 
         {/* MOBILE */}
         <div className="md:hidden flex items-center justify-between">
-          <Link href="/" className="font-semibold text-lg" onClick={() => setMobileOpen(false)}>
+          <Link
+            href="/"
+            className="font-semibold text-lg"
+            onClick={() => setMobileOpen(false)}
+          >
             FOTBALL PÅ JORDAL
           </Link>
 
@@ -142,11 +164,19 @@ export default function Header() {
         {mobileOpen ? (
           <div className="md:hidden border-t border-black/10 bg-white mt-3">
             <div className="px-4 py-4 flex flex-col gap-3 text-sm">
-              <Link href="/om" onClick={() => setMobileOpen(false)} className="hover:opacity-80">
+              <Link
+                href="/om"
+                onClick={() => setMobileOpen(false)}
+                className="hover:opacity-80"
+              >
                 Om oss
               </Link>
 
-              <Link href="/program" onClick={() => setMobileOpen(false)} className="hover:opacity-80">
+              <Link
+                href="/program"
+                onClick={() => setMobileOpen(false)}
+                className="hover:opacity-80"
+              >
                 Program
               </Link>
 
@@ -158,7 +188,11 @@ export default function Header() {
                 Billetter
               </button>
 
-              <Link href="/q&a" onClick={() => setMobileOpen(false)} className="hover:opacity-80">
+              <Link
+                href="/q&a"
+                onClick={() => setMobileOpen(false)}
+                className="hover:opacity-80"
+              >
                 Q&amp;A
               </Link>
 

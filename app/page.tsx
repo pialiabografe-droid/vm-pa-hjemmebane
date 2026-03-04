@@ -74,7 +74,7 @@ export default function FotballVMJordal() {
       unit: "per bord",
       pricePrefix: "Fra",
       items: ["Bord til Norge - Playoff 2 og Norge - Frankrike", "Inngang til VIP-området", "Tre drikkeenheter", "Middag og dessert", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
-      href: ticketcoUrl,
+     href: "mailto:daniel@vif-hockey.no?subject=Forespørsel%20VIP-pakke%20Norge-kampene",
     },
     {
       title: "FAMILIETRIBUNEN",
@@ -150,19 +150,25 @@ export default function FotballVMJordal() {
                 </p>
 
                 {/* PARTNERE PÅ MOBIL */}
-                <div className="mt-8 flex justify-center md:hidden">
-                  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
-                    <img
-                  src="/media/obos-logo.png"
-                  alt="OBOS"
-                  className="h-6 w-auto object-contain block origin-center scale-150 translate-y-[1px]"
+                {/* PARTNERE PÅ MOBIL */}
+<div className="mt-8 flex justify-center md:hidden">
+  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
+
+
+    <img
+      src="/media/sparebank1-logo2.png"
+      alt="SpareBank 1"
+      className="h-6 w-auto object-contain"
+    />
+     <div className="h-6 w-px bg-black/10" />
+
+    <img
+  src="/media/obos-logo2.png"
+  alt="OBOS"
+  className="h-6 w-auto object-contain"
 />
-                    <div className="h-6 w-px bg-black/10" />
-                    <span className="text-xs font-semibold text-black/70">P2</span>
-                    <div className="h-6 w-px bg-black/10" />
-                    <span className="text-xs font-semibold text-black/70">P3</span>
-                  </div>
-                </div>
+  </div>
+</div>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -259,8 +265,7 @@ export default function FotballVMJordal() {
       rel="noopener noreferrer"
       className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
     >
-      KJØP HER!
-    </a>
+{p.title === "TO KVELDER PÅ VIP RESTAURANT" ? "KONTAKT OSS" : "KJØP HER!"}    </a>
   </div>
 </div>
               </Reveal>
