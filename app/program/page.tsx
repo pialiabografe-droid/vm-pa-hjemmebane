@@ -21,18 +21,13 @@ export default function ProgramPage() {
 
   const matches: Match[] = [
     {
-      slug: "playoff-2-norge",
-      title: "Playoff 2 - Norge",
+      slug: "norge-playoff2",
+      title: "Norge - Playoff 2",
       subtitle: "VM visning på storskjerm",
       ticketUrl: 
       "https://vif-hockey.ticketco.events/no/nb/e/norge__playoff_2/hjemmeside-%20fotballvm",
     },
-    {
-      slug: "nederland-japan",
-      title: "Nederland - Japan",
-      subtitle: "VM visning på storskjerm",
-      ticketUrl: ticketcoUrl,
-    },
+
     {
       slug: "norge-frankrike",
       title: "Norge - Frankrike",
