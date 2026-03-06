@@ -103,8 +103,8 @@ export default function Header() {
                   Billetter
                 </button>
 
-                <Link href="/q&a" className="hover:text-black transition-colors">
-                  Q&amp;A
+                <Link href="/faq" className="hover:text-black transition-colors">
+                  FAQ
                 </Link>
               </nav>
             )}
@@ -199,11 +199,11 @@ export default function Header() {
               </button>
 
               <Link
-                href="/q&a"
+                href="/faq"
                 onClick={() => setMobileOpen(false)}
                 className="hover:opacity-80"
               >
-                Q&amp;A
+                FAQ
               </Link>
 
               <a

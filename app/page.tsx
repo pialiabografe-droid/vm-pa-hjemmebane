@@ -113,7 +113,7 @@ export default function FotballVMJordal() {
     },
   ];
 
-  const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];
+  const practical = [{ title: "FAQ", desc: "Ofte stilte spørsmål." }];
 
   return (
     <div
@@ -170,10 +170,10 @@ export default function FotballVMJordal() {
                 </a>
 
                 <Link
-                  href="/q&a"
+                  href="/faq"
                   className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
                 >
-                  Q&amp;A
+                  FAQ
                 </Link>
               </div>
 
