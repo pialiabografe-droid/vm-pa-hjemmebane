@@ -187,7 +187,7 @@ export default function FotballVMJordal() {
                 />
 
                 <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
-                  Vi viser de beste kampene, og hele sluttspillet gratis! <br /> Uansett vær.
+                  Vi viser de beste kampene, og hele sluttspillet <strong>gratis</strong>! <br /> Uansett vær.
                 </p>
 
                 <div className="mt-8 flex justify-center md:hidden">
@@ -233,7 +233,7 @@ export default function FotballVMJordal() {
           <Reveal>
             <div className="flex items-end justify-between gap-6 flex-wrap">
               <div>
-                <h2 className="text-3xl font-semibold">Biletter og pakker</h2>
+                <h2 className="text-3xl font-semibold">Billetter og pakker</h2>
                 <p className="mt-2 text-sm text-black/60">
                   Kjøp billett allerede nå for å sikre deg plass, fast track og reservert bord <strong>hele</strong> dagen! <br/>
                   Velg område eller bordpakke. Alle kjøp går via TicketCo.
