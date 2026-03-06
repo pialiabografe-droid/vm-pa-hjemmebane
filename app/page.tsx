@@ -266,8 +266,8 @@ export default function FotballVMJordal() {
 
                   <div className="mt-6">
                     <div className="min-h-[18px] text-sm font-semibold text-black/50 leading-none">
-                      {"pricePrefix" in p && p.pricePrefix ? p.pricePrefix : "\u00A0"}
-                    </div>
+  &nbsp;
+</div>
 
                     <div className="mt-1 text-5xl font-semibold tracking-tight text-[#0E2433] leading-none tabular-nums whitespace-nowrap">
                       {p.price}
