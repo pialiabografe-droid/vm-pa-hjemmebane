@@ -139,7 +139,7 @@ export default function FotballVMJordal() {
       />
 
       <img
-        src="/media/hero-desktop.png"
+        src="/media/haaland-hero.png"
         alt="Publikum ser VM på storskjerm"
         className="hidden md:block h-full w-full object-cover"
         onError={() => setBgOk(false)}
