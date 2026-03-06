@@ -116,7 +116,7 @@ export default function OmPage() {
 
               <img
                 src="/media/vif-logo.png"
-                alt="SpareBank 1"
+                alt="Vålerenga"
                 className="h-16 w-auto object-contain"
               />
             </div>
