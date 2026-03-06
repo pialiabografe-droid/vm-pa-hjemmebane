@@ -95,34 +95,61 @@ export default function OmPage() {
         </div>
 
         {/* PARTNERE */}
-        <Reveal delayMs={260}>
-          <div className="mt-24 text-center">
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-12">
-                <img
-                src="/media/sparebank1-logo2.png"
-                alt="SpareBank 1"
-                className="h-10 w-auto object-contain"
-              />
-              <img
-                src="/media/obos-logo2.png"
-                alt="OBOS"
-                className="h-10 w-auto object-contain"
-              />
+<Reveal delayMs={260}>
+  <div className="mt-24 text-center">
+    <div className="mt-10 flex flex-wrap items-center justify-center gap-12">
 
-              <img
-                src="/media/jcp-logo-svart.png"
-                alt="JCP"
-                className="h-16 w-auto object-contain"
-              />
+      <a
+        href="https://www.sparebank1.no/nb/ostlandet/privat.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/media/sparebank1-logo2.png"
+          alt="SpareBank 1"
+          className="h-10 w-auto object-contain hover:opacity-80 transition"
+        />
+      </a>
 
-              <img
-                src="/media/vif-logo.png"
-                alt="Vålerenga Ishockey"
-                className="h-16 w-auto object-contain"
-              />
-            </div>
-          </div>
-        </Reveal>
+      <a
+        href="https://www.obos.no/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/media/obos-logo2.png"
+          alt="OBOS"
+          className="h-10 w-auto object-contain hover:opacity-80 transition"
+        />
+      </a>
+
+      <a
+        href="https://www.jcp.no/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/media/jcp-logo-svart.png"
+          alt="JCP"
+          className="h-16 w-auto object-contain hover:opacity-80 transition"
+        />
+      </a>
+
+      <a
+        href="https://www.vif-hockey.no/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/media/vif-logo.png"
+          alt="Vålerenga Ishockey"
+          className="h-16 w-auto object-contain hover:opacity-80 transition"
+        />
+      </a>
+
+    </div>
+  </div>
+</Reveal>
 
         {/* CTA */}
         <Reveal delayMs={340}>

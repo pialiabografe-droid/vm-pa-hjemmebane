@@ -99,7 +99,7 @@ export default function FotballVMJordal() {
       price: "25 000",
       currency: "NOK",
       unit: "per bord",
-    items: [
+      items: [
         "Bord til Norge - Playoff 2 og Norge - Frankrike",
         "Inngang til VIP-området",
         "Tre drikkeenheter",
@@ -111,7 +111,6 @@ export default function FotballVMJordal() {
       ],
       href: "mailto:daniel@vif-hockey.no?subject=Forespørsel%20VIP-pakke%20Norge-kampene",
     },
-  
   ];
 
   const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];
@@ -124,56 +123,55 @@ export default function FotballVMJordal() {
       <style>{`html { scroll-behavior: smooth; }`}</style>
 
       <main id="top">
-        {/* HERO */}
         <Reveal>
           <section className="relative overflow-hidden">
             <div className="absolute inset-0">
-  {bgOk ? (
-    <>
-      <img
-        src={BG.hero}
-        alt="Publikum ser VM på storskjerm"
-        className="h-full w-full object-cover md:hidden"
-        onError={() => setBgOk(false)}
-      />
+              {bgOk ? (
+                <>
+                  <img
+                    src={BG.hero}
+                    alt="Publikum ser VM på storskjerm"
+                    className="h-full w-full object-cover md:hidden"
+                    onError={() => setBgOk(false)}
+                  />
 
-      <img
-        src="/media/haaland-hero.png"
-        alt="Publikum ser VM på storskjerm"
-        className="hidden md:block h-full w-full object-cover"
-        onError={() => setBgOk(false)}
-      />
-    </>
-  ) : null}
-  <div className="absolute inset-0 bg-black/35" />
-</div>
+                  <img
+                    src="/media/haaland-hero.png"
+                    alt="Publikum ser VM på storskjerm"
+                    className="hidden md:block h-full w-full object-cover"
+                    onError={() => setBgOk(false)}
+                  />
+                </>
+              ) : null}
+              <div className="absolute inset-0 bg-black/35" />
+            </div>
 
-          <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
+            <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
               <div className="hidden md:flex justify-center gap-3">
                 <Link
                   href="/om"
-                  className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+                  className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
                 >
                   Om oss
                 </Link>
 
                 <Link
                   href="/program"
-                  className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+                  className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
                 >
                   Program
                 </Link>
 
                 <a
                   href="#pakker"
-                  className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+                  className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
                 >
                   Billetter
                 </a>
 
                 <Link
                   href="/q&a"
-                  className="px-5 py-2 rounded-full text-sm font-medium text-white border border-white/30 bg-white/10 hover:bg-white/20 transition"
+                  className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
                 >
                   Q&amp;A
                 </Link>
@@ -187,7 +185,7 @@ export default function FotballVMJordal() {
                 />
 
                 <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
-                  Vi viser de beste kampene, og hele sluttspillet <strong>gratis</strong>! <br /> Uansett vær.
+                  Vi viser de beste kampene, og hele sluttspillet. <br /> Uansett vær.
                 </p>
 
                 <div className="mt-8 flex justify-center md:hidden">
@@ -228,15 +226,14 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
-        {/* PAKKER */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pt-16 pb-16">
           <Reveal>
             <div className="flex items-end justify-between gap-6 flex-wrap">
               <div>
                 <h2 className="text-3xl font-semibold">Billetter og pakker</h2>
                 <p className="mt-2 text-sm text-black/60">
-                  Kjøp billett allerede nå for å sikre deg plass, fast track og reservert bord <strong>hele</strong> dagen! <br/>
-                  Velg område eller bordpakke. Alle kjøp går via TicketCo.
+                  Kjøp billett allerede nå for å sikre deg plass, fast track og reservert bord <strong>hele</strong> dagen! <br />
+                  Alle kjøp går via TicketCo.
                 </p>
               </div>
 
@@ -266,8 +263,8 @@ export default function FotballVMJordal() {
 
                   <div className="mt-6">
                     <div className="min-h-[18px] text-sm font-semibold text-black/50 leading-none">
-  &nbsp;
-</div>
+                      &nbsp;
+                    </div>
 
                     <div className="mt-1 text-5xl font-semibold tracking-tight text-[#0E2433] leading-none tabular-nums whitespace-nowrap">
                       {p.price}
@@ -313,7 +310,6 @@ export default function FotballVMJordal() {
           </div>
         </section>
 
-        {/* SALKART */}
         <section className="mx-auto max-w-6xl px-4 pb-12">
           <Reveal>
             <h2 className="text-3xl font-semibold">Salkart</h2>
@@ -330,7 +326,6 @@ export default function FotballVMJordal() {
           </Reveal>
         </section>
 
-        {/* QUICK */}
         <section className="mx-auto max-w-6xl px-4 pt-10 pb-16">
           <div className="mb-10">
             <h2 className="text-3xl font-semibold">Om arrangementet</h2>
@@ -355,7 +350,6 @@ export default function FotballVMJordal() {
           </div>
         </section>
 
-        {/* PRAKTISK */}
         <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-12">
           <Reveal>
             <h2 className="text-3xl font-semibold">Praktisk</h2>
