@@ -48,9 +48,23 @@ export default function FotballVMJordal() {
 
   const packages = [
     {
+      title: "FAMILIETRIBUNEN",
+      subtitle: "Barn i følge med voksen.",
+      price: "99",
+      currency: "NOK",
+      unit: "per person",
+      items: [
+        "Inngang til familieområdet",
+        "Tribune",
+        "Kiosk",
+        "Fast track",
+      ],
+      href: ticketcoUrl,
+    },
+    {
       title: "VOKSEN",
       subtitle: "Aldersgrense 18+.",
-      price: "100",
+      price: "99",
       currency: "NOK",
       unit: "per person",
       items: [
@@ -98,20 +112,7 @@ export default function FotballVMJordal() {
       ],
       href: "mailto:daniel@vif-hockey.no?subject=Forespørsel%20VIP-pakke%20Norge-kampene",
     },
-    {
-      title: "FAMILIETRIBUNEN",
-      subtitle: "Barn i følge med voksen.",
-      price: "100",
-      currency: "NOK",
-      unit: "per person",
-      items: [
-        "Inngang til familieområdet",
-        "Tribune",
-        "Kiosk",
-        "Fast track",
-      ],
-      href: ticketcoUrl,
-    },
+  
   ];
 
   const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];

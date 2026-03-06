@@ -97,6 +97,11 @@ export default function OmPage() {
         <Reveal delayMs={260}>
           <div className="mt-24 text-center">
             <div className="mt-10 flex flex-wrap items-center justify-center gap-12">
+                <img
+                src="/media/sparebank1-logo2.png"
+                alt="SpareBank 1"
+                className="h-10 w-auto object-contain"
+              />
               <img
                 src="/media/obos-logo2.png"
                 alt="OBOS"
@@ -110,9 +115,9 @@ export default function OmPage() {
               />
 
               <img
-                src="/media/sparebank1-logo2.png"
+                src="/media/vif-logo.png"
                 alt="SpareBank 1"
-                className="h-10 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </div>
           </div>
