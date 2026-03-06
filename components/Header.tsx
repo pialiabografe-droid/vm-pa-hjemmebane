@@ -54,9 +54,14 @@ export default function Header() {
           <div className="flex items-center">
             <Link
               href="/"
-              className="font-semibold text-lg hover:opacity-75 transition-opacity"
+              className="hover:opacity-75 transition-opacity"
+              aria-label="Fotball på Jordal"
             >
-              FOTBALL PÅ JORDAL
+              <img
+                src="/media/fotball-pa-jordal-logo.png"
+                alt="Fotball på Jordal"
+                className="block w-[100px] h-auto"
+              />
             </Link>
           </div>
 
@@ -136,18 +141,23 @@ export default function Header() {
         </div>
 
         {/* MOBILE */}
-        <div className="md:hidden flex items-center justify-between">
+        <div className="md:hidden flex items-center justify-between gap-3">
           <Link
             href="/"
-            className="font-semibold text-lg"
+            className="flex items-center"
             onClick={() => setMobileOpen(false)}
+            aria-label="Fotball på Jordal"
           >
-            FOTBALL PÅ JORDAL
+            <img
+              src="/media/fotball-pa-jordal-logo.png"
+              alt="Fotball på Jordal"
+              className="block w-[90px] h-auto"
+            />
           </Link>
 
           <button
             type="button"
-            className="h-10 w-10 border border-black/10 rounded-xl bg-white"
+            className="h-10 w-10 shrink-0 border border-black/10 rounded-xl bg-white"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Åpne meny"
             aria-expanded={mobileOpen}

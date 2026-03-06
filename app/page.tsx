@@ -47,14 +47,20 @@ export default function FotballVMJordal() {
   ];
 
   const packages = [
-
-  {
+    {
       title: "VOKSEN",
       subtitle: "Aldersgrense 18+.",
       price: "100",
       currency: "NOK",
       unit: "per person",
-      items: ["Inngang til 18+ området", "Tribune", "Bar", "Serveringstilbud", "Kiosk", "Fast track",],
+      items: [
+        "Inngang til 18+ området",
+        "Tribune",
+        "Bar",
+        "Serveringstilbud",
+        "Kiosk",
+        "Fast track",
+      ],
       href: ticketcoUrl,
     },
     {
@@ -63,7 +69,14 @@ export default function FotballVMJordal() {
       price: "1 499",
       currency: "NOK",
       unit: "per bord",
-      items: ["Reservert langbord", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
+      items: [
+        "Reservert langbord",
+        "Nærmest skjermen",
+        "Bar",
+        "Serveringstilbud",
+        "Kiosk",
+        "Fast track",
+      ],
       href: ticketcoUrl,
     },
     {
@@ -73,8 +86,17 @@ export default function FotballVMJordal() {
       currency: "NOK",
       unit: "per bord",
       pricePrefix: "Fra",
-      items: ["Bord til Norge - Playoff 2 og Norge - Frankrike", "Inngang til VIP-området", "Tre drikkeenheter", "Middag og dessert", "Egen VIP-bar", "Underholdning", "Oppsnakk før kamp", "Fast track"],
-     href: "mailto:daniel@vif-hockey.no?subject=Forespørsel%20VIP-pakke%20Norge-kampene",
+      items: [
+        "Bord til Norge - Playoff 2 og Norge - Frankrike",
+        "Inngang til VIP-området",
+        "Tre drikkeenheter",
+        "Middag og dessert",
+        "Egen VIP-bar",
+        "Underholdning",
+        "Oppsnakk før kamp",
+        "Fast track",
+      ],
+      href: "mailto:daniel@vif-hockey.no?subject=Forespørsel%20VIP-pakke%20Norge-kampene",
     },
     {
       title: "FAMILIETRIBUNEN",
@@ -82,16 +104,23 @@ export default function FotballVMJordal() {
       price: "100",
       currency: "NOK",
       unit: "per person",
-      items: ["Inngang til familieområdet", "Tribune", "Kiosk", "Fast track"],
+      items: [
+        "Inngang til familieområdet",
+        "Tribune",
+        "Kiosk",
+        "Fast track",
+      ],
       href: ticketcoUrl,
     },
-
   ];
 
   const practical = [{ title: "Q&A", desc: "Ofte stilte spørsmål." }];
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: palette.page, color: palette.text }}>
+    <div
+      className="min-h-screen"
+      style={{ backgroundColor: palette.page, color: palette.text }}
+    >
       <style>{`html { scroll-behavior: smooth; }`}</style>
 
       <main id="top">
@@ -111,7 +140,6 @@ export default function FotballVMJordal() {
             </div>
 
             <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
-              {/* DESKTOP MENY OVER HERO */}
               <div className="hidden md:flex justify-center gap-3">
                 <Link
                   href="/om"
@@ -143,32 +171,31 @@ export default function FotballVMJordal() {
               </div>
 
               <div className="mt-10 text-center md:mt-12">
-                <h1 className="text-4xl md:text-6xl font-semibold text-white tracking-tight">FOTBALL PÅ JORDAL</h1>
+                <img
+                  src="/media/fotball-pa-jordal-logo-h.png"
+                  alt="Fotball på Jordal"
+                  className="mx-auto w-[260px] md:w-[420px] h-auto"
+                />
 
-                <p className="mt-6 text-base md:text-lg text-white/90">
+                <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
                   De beste kampene, og hele sluttspillet. <br /> Uansett vær.
                 </p>
 
-                {/* PARTNERE PÅ MOBIL */}
-                {/* PARTNERE PÅ MOBIL */}
-<div className="mt-8 flex justify-center md:hidden">
-  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
-
-
-    <img
-      src="/media/sparebank1-logo2.png"
-      alt="SpareBank 1"
-      className="h-6 w-auto object-contain"
-    />
-     <div className="h-6 w-px bg-black/10" />
-
-    <img
-  src="/media/obos-logo2.png"
-  alt="OBOS"
-  className="h-6 w-auto object-contain"
-/>
-  </div>
-</div>
+                <div className="mt-8 flex justify-center md:hidden">
+                  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
+                    <img
+                      src="/media/sparebank1-logo2.png"
+                      alt="SpareBank 1"
+                      className="h-6 w-auto object-contain"
+                    />
+                    <div className="h-6 w-px bg-black/10" />
+                    <img
+                      src="/media/obos-logo2.png"
+                      alt="OBOS"
+                      className="h-6 w-auto object-contain"
+                    />
+                  </div>
+                </div>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -193,11 +220,14 @@ export default function FotballVMJordal() {
         </Reveal>
 
         {/* PAKKER */}
-          <section id="pakker" className="mx-auto max-w-6xl px-4 pt-16 pb-16">          <Reveal>
+        <section id="pakker" className="mx-auto max-w-6xl px-4 pt-16 pb-16">
+          <Reveal>
             <div className="flex items-end justify-between gap-6 flex-wrap">
               <div>
                 <h2 className="text-3xl font-semibold">Biletter og pakker</h2>
-                <p className="mt-2 text-sm text-black/60">Velg område eller bordpakke. Alle kjøp går via TicketCo.</p>
+                <p className="mt-2 text-sm text-black/60">
+                  Velg område eller bordpakke. Alle kjøp går via TicketCo.
+                </p>
               </div>
 
               <a
@@ -214,106 +244,106 @@ export default function FotballVMJordal() {
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {packages.map((p, i) => (
               <Reveal key={p.title} delayMs={i * 110}>
-              <div className="rounded-3xl bg-white border border-black/10 p-8 flex flex-col h-full">
-  {/* Fast høyde topp (litt mindre) */}
-  <div className="min-h-[96px]">
-    <div className="text-sm font-semibold tracking-wide text-[#1A2238]">{p.title}</div>
-    <div className="mt-1 text-sm text-black/60 leading-relaxed">{p.subtitle}</div>
-  </div>
+                <div className="rounded-3xl bg-white border border-black/10 p-8 flex flex-col h-full">
+                  <div className="min-h-[96px]">
+                    <div className="text-sm font-semibold tracking-wide text-[#1A2238]">
+                      {p.title}
+                    </div>
+                    <div className="mt-1 text-sm text-black/60 leading-relaxed">
+                      {p.subtitle}
+                    </div>
+                  </div>
 
-  {/* Pris (mindre toppmargin) */}
-  <div className="mt-6">
-    {/* Prefix (Fra) – behold fast høyde, men litt strammere */}
-    <div className="min-h-[18px] text-sm font-semibold text-black/50 leading-none">
-      {p.pricePrefix ? p.pricePrefix : "\u00A0"}
-    </div>
+                  <div className="mt-6">
+                    <div className="min-h-[18px] text-sm font-semibold text-black/50 leading-none">
+                      {"pricePrefix" in p && p.pricePrefix ? p.pricePrefix : "\u00A0"}
+                    </div>
 
-    {/* Selve summen */}
-    <div className="mt-1 text-5xl font-semibold tracking-tight text-[#0E2433] leading-none tabular-nums whitespace-nowrap">
-      {p.price}
-    </div>
+                    <div className="mt-1 text-5xl font-semibold tracking-tight text-[#0E2433] leading-none tabular-nums whitespace-nowrap">
+                      {p.price}
+                    </div>
 
-    {/* NOK stor + per enhet liten */}
-    <div className="mt-0.5 flex items-end justify-between">
-      <span className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none">
-        {p.currency}
-      </span>
+                    <div className="mt-0.5 flex items-end justify-between">
+                      <span className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none">
+                        {p.currency}
+                      </span>
 
-      <span className="text-sm text-black/60 pb-1">
-        {p.unit}
-      </span>
-    </div>
+                      <span className="text-sm text-black/60 pb-1">
+                        {p.unit}
+                      </span>
+                    </div>
 
-    <div className="mt-5 h-px bg-black/10" />
-  </div>
+                    <div className="mt-5 h-px bg-black/10" />
+                  </div>
 
-  {/* Bullets */}
-  <div className="mt-6 space-y-4">
-    {p.items.map((it) => (
-      <div key={it} className="flex items-start gap-4">
-        <span className="mt-1 h-6 w-6 rounded-full bg-[#044EA2] shrink-0" />
-        <div className="text-sm text-black/70">{it}</div>
-      </div>
-    ))}
-  </div>
+                  <div className="mt-6 space-y-4">
+                    {p.items.map((it) => (
+                      <div key={it} className="flex items-start gap-4">
+                        <span className="mt-1 h-6 w-6 rounded-full bg-[#044EA2] shrink-0" />
+                        <div className="text-sm text-black/70">{it}</div>
+                      </div>
+                    ))}
+                  </div>
 
-  {/* Knapp alltid nederst */}
-  <div className="mt-auto pt-8">
-    <a
-      href={p.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
-    >
-{p.title === "TO KVELDER PÅ VIP RESTAURANT" ? "KONTAKT OSS" : "KJØP HER!"}    </a>
-  </div>
-</div>
+                  <div className="mt-auto pt-8">
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
+                    >
+                      {p.title === "TO KVELDER PÅ VIP RESTAURANT"
+                        ? "KONTAKT OSS"
+                        : "KJØP HER!"}
+                    </a>
+                  </div>
+                </div>
               </Reveal>
             ))}
           </div>
         </section>
 
-{/* SALKART */}
-<section className="mx-auto max-w-6xl px-4 pb-12">
-  <Reveal>
-    <h2 className="text-3xl font-semibold">Salkart</h2>
-  </Reveal>
+        {/* SALKART */}
+        <section className="mx-auto max-w-6xl px-4 pb-12">
+          <Reveal>
+            <h2 className="text-3xl font-semibold">Salkart</h2>
+          </Reveal>
 
-  <Reveal delayMs={120}>
-    <div className="mt-8 max-w-3xl rounded-3xl overflow-hidden border border-black/10 bg-white">
-      <img
-        src="/media/salkart-med-tribune3.png"
-        alt="Salkart Jordal"
-        className="w-full h-auto object-contain block"
-      />
-    </div>
-  </Reveal>
-</section>
+          <Reveal delayMs={120}>
+            <div className="mt-8 max-w-3xl rounded-3xl overflow-hidden border border-black/10 bg-white">
+              <img
+                src="/media/salkart-med-tribune3.png"
+                alt="Salkart Jordal"
+                className="w-full h-auto object-contain block"
+              />
+            </div>
+          </Reveal>
+        </section>
 
-
-       {/* QUICK */}
-<section className="mx-auto max-w-6xl px-4 pt-10 pb-16">
-  <div className="mb-10">
-    <h2 className="text-3xl font-semibold">Om arrangementet</h2>
-  </div>
-
-  <div className="grid md:grid-cols-3 gap-6 items-stretch">
-    {quick.map((q, i) => (
-      <Reveal key={q.title} delayMs={i * 90}>
-        <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
-          <div className="min-h-[56px]">
-            <div className="text-lg font-semibold leading-snug">{q.title}</div>
+        {/* QUICK */}
+        <section className="mx-auto max-w-6xl px-4 pt-10 pb-16">
+          <div className="mb-10">
+            <h2 className="text-3xl font-semibold">Om arrangementet</h2>
           </div>
 
-          <div className="mt-3 text-sm text-black/70 leading-relaxed">
-            {q.desc}
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
+            {quick.map((q, i) => (
+              <Reveal key={q.title} delayMs={i * 90}>
+                <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
+                  <div className="min-h-[56px]">
+                    <div className="text-lg font-semibold leading-snug">
+                      {q.title}
+                    </div>
+                  </div>
+
+                  <div className="mt-3 text-sm text-black/70 leading-relaxed">
+                    {q.desc}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </div>
-      </Reveal>
-    ))}
-  </div>
-</section>
-    
+        </section>
 
         {/* PRAKTISK */}
         <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-12">
@@ -326,7 +356,9 @@ export default function FotballVMJordal() {
               <Reveal key={f.title} delayMs={i * 120}>
                 <div className="rounded-3xl p-8 bg-white border border-black/10">
                   <div className="font-semibold">{f.title}</div>
-                  <div className="mt-2 text-sm text-black/70 leading-relaxed">{f.desc}</div>
+                  <div className="mt-2 text-sm text-black/70 leading-relaxed">
+                    {f.desc}
+                  </div>
                 </div>
               </Reveal>
             ))}
