@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const ticketcoUrl =
-  "https://testestsetset.ticketco.events/no/nb/events/1069019/sections/672328?";
+  "https://vif-hockey.ticketco.shop/?tag=fotballVM";
 
 const ticketsSectionId = "pakker";
 

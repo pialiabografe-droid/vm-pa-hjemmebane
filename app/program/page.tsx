@@ -17,18 +17,19 @@ export default function ProgramPage() {
   } as const;
 
   const ticketcoUrl =
-    "https://testestsetset.ticketco.events/no/nb/events/1069019/sections/672328?";
+    "https://vif-hockey.ticketco.shop/?tag=fotballVM";
 
   const matches: Match[] = [
     {
       slug: "playoff-2-norge",
       title: "Playoff 2 - Norge",
       subtitle: "VM visning på storskjerm",
-      ticketUrl: ticketcoUrl,
+      ticketUrl: 
+      "https://vif-hockey.ticketco.events/no/nb/e/norge__playoff_2/hjemmeside-%20fotballvm",
     },
     {
-      slug: "england-panama",
-      title: "England - Panama",
+      slug: "nederland-japan",
+      title: "Nederland - Japan",
       subtitle: "VM visning på storskjerm",
       ticketUrl: ticketcoUrl,
     },
@@ -36,7 +37,8 @@ export default function ProgramPage() {
       slug: "norge-frankrike",
       title: "Norge - Frankrike",
       subtitle: "VM visning på storskjerm",
-      ticketUrl: ticketcoUrl,
+      ticketUrl: 
+      "https://vif-hockey.ticketco.events/no/nb/e/fotball_paa_jordal/hjemmeside-%20",
     },
   ];
 
@@ -56,7 +58,7 @@ export default function ProgramPage() {
               Velg kamp
             </h1>
             <p className="mt-3 text-black/70">
-              Trykk på kampen du vil se, så går du rett til billett.
+              Velg en kamp, eller gå til hele kampoversikten i TicketCo.
             </p>
           </div>
 
@@ -116,15 +118,16 @@ export default function ProgramPage() {
               <div className="mt-2 text-sm text-black/70">{more.subtitle}</div>
             )}
 
-            <div className="mt-6">
-              <Link
-                href={more.href as string}
-                className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
-                style={{ backgroundColor: VIF.blue }}
-              >
-                Kampoversikt
-              </Link>
-            </div>
+        <div className="mt-6">
+  <Link
+    href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
+    target="_blank"
+    className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
+    style={{ backgroundColor: VIF.blue }}
+  >
+    Kampoversikt
+  </Link>
+</div>
           </section>
         </div>
       </main>

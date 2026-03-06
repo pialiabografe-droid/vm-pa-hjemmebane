@@ -20,7 +20,7 @@ export default function FotballVMJordal() {
   } as const;
 
   const ticketcoUrl =
-    "https://testestsetset.ticketco.events/no/nb/events/1069019/sections/672328?";
+    "https://vif-hockey.ticketco.shop/?tag=fotballVM";
 
   const quick = [
     {
@@ -129,18 +129,27 @@ export default function FotballVMJordal() {
         <Reveal>
           <section className="relative overflow-hidden">
             <div className="absolute inset-0">
-              {bgOk ? (
-                <img
-                  src={BG.hero}
-                  alt="Publikum ser VM på storskjerm"
-                  className="h-full w-full object-cover"
-                  onError={() => setBgOk(false)}
-                />
-              ) : null}
-              <div className="absolute inset-0 bg-black/35" />
-            </div>
+  {bgOk ? (
+    <>
+      <img
+        src={BG.hero}
+        alt="Publikum ser VM på storskjerm"
+        className="h-full w-full object-cover md:hidden"
+        onError={() => setBgOk(false)}
+      />
 
-            <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
+      <img
+        src="/media/hero-desktop.png"
+        alt="Publikum ser VM på storskjerm"
+        className="hidden md:block h-full w-full object-cover"
+        onError={() => setBgOk(false)}
+      />
+    </>
+  ) : null}
+  <div className="absolute inset-0 bg-black/35" />
+</div>
+
+          <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
               <div className="hidden md:flex justify-center gap-3">
                 <Link
                   href="/om"
