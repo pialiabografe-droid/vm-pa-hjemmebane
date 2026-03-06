@@ -99,8 +99,7 @@ export default function FotballVMJordal() {
       price: "25 000",
       currency: "NOK",
       unit: "per bord",
-      pricePrefix: "Fra",
-      items: [
+    items: [
         "Bord til Norge - Playoff 2 og Norge - Frankrike",
         "Inngang til VIP-området",
         "Tre drikkeenheter",
