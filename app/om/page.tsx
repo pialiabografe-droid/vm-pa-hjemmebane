@@ -109,9 +109,9 @@ export default function OmPage() {
               />
 
               <img
-                src="/media/jcp-logo.png"
+                src="/media/jcp-logo-svart.png"
                 alt="JCP"
-                className="h-10 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
 
               <img
