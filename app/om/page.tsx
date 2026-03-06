@@ -17,6 +17,7 @@ export default function OmPage() {
           <Reveal>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight">
               VM på Jordal – gratis møteplass på Oslo øst
+
             </h1>
           </Reveal>
 
@@ -116,7 +117,7 @@ export default function OmPage() {
 
               <img
                 src="/media/vif-logo.png"
-                alt="Vålerenga"
+                alt="Vålerenga Ishockey"
                 className="h-16 w-auto object-contain"
               />
             </div>
