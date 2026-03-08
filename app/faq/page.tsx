@@ -120,7 +120,7 @@ export default function QaPage() {
 
             <p className="mt-3 text-black/70 max-w-2xl">
               Her finner du svar på vanlige spørsmål om Fotball VM på Jordal.
-              Finner du ikke det du lurer på, er du velkommen til å ta kontakt.
+              Finner du ikke svar på det du lurer på, er du velkommen til å ta kontakt.
             </p>
           </div>
 
