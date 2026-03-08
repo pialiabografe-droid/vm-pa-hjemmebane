@@ -190,30 +190,25 @@ export default function FotballVMJordal() {
                 </p>
 
                 {/* Sponsor logos mobil */}
-                <div className="mt-8 flex justify-center md:hidden">
-                  <div className="flex items-center gap-5 bg-white border border-black/10 rounded-3xl px-6 py-3 shadow-md">
-                    <img
-                      src="/media/vif-logo.png"
-                      alt="VIF"
-                      className="h-6 w-auto object-contain"
-                    />
-                    <img
-                      src="/media/sparebank1-logo2.png"
-                      alt="SpareBank 1"
-                      className="h-4 w-auto object-contain"
-                    />
-                    <img
-                      src="/media/obos-logo2.png"
-                      alt="OBOS"
-                      className="h-4 w-auto object-contain"
-                    />
-                    <img
-                      src="/media/jcp-logo-svart.png"
-                      alt="JCP"
-                      className="h-6 w-auto object-contain"
-                    />
-                  </div>
-                </div>
+<div className="mt-8 flex justify-center md:hidden">
+  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
+    
+    <img
+      src="/media/sparebank1-logo2.png"
+      alt="SpareBank 1"
+      className="h-6 w-auto object-contain"
+    />
+
+    <div className="h-6 w-px bg-black/10" />
+
+    <img
+      src="/media/obos-logo2.png"
+      alt="OBOS"
+      className="h-6 w-auto object-contain"
+    />
+
+  </div>
+</div>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                   <a

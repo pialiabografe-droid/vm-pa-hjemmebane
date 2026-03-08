@@ -16,7 +16,7 @@ export default function OmPage() {
 
           <Reveal>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight">
-              VM på Jordal – gratis møteplass på Oslo øst
+              VM på hjemmebane – møteplass på Oslo øst
 
             </h1>
           </Reveal>
@@ -35,17 +35,6 @@ export default function OmPage() {
                 eventpartner. Målet er å skape en inkluderende møteplass på Oslo
                 øst – et sted der folk kan møtes, ta med venner og dele kampene i
                 fellesskap.
-              </p>
-
-              <p className="font-semibold text-[#1A2238]">
-                Gratis inngang – med mulighet for plassgaranti
-              </p>
-
-              <p>
-                Det er gratis å komme inn, så lenge det er kapasitet. Hvis du vil
-                være sikker på å få plass, kan du kjøpe plassgaranti-billett. Har
-                du først kommet inn, kan du bli værende – du blir ikke kastet ut
-                mellom kampene.
               </p>
 
               <p className="font-semibold text-[#1A2238]">
