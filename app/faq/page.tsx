@@ -2,7 +2,7 @@ import Link from "next/link";
 
 type QAItem = {
   q: string;
-  a: string;
+  a: React.ReactNode;
 };
 
 export default function QaPage() {
@@ -13,20 +13,99 @@ export default function QaPage() {
 
   const items: QAItem[] = [
     {
-      q: "Hvor er arrangementet?",
-      a: "Jordal Amfi, Oslo. Se «Sted» på forsiden for kartlenker.",
+      q: "Hvor foregår arrangementet, og hvordan kommer man seg dit?",
+      a: (
+        <>
+          Arrangementet finner sted på Jordal Amfi, Jordalgata 12 i Oslo. Den
+          enkleste måten å komme seg dit på er med T-bane til Ensjø stasjon, som
+          ligger omtrent fem minutters gange fra arenaen. Du kan ta linje 1, 2,
+          3, 4 eller 5. Buss 20 og 37 stopper også i nærheten. Vi anbefaler
+          kollektivtransport, da det er begrenset med parkering i området. Det
+          finnes også sykkelstativer i nærheten.
+        </>
+      ),
     },
     {
-      q: "Må jeg kjøpe billett?",
-      a: "Ja, du kjøper billett via TicketCo. Velg kamp på programsiden eller via «Program»-dropdownen på forsiden.",
+      q: "Hva er åpningstidene, og når bør jeg møte opp før kampstart?",
+      a: (
+        <>
+          Tidspunkt og inngang varierer etter billettype og kampstart. Du får
+          praktisk informasjon før arrangementet, men vanlig inngangstid er
+          to timer før kampstart.
+        </>
+      ),
     },
     {
-      q: "Hva om det regner?",
-      a: "Jordal Amfi er en arena som gjør opplevelsen bra uansett vær.",
+      q: "Er det aldersgrense på arrangementet?",
+      a: (
+        <>
+          Arrangementet på Jordal Amfi har 18-årsgrense, med unntak av
+          familietribunen, som er et avgrenset område for barn og ungdom. Barn under 12 år i følge
+          med voksen.
+        </>
+      ),
+    },
+   {
+  q: "Må jeg bestille billett på forhånd?",
+  a: (
+    <>
+      Du kan sikre deg tribuneplass til 99 kr eller reservere bord på forhånd. 
+      Billetter kan også kjøpes i inngangen dersom det fortsatt er ledig kapasitet.
+    </>
+  ),
+},
+    {
+      q: "Hvilke kamper vises på Jordal?",
+      a: (
+        <>
+          På Jordal Amfi blir det totalt 18 dager med VM-feber. Vi viser Norges
+          to beste gruppespillkamper, flere 16-delsfinaler og resten av
+          sluttspillet.{" "}
+          <a
+            href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
+            target="_blank"
+            className="underline"
+          >
+            Se hele programmet her
+          </a>
+          .
+        </>
+      ),
     },
     {
-      q: "Kan jeg kjøpe bordpakke / losje?",
-      a: "Ja, se «Bordpakker» på forsiden. Ta kontakt om du trenger hjelp.",
+      q: "Hva er forskjellen på tribuneplass, Fast Track, premium bord og VIP-resturanten?",
+      a: (
+        <>
+          Alle forhåndsbestilte billetter inkluderer Fast Track og tilgang til mat- og drikkeservering. På familietribunen serveres det ikke alkohol. Se billettinformasjonen for den enkelte kamp for detaljer om inngang og praktisk informasjon.
+        </>
+      ),
+    },
+    {
+      q: "Er området tilrettelagt for rullestolbrukere?",
+      a: (
+        <>
+          Jordal Amfi er en toppmoderne arena som sto ferdig i 2020 og er
+          tilrettelagt for rullestolbrukere.
+        </>
+      ),
+    },
+    {
+      q: "Vil det være mat og drikke tilgjengelig på området?",
+      a: (
+        <>
+          Det vil være servering av drikke både med og uten alkohol, samt
+          mulighet for å kjøpe mat på området. På familietribunen sereves det ikke alkohol.
+        </>
+      ),
+    },
+    {
+      q: "Når får jeg billetten min?",
+      a: (
+        <>
+          Billetten din blir sendt så
+          fort bestillingen er gjennomført i TicketCo. 
+        </>
+      ),
     },
   ];
 
@@ -35,14 +114,13 @@ export default function QaPage() {
       <main className="mx-auto max-w-6xl px-4 py-16">
         <div className="flex items-start justify-between gap-6 flex-wrap">
           <div>
-            
-
             <h1 className="mt-5 text-4xl md:text-5xl font-semibold">
               Ofte stilte spørsmål
             </h1>
 
             <p className="mt-3 text-black/70 max-w-2xl">
-              Her finner du raske svar. Om du ikke finner svar på det du lurer på, ta kontakt.
+              Her finner du svar på vanlige spørsmål om Fotball VM på Jordal.
+              Finner du ikke det du lurer på, er du velkommen til å ta kontakt.
             </p>
           </div>
 
@@ -56,7 +134,10 @@ export default function QaPage() {
 
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           {items.map((it) => (
-            <div key={it.q} className="rounded-3xl p-8 bg-white border border-black/10">
+            <div
+              key={String(it.q)}
+              className="rounded-3xl p-8 bg-white border border-black/10"
+            >
               <div className="text-lg font-semibold">{it.q}</div>
               <div className="mt-3 text-sm text-black/70">{it.a}</div>
             </div>

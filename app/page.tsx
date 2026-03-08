@@ -49,7 +49,7 @@ export default function FotballVMJordal() {
   const packages = [
     {
       title: "FAMILIETRIBUNEN",
-      subtitle: "Barn i følge med voksen.",
+      subtitle: "Fri aldersgrense. Barn under 12 år i følge med voksen.",
       price: "99",
       currency: "NOK",
       unit: "per person",
@@ -150,28 +150,28 @@ export default function FotballVMJordal() {
               <div className="hidden md:flex justify-center gap-3">
                 <Link
                   href="/om"
-                  className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
+                  className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
                 >
                   Om oss
                 </Link>
 
                 <Link
                   href="/program"
-                  className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
+                  className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
                 >
                   Program
                 </Link>
 
                 <a
                   href="#pakker"
-                  className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
+                  className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
                 >
                   Billetter
                 </a>
 
                 <Link
                   href="/faq"
-                  className="px-5 py-2 rounded-full text-sm font-medium bg-white text-[#1A2238] border border-white shadow-md hover:bg-white/90 transition"
+                  className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
                 >
                   FAQ
                 </Link>
@@ -185,20 +185,31 @@ export default function FotballVMJordal() {
                 />
 
                 <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
-                  Vi viser de beste kampene, og hele sluttspillet. <br /> Uansett vær.
+                  Vi viser de beste kampene, og hele sluttspillet. <br />
+                  Uansett vær.
                 </p>
 
+                {/* Sponsor logos mobil */}
                 <div className="mt-8 flex justify-center md:hidden">
-                  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
+                  <div className="flex items-center gap-5 bg-white border border-black/10 rounded-3xl px-6 py-3 shadow-md">
+                    <img
+                      src="/media/vif-logo.png"
+                      alt="VIF"
+                      className="h-6 w-auto object-contain"
+                    />
                     <img
                       src="/media/sparebank1-logo2.png"
                       alt="SpareBank 1"
-                      className="h-6 w-auto object-contain"
+                      className="h-4 w-auto object-contain"
                     />
-                    <div className="h-6 w-px bg-black/10" />
                     <img
                       src="/media/obos-logo2.png"
                       alt="OBOS"
+                      className="h-4 w-auto object-contain"
+                    />
+                    <img
+                      src="/media/jcp-logo-svart.png"
+                      alt="JCP"
                       className="h-6 w-auto object-contain"
                     />
                   </div>
@@ -232,7 +243,8 @@ export default function FotballVMJordal() {
               <div>
                 <h2 className="text-3xl font-semibold">Billetter og pakker</h2>
                 <p className="mt-2 text-sm text-black/60">
-                  Kjøp billett allerede nå for å sikre deg plass, fast track og reservert bord <strong>hele</strong> dagen! <br />
+                  Kjøp billett allerede nå for å sikre deg plass, fast track og
+                  reservert bord <strong>hele</strong> dagen! <br />
                   Alle kjøp går via TicketCo.
                 </p>
               </div>
