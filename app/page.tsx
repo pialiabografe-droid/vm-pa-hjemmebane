@@ -16,7 +16,7 @@ export default function FotballVMJordal() {
   );
 
   const BG = {
-    hero: "/media/vm-jordal.jpeg",
+    hero: "/media/hero-med-lys.png",
   } as const;
 
   const ticketcoUrl =
@@ -136,9 +136,9 @@ export default function FotballVMJordal() {
                   />
 
                   <img
-                    src="/media/ny-jordal-hero.png"
+                    src="/media/hero-med-lys.png"
                     alt="Publikum ser VM på storskjerm"
-                    className="hidden md:block h-full w-full object-cover"
+                    className="hidden md:block h-full w-full object-cover object-[center_30%]"
                     onError={() => setBgOk(false)}
                   />
                 </>
