@@ -146,6 +146,7 @@ export default function FotballVMJordal() {
               <div className="absolute inset-0 bg-black/35" />
             </div>
 
+
             <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
               <div className="hidden md:flex justify-center gap-3">
                 <Link
@@ -183,6 +184,12 @@ export default function FotballVMJordal() {
                   alt="Fotball på Jordal"
                   className="mx-auto w-[260px] md:w-[420px] h-auto"
                 />
+
+                <img
+  src="/media/vif-logo.png"
+  alt="Vålerenga Ishockey"
+  className="mx-auto mt-4 w-[60px] md:w-[80px] h-auto"
+/>
 
                 <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
                   Vi viser de beste kampene, og hele sluttspillet. <br />
