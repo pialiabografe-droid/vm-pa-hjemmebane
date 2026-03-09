@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ReactNode } from "react";
+import Reveal from "../../components/Reveal";
 
 type Match = {
   slug: string;
@@ -134,147 +135,155 @@ export default function ProgramPage() {
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
       <main className="mx-auto max-w-6xl px-4 py-16">
-        <div className="flex items-start justify-between gap-6 flex-wrap">
-          <div className="max-w-3xl">
-            <h1 className="mt-5 text-4xl md:text-5xl font-semibold">
-              Velg kamp
-            </h1>
-            <p className="mt-3 text-black/70">
-              Vi viser utvalgte toppkamper og hele sluttspillet, og programmet
-              oppdateres løpende. Følg med for flere kampdager og nye oppsett.
-            </p>
-          </div>
+        <Reveal>
+          <div className="flex items-start justify-between gap-6 flex-wrap">
+            <div className="max-w-3xl">
+              <h1 className="mt-5 text-4xl md:text-5xl font-semibold">
+                Velg kamp
+              </h1>
+              <p className="mt-3 text-black/70">
+                Vi viser utvalgte toppkamper og hele sluttspillet, og programmet
+                oppdateres løpende. Følg med for flere kampdager og nye oppsett.
+              </p>
+            </div>
 
-          <Link
-            href="/"
-            className="px-5 py-3 rounded-2xl bg-white border border-black/10 text-sm"
-          >
-            Tilbake til forsiden
-          </Link>
-        </div>
+            <Link
+              href="/"
+              className="px-5 py-3 rounded-2xl bg-white border border-black/10 text-sm"
+            >
+              Tilbake til forsiden
+            </Link>
+          </div>
+        </Reveal>
 
         <div className="mt-10">
           {/* Mobil */}
           <div className="md:hidden space-y-4">
-            {matches.map((m) => (
-              <section
-                key={m.slug}
-                className="rounded-2xl p-5 bg-white border border-black/10"
-              >
-                <div className="text-base font-semibold">{m.title}</div>
+            {matches.map((m, i) => (
+              <Reveal key={m.slug} delayMs={i * 90}>
+                <section className="rounded-2xl p-5 bg-white border border-black/10">
+                  <div className="text-base font-semibold">{m.title}</div>
 
-                {m.subtitle && (
-                  <div className="mt-3 text-sm text-black/70">
-                    {m.subtitle}
+                  {m.subtitle && (
+                    <div className="mt-3 text-sm text-black/70">
+                      {m.subtitle}
+                    </div>
+                  )}
+
+                  <div className="mt-4">
+                    <a
+                      href={m.ticketUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full text-center px-4 py-3 rounded-2xl font-semibold text-white inline-block"
+                      style={{ backgroundColor: VIF.blue }}
+                    >
+                      Kjøp billett
+                    </a>
+                  </div>
+                </section>
+              </Reveal>
+            ))}
+
+            <Reveal delayMs={120}>
+              <section className="rounded-2xl p-5 bg-white border border-black/10">
+                <div className="text-base font-semibold">Øvrig program</div>
+                <div className="mt-2 text-sm text-black/70 leading-relaxed">
+                  Kom tidlig og få med deg mer enn selve kampen. Gratis
+                  aktiviteter, underholdning før avspark og uteservering når
+                  været tillater det. Opplevelser for både store og små! Se
+                  billettsiden for hver kamp for detaljer og tidspunkt.
+                </div>
+              </section>
+            </Reveal>
+
+            <Reveal delayMs={180}>
+              <section className="rounded-2xl p-5 bg-white border border-black/10">
+                <div className="text-base font-semibold">{more.title}</div>
+
+                {more.subtitle && (
+                  <div className="mt-2 text-sm text-black/70">
+                    {more.subtitle}
                   </div>
                 )}
 
                 <div className="mt-4">
-                  <a
-                    href={m.ticketUrl}
+                  <Link
+                    href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
                     target="_blank"
-                    rel="noopener noreferrer"
                     className="w-full text-center px-4 py-3 rounded-2xl font-semibold text-white inline-block"
                     style={{ backgroundColor: VIF.blue }}
                   >
-                    Kjøp billett
-                  </a>
+                    Kampoversikt
+                  </Link>
                 </div>
               </section>
-            ))}
-
-            <section className="rounded-2xl p-5 bg-white border border-black/10">
-              <div className="text-base font-semibold">Øvrig program</div>
-              <div className="mt-2 text-sm text-black/70 leading-relaxed">
-                Kom tidlig og få med deg mer enn selve kampen. Gratis aktiviteter,
-                underholdning før avspark og uteservering når været tillater det.
-                Opplevelser for både store og små! Se billettsiden for hver kamp
-                for detaljer og tidspunkt.
-              </div>
-            </section>
-
-            <section className="rounded-2xl p-5 bg-white border border-black/10">
-              <div className="text-base font-semibold">{more.title}</div>
-
-              {more.subtitle && (
-                <div className="mt-2 text-sm text-black/70">
-                  {more.subtitle}
-                </div>
-              )}
-
-              <div className="mt-4">
-                <Link
-                  href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
-                  target="_blank"
-                  className="w-full text-center px-4 py-3 rounded-2xl font-semibold text-white inline-block"
-                  style={{ backgroundColor: VIF.blue }}
-                >
-                  Kampoversikt
-                </Link>
-              </div>
-            </section>
+            </Reveal>
           </div>
 
           {/* Desktop */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6 items-stretch">
-            {matches.map((m) => (
-              <section
-                key={m.slug}
-                className="rounded-3xl p-8 bg-white border border-black/10 flex flex-col h-full"
-              >
-                <div className="text-lg font-semibold">{m.title}</div>
+<div className="hidden md:grid md:grid-cols-3 gap-6 items-stretch">
+  {matches.map((m, i) => (
+    <Reveal key={m.slug} delayMs={i * 90} className="h-full">
+      <section className="rounded-3xl p-8 bg-white border border-black/10 flex flex-col h-full">
+        <div className="text-lg font-semibold">{m.title}</div>
 
-                {m.subtitle && (
-                  <div className="mt-2 text-sm text-black/70 flex-1">
-                    {m.subtitle}
-                  </div>
-                )}
-
-                <div className="mt-6">
-                  <a
-                    href={m.ticketUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
-                    style={{ backgroundColor: VIF.blue }}
-                  >
-                    Kjøp billett
-                  </a>
-                </div>
-              </section>
-            ))}
-
-            <section className="md:col-span-3 rounded-3xl p-8 bg-white border border-black/10">
-              <div className="text-lg font-semibold">Øvrig program</div>
-              <div className="mt-2 text-sm text-black/70 leading-relaxed">
-                Kom tidlig og få med deg mer enn selve kampen. Gratis aktiviteter,
-                underholdning før avspark og uteservering når været tillater det.
-                Opplevelser for både store og små! Se billettsiden for hver kamp
-                for detaljer og tidspunkt.
-              </div>
-            </section>
-
-            <section className="rounded-3xl p-8 bg-white border border-black/10 flex flex-col">
-              <div className="text-lg font-semibold">{more.title}</div>
-
-              {more.subtitle && (
-                <div className="mt-2 text-sm text-black/70 flex-1">
-                  {more.subtitle}
-                </div>
-              )}
-
-              <div className="mt-6">
-                <Link
-                  href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
-                  target="_blank"
-                  className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
-                  style={{ backgroundColor: VIF.blue }}
-                >
-                  Kampoversikt
-                </Link>
-              </div>
-            </section>
+        {m.subtitle && (
+          <div className="mt-2 text-sm text-black/70 flex-1">
+            {m.subtitle}
           </div>
+        )}
+
+        <div className="mt-6">
+          <a
+            href={m.ticketUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
+            style={{ backgroundColor: VIF.blue }}
+          >
+            Kjøp billett
+          </a>
+        </div>
+      </section>
+    </Reveal>
+  ))}
+
+  <Reveal delayMs={120} className="md:col-span-3">
+    <section className="rounded-3xl p-8 bg-white border border-black/10">
+      <div className="text-lg font-semibold">Øvrig program</div>
+      <div className="mt-2 text-sm text-black/70 leading-relaxed">
+        Kom tidlig og få med deg mer enn selve kampen. Gratis
+        aktiviteter, underholdning før avspark og uteservering når
+        været tillater det. Opplevelser for både store og små! Se
+        billettsiden for hver kamp for detaljer og tidspunkt.
+      </div>
+    </section>
+  </Reveal>
+
+  <Reveal delayMs={180} className="h-full">
+    <section className="rounded-3xl p-8 bg-white border border-black/10 flex flex-col h-full">
+      <div className="text-lg font-semibold">{more.title}</div>
+
+      {more.subtitle && (
+        <div className="mt-2 text-sm text-black/70 flex-1">
+          {more.subtitle}
+        </div>
+      )}
+
+      <div className="mt-6">
+        <Link
+          href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
+          target="_blank"
+          className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
+          style={{ backgroundColor: VIF.blue }}
+        >
+          Kampoversikt
+        </Link>
+      </div>
+    </section>
+  </Reveal>
+</div>
         </div>
       </main>
     </div>
