@@ -145,34 +145,36 @@ export default function QaPage() {
         </Reveal>
 
         <div className="mt-12 grid md:grid-cols-2 gap-6 items-stretch">
-          {items.map((it, i) => (
-            <Reveal key={String(it.q)} delayMs={i * 90} className="h-full">
-              <div className="rounded-3xl p-8 bg-white border border-black/10 h-full">
-                <div className="text-lg font-semibold">{it.q}</div>
-                <div className="mt-3 text-sm text-black/70">{it.a}</div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+  {items.map((it, i) => (
+    <Reveal key={String(it.q)} delayMs={i * 90} className="h-full">
+      <div className="rounded-3xl p-8 bg-white border border-black/10 h-full">
+        <div className="text-lg font-semibold">{it.q}</div>
+        <div className="mt-3 text-sm text-black/70">{it.a}</div>
+      </div>
+    </Reveal>
+  ))}
+</div>
 
-        <Reveal delayMs={120}>
-          <div className="mt-14 flex gap-3 flex-wrap justify-center">
-            <Link
-              href="/program"
-              className="px-8 py-4 rounded-2xl text-white font-semibold"
-              style={{ backgroundColor: VIF.blue }}
-            >
-              Se program
-            </Link>
+<Reveal delayMs={120}>
+  <div className="mt-14 flex gap-3 flex-wrap justify-center">
+    <Link
+      href="/program"
+      className="px-8 py-4 rounded-2xl text-white font-semibold"
+      style={{ backgroundColor: VIF.blue }}
+    >
+      Se program
+    </Link>
 
-            <Link
-              href="/#billetter"
-              className="px-8 py-4 rounded-2xl bg-white border border-black/10 font-semibold"
-            >
-              Kjøp billetter
-            </Link>
-          </div>
-        </Reveal>
+    <a
+      href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-8 py-4 rounded-2xl bg-white border border-black/10 font-semibold"
+    >
+      Kjøp billetter
+    </a>
+  </div>
+</Reveal>
       </main>
     </div>
   );
