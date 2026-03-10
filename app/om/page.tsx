@@ -71,15 +71,15 @@ export default function OmPage() {
           </Reveal>
 
           <Reveal delayMs={200}>
-            <div className="mt-10">
-              <Link
-                href="/"
-                className="text-sm underline underline-offset-4 text-black/60 hover:text-black"
-              >
-                Tilbake til forsiden
-              </Link>
-            </div>
-          </Reveal>
+  <div className="mt-10">
+    <Link
+      href="/"
+      className="inline-flex px-5 py-3 rounded-2xl bg-white border border-black/10 text-sm text-[#1A2238] hover:bg-black/[0.03] transition"
+    >
+      Tilbake til forsiden
+    </Link>
+  </div>
+</Reveal>
 
         </div>
 
