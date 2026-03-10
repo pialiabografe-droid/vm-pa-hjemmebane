@@ -377,14 +377,16 @@ export default function FotballVMJordal() {
 
           <div className="mt-8 grid md:grid-cols-3 gap-6">
             {practical.map((f, i) => (
-              <Reveal key={f.title} delayMs={i * 120}>
-                <div className="rounded-3xl p-8 bg-white border border-black/10">
-                  <div className="font-semibold">{f.title}</div>
-                  <div className="mt-2 text-sm text-black/70 leading-relaxed">
-                    {f.desc}
-                  </div>
-                </div>
-              </Reveal>
+             <Reveal key={f.title} delayMs={i * 120}>
+  <Link href="/faq">
+    <div className="rounded-3xl p-8 bg-white border border-black/10 hover:shadow-md transition cursor-pointer">
+      <div className="font-semibold">{f.title}</div>
+      <div className="mt-2 text-sm text-black/70 leading-relaxed">
+        {f.desc}
+      </div>
+    </div>
+  </Link>
+</Reveal>
             ))}
           </div>
         </section>
