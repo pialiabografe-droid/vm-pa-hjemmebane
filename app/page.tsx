@@ -185,11 +185,18 @@ export default function FotballVMJordal() {
                   className="mx-auto w-[260px] md:w-[420px] h-auto"
                 />
 
-                <img
-  src="/media/vif-logo.png"
-  alt="Vålerenga Ishockey"
-  className="mx-auto mt-4 w-[60px] md:w-[80px] h-auto"
-/>
+                <a
+  href="https://www.vif-hockey.no/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-block"
+>
+  <img
+    src="/media/vif-logo.png"
+    alt="Vålerenga Ishockey"
+    className="mx-auto h-14 md:h-15 w-auto"
+  />
+</a>
 
                 <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
                   Vi viser de beste kampene, og hele sluttspillet. <br />
