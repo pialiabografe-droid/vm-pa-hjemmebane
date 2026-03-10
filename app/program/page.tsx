@@ -20,7 +20,7 @@ export default function ProgramPage() {
   const matches: Match[] = [
     {
       slug: "16-juni",
-      title: "Mandag 16. juni",
+      title: "Tirsdag 16. juni",
       subtitle: (
         <div className="space-y-2">
     <div className="text-sm text-black/60">Dørene åpner 20:00</div>
@@ -161,7 +161,7 @@ export default function ProgramPage() {
     <div className="text-sm text-black/60">Dørene åpner kl. 18:00 </div>
 
     <div className="text-base font-semibold">
-          21:00 Kvartfinale</div>
+          21:00 Finale</div>
         </div>
       ),
       ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
