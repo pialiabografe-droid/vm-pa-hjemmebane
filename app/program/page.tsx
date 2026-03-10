@@ -9,7 +9,6 @@ type Match = {
   title: string;
   subtitle?: ReactNode;
   ticketUrl?: string;
-  href?: string;
 };
 
 export default function ProgramPage() {
@@ -40,7 +39,8 @@ export default function ProgramPage() {
           <div>22:00 Tyskland – Elfenbenskysten</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/tyskland__elfenbenskysten/4b48842c-9362-4260-b514-bd22894e99d7",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/tyskland__elfenbenskysten/4b48842c-9362-4260-b514-bd22894e99d7",
     },
     {
       slug: "26-juni",
@@ -61,7 +61,8 @@ export default function ProgramPage() {
           <div>22:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_1/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_1/hjemmeside",
     },
     {
       slug: "10-juli",
@@ -71,7 +72,8 @@ export default function ProgramPage() {
           <div>21:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_2/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_2/hjemmeside",
     },
     {
       slug: "11-juli",
@@ -81,7 +83,8 @@ export default function ProgramPage() {
           <div>23:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
     },
     {
       slug: "14-juli",
@@ -91,7 +94,8 @@ export default function ProgramPage() {
           <div>21:00 Semifinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_1/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_1/hjemmeside",
     },
     {
       slug: "15-juli",
@@ -101,7 +105,8 @@ export default function ProgramPage() {
           <div>21:00 Semifinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_2/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_2/hjemmeside",
     },
     {
       slug: "18-juli",
@@ -111,7 +116,8 @@ export default function ProgramPage() {
           <div>23:00 Bronsefinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/bronsefinale/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/bronsefinale/hjemmeside",
     },
     {
       slug: "19-juli",
@@ -124,13 +130,6 @@ export default function ProgramPage() {
       ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
     },
   ];
-
-  const more: Match = {
-    slug: "flere-kamper",
-    title: "Flere kamper",
-    subtitle: "Se hele programmet",
-    href: "/program",
-  };
 
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
@@ -158,7 +157,6 @@ export default function ProgramPage() {
         </Reveal>
 
         <div className="mt-10">
-
           {/* Mobil */}
           <div className="md:hidden space-y-4">
             {matches.map((m, i) => (
@@ -196,29 +194,6 @@ export default function ProgramPage() {
                   aktiviteter, underholdning før avspark og uteservering når
                   været tillater det. Opplevelser for både store og små! Se
                   billettsiden for hver kamp for detaljer og tidspunkt.
-                </div>
-              </section>
-            </Reveal>
-
-            <Reveal delayMs={180}>
-              <section className="rounded-2xl p-5 bg-white border border-black/10">
-                <div className="text-base font-semibold">{more.title}</div>
-
-                {more.subtitle && (
-                  <div className="mt-2 text-sm text-black/70">
-                    {more.subtitle}
-                  </div>
-                )}
-
-                <div className="mt-4">
-                  <Link
-                    href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
-                    target="_blank"
-                    className="w-full text-center px-4 py-3 rounded-2xl font-semibold text-white inline-block"
-                    style={{ backgroundColor: VIF.blue }}
-                  >
-                    Kampoversikt
-                  </Link>
                 </div>
               </section>
             </Reveal>
@@ -261,29 +236,6 @@ export default function ProgramPage() {
                   aktiviteter, underholdning før avspark og uteservering når
                   været tillater det. Opplevelser for både store og små! Se
                   billettsiden for hver kamp for detaljer og tidspunkt.
-                </div>
-              </section>
-            </Reveal>
-
-            <Reveal delayMs={180} className="h-full">
-              <section className="rounded-3xl p-8 bg-white border border-black/10 flex flex-col h-full">
-                <div className="text-lg font-semibold">{more.title}</div>
-
-                {more.subtitle && (
-                  <div className="mt-2 text-sm text-black/70 flex-1">
-                    {more.subtitle}
-                  </div>
-                )}
-
-                <div className="mt-6">
-                  <Link
-                    href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
-                    target="_blank"
-                    className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
-                    style={{ backgroundColor: VIF.blue }}
-                  >
-                    Kampoversikt
-                  </Link>
                 </div>
               </section>
             </Reveal>

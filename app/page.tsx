@@ -59,7 +59,7 @@ export default function FotballVMJordal() {
         "Kiosk",
         "Fast track",
       ],
-      href: ticketcoUrl,
+      href: "/program",
     },
     {
       title: "VOKSEN",
@@ -75,7 +75,7 @@ export default function FotballVMJordal() {
         "Kiosk",
         "Fast track",
       ],
-      href: ticketcoUrl,
+      href: "/program",
     },
     {
       title: "PREMIUM BORD",
@@ -91,7 +91,7 @@ export default function FotballVMJordal() {
         "Kiosk",
         "Fast track",
       ],
-      href: ticketcoUrl,
+      href: "/program",
     },
     {
       title: "TO KVELDER PÅ VIP RESTAURANT",
@@ -146,7 +146,6 @@ export default function FotballVMJordal() {
               <div className="absolute inset-0 bg-black/35" />
             </div>
 
-
             <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
               <div className="hidden md:flex justify-center gap-3">
                 <Link
@@ -167,7 +166,7 @@ export default function FotballVMJordal() {
                   href="#pakker"
                   className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
                 >
-                  Billetter
+                  Plasser
                 </a>
 
                 <Link
@@ -186,53 +185,48 @@ export default function FotballVMJordal() {
                 />
 
                 <a
-  href="https://www.vif-hockey.no/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-6 inline-block"
->
-  <img
-    src="/media/vif-logo.png"
-    alt="Vålerenga Ishockey"
-    className="mx-auto h-14 md:h-15 w-auto"
-  />
-</a>
+                  href="https://www.vif-hockey.no/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-block"
+                >
+                  <img
+                    src="/media/vif-logo.png"
+                    alt="Vålerenga Ishockey"
+                    className="mx-auto h-14 md:h-15 w-auto"
+                  />
+                </a>
 
                 <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
                   Vi viser de beste kampene, og hele sluttspillet. <br />
                   Uansett vær.
                 </p>
 
-                {/* Sponsor logos mobil */}
-<div className="mt-8 flex justify-center md:hidden">
-  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
-    
-    <img
-      src="/media/sparebank1-logo2.png"
-      alt="SpareBank 1"
-      className="h-6 w-auto object-contain"
-    />
+                <div className="mt-8 flex justify-center md:hidden">
+                  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
+                    <img
+                      src="/media/sparebank1-logo2.png"
+                      alt="SpareBank 1"
+                      className="h-6 w-auto object-contain"
+                    />
 
-    <div className="h-6 w-px bg-black/10" />
+                    <div className="h-6 w-px bg-black/10" />
 
-    <img
-      src="/media/obos-logo2.png"
-      alt="OBOS"
-      className="h-6 w-auto object-contain"
-    />
-
-  </div>
-</div>
+                    <img
+                      src="/media/obos-logo2.png"
+                      alt="OBOS"
+                      className="h-6 w-auto object-contain"
+                    />
+                  </div>
+                </div>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href={ticketcoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/program"
                     className="px-7 py-3 rounded-2xl font-semibold bg-white text-[#1A2238] shadow-md hover:bg-white/90 transition"
                   >
                     Kjøp billetter
-                  </a>
+                  </Link>
 
                   <a
                     href="#pakker"
@@ -258,14 +252,12 @@ export default function FotballVMJordal() {
                 </p>
               </div>
 
-              <a
-                href={ticketcoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/program"
                 className="px-5 py-3 rounded-2xl bg-white border border-black/10 text-sm font-semibold hover:bg-black/[0.02] transition"
               >
-                Kjøp billett
-              </a>
+                Velg kamp
+              </Link>
             </div>
           </Reveal>
 
@@ -314,16 +306,23 @@ export default function FotballVMJordal() {
                   </div>
 
                   <div className="mt-auto pt-8">
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
-                    >
-                      {p.title === "TO KVELDER PÅ VIP RESTAURANT"
-                        ? "KONTAKT OSS"
-                        : "KJØP HER!"}
-                    </a>
+                    {p.title === "TO KVELDER PÅ VIP RESTAURANT" ? (
+                      <a
+                        href={p.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
+                      >
+                        KONTAKT OSS
+                      </a>
+                    ) : (
+                      <Link
+                        href="/program"
+                        className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
+                      >
+                        VELG KAMP
+                      </Link>
+                    )}
                   </div>
                 </div>
               </Reveal>

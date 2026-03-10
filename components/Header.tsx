@@ -4,9 +4,6 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const ticketcoUrl =
-  "https://vif-hockey.ticketco.shop/?tag=fotballVM";
-
 const ticketsSectionId = "pakker";
 
 export default function Header() {
@@ -100,7 +97,7 @@ export default function Header() {
                   onClick={() => goSection(ticketsSectionId)}
                   className="hover:text-black transition-colors"
                 >
-                  Billetter
+                  Plasser
                 </button>
 
                 <Link href="/faq" className="hover:text-black transition-colors">
@@ -129,14 +126,12 @@ export default function Header() {
               </div>
             )}
 
-            <a
-              href={ticketcoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/program"
               className="px-4 py-2 rounded-xl bg-[#BC1823] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Billetter
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -195,7 +190,7 @@ export default function Header() {
                 onClick={() => goSection(ticketsSectionId)}
                 className="text-left hover:opacity-80"
               >
-                Billetter
+                Plasser
               </button>
 
               <Link
@@ -206,15 +201,13 @@ export default function Header() {
                 FAQ
               </Link>
 
-              <a
-                href={ticketcoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/program"
                 className="px-3 py-3 rounded-xl bg-[#BC1823] text-white font-semibold text-center hover:opacity-90 transition-opacity"
                 onClick={() => setMobileOpen(false)}
               >
                 Billetter
-              </a>
+              </Link>
             </div>
           </div>
         ) : null}
