@@ -164,15 +164,7 @@ export default function QaPage() {
     >
       Se program
     </Link>
-
-    <a
-      href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="px-8 py-4 rounded-2xl bg-white border border-black/10 font-semibold"
-    >
-      Kjøp billetter
-    </a>
+    
   </div>
 </Reveal>
       </main>
