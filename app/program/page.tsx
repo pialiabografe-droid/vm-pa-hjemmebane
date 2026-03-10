@@ -22,10 +22,15 @@ export default function ProgramPage() {
       slug: "16-juni",
       title: "Mandag 16. juni",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>21:00 Senegal – Frankrike</div>
-          <div>00:00 Playoff 2 – Norge</div>
-        </div>
+        <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner 20:00</div>
+          <div className="text-base font-semibold">
+      21:00 Senegal – Frankrike
+    </div>
+    <div className="text-base font-semibold">
+      00:00 Playoff 2 – Norge
+    </div>
+  </div>
       ),
       ticketUrl:
         "https://vif-hockey.ticketco.events/no/nb/e/norge__playoff_2/hjemmeside-%20fotballvm",
@@ -33,10 +38,17 @@ export default function ProgramPage() {
     {
       slug: "20-juni",
       title: "Lørdag 20. juni",
-      subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>19:00 Nederland – Playoff B</div>
-          <div>22:00 Tyskland – Elfenbenskysten</div>
+     subtitle: (
+    <div className="space-y-2">
+      <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+
+      <div className="text-base font-semibold">
+        19:00 Nederland – Playoff B
+      </div>
+
+      <div className="text-base font-semibold">
+        22:00 Tyskland – Elfenbenskysten
+      </div>
         </div>
       ),
       ticketUrl:
@@ -46,8 +58,12 @@ export default function ProgramPage() {
       slug: "26-juni",
       title: "Fredag 26. juni",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>21:00 Norge – Frankrike</div>
+  <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+
+    <div className="text-base font-semibold">
+      21:00 Norge – Frankrike
+    </div>
         </div>
       ),
       ticketUrl:
@@ -57,8 +73,11 @@ export default function ProgramPage() {
       slug: "9-juli",
       title: "Torsdag 9. juli",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>22:00 Kvartfinale</div>
+ <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner kl. 20:00 </div>
+
+    <div className="text-base font-semibold">
+          22:00 Kvartfinale</div>
         </div>
       ),
       ticketUrl:
@@ -68,8 +87,11 @@ export default function ProgramPage() {
       slug: "10-juli",
       title: "Fredag 10. juli",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>21:00 Kvartfinale</div>
+        <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner kl. 19:00 </div>
+
+    <div className="text-base font-semibold">
+          21:00 Kvartfinale</div>
         </div>
       ),
       ticketUrl:
@@ -79,8 +101,11 @@ export default function ProgramPage() {
       slug: "11-juli",
       title: "Lørdag 11. juli",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>23:00 Kvartfinale</div>
+       <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner kl. 21:00 </div>
+
+    <div className="text-base font-semibold">
+          23:00 Kvartfinale</div>
         </div>
       ),
       ticketUrl:
@@ -90,8 +115,11 @@ export default function ProgramPage() {
       slug: "14-juli",
       title: "Tirsdag 14. juli",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>21:00 Semifinale</div>
+        <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner kl. 19:00 </div>
+
+    <div className="text-base font-semibold">
+          21:00 Semifinale</div>
         </div>
       ),
       ticketUrl:
@@ -101,8 +129,11 @@ export default function ProgramPage() {
       slug: "15-juli",
       title: "Onsdag 15. juli",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>21:00 Semifinale</div>
+        <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner kl. 19:00 </div>
+
+    <div className="text-base font-semibold">
+          21:00 Semifinale</div>
         </div>
       ),
       ticketUrl:
@@ -112,8 +143,11 @@ export default function ProgramPage() {
       slug: "18-juli",
       title: "Lørdag 18. juli",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>23:00 Bronsefinale</div>
+        <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner kl. 20:00 </div>
+
+    <div className="text-base font-semibold">
+          23:00 Bronsefinale</div>
         </div>
       ),
       ticketUrl:
@@ -123,8 +157,11 @@ export default function ProgramPage() {
       slug: "19-juli",
       title: "Søndag 19. juli",
       subtitle: (
-        <div className="space-y-1 text-base font-medium">
-          <div>21:00 Finale</div>
+        <div className="space-y-2">
+    <div className="text-sm text-black/60">Dørene åpner kl. 18:00 </div>
+
+    <div className="text-base font-semibold">
+          21:00 Kvartfinale</div>
         </div>
       ),
       ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
