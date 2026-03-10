@@ -40,7 +40,7 @@ export default function ProgramPage() {
       title: "Lørdag 20. juni",
      subtitle: (
     <div className="space-y-2">
-      <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+      <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
 
       <div className="text-base font-semibold">
         19:00 Nederland – Playoff B
