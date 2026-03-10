@@ -36,11 +36,11 @@ export default function ProgramPage() {
       title: "Lørdag 20. juni",
       subtitle: (
         <div className="space-y-1 text-base font-medium">
-          <div>19:00 Nederland – Playoff C</div>
+          <div>19:00 Nederland – Playoff B</div>
           <div>22:00 Tyskland – Elfenbenskysten</div>
         </div>
       ),
-      ticketUrl: "SETT_INN_TICKETCO_LENKE_HER",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/tyskland__elfenbenskysten/4b48842c-9362-4260-b514-bd22894e99d7",
     },
     {
       slug: "26-juni",
@@ -61,7 +61,7 @@ export default function ProgramPage() {
           <div>22:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "SETT_INN_TICKETCO_LENKE_HER",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_1/hjemmeside",
     },
     {
       slug: "10-juli",
@@ -71,7 +71,7 @@ export default function ProgramPage() {
           <div>21:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "SETT_INN_TICKETCO_LENKE_HER",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_2/hjemmeside",
     },
     {
       slug: "11-juli",
@@ -81,7 +81,7 @@ export default function ProgramPage() {
           <div>23:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "SETT_INN_TICKETCO_LENKE_HER",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
     },
     {
       slug: "14-juli",
@@ -91,7 +91,7 @@ export default function ProgramPage() {
           <div>21:00 Semifinale</div>
         </div>
       ),
-      ticketUrl: "SETT_INN_TICKETCO_LENKE_HER",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_1/hjemmeside",
     },
     {
       slug: "15-juli",
@@ -101,7 +101,7 @@ export default function ProgramPage() {
           <div>21:00 Semifinale</div>
         </div>
       ),
-      ticketUrl: "SETT_INN_TICKETCO_LENKE_HER",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_2/hjemmeside",
     },
     {
       slug: "18-juli",
@@ -111,7 +111,7 @@ export default function ProgramPage() {
           <div>23:00 Bronsefinale</div>
         </div>
       ),
-      ticketUrl: "SETT_INN_TICKETCO_LENKE_HER",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/bronsefinale/hjemmeside",
     },
     {
       slug: "19-juli",
@@ -121,7 +121,7 @@ export default function ProgramPage() {
           <div>21:00 Finale</div>
         </div>
       ),
-      ticketUrl: "SETT_INN_TICKETCO_LENKE_HER",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
     },
   ];
 
