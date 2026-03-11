@@ -9,28 +9,30 @@ type Match = {
   title: string;
   subtitle?: ReactNode;
   ticketUrl?: string;
+  isNorway?: boolean;
+  isFinal?: boolean;
 };
 
 export default function ProgramPage() {
   const VIF = {
     blue: "#044EA2",
-    red: "#BC1823",
   } as const;
 
   const matches: Match[] = [
     {
       slug: "16-juni",
       title: "Tirsdag 16. juni",
+      isNorway: true,
       subtitle: (
         <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner 20:00</div>
+          <div className="text-sm text-black/60">Dørene åpner 20:00</div>
           <div className="text-base font-semibold">
-      21:00 Senegal – Frankrike
-    </div>
-    <div className="text-base font-semibold">
-      00:00 Playoff 2 – Norge
-    </div>
-  </div>
+            21:00 Senegal – Frankrike
+          </div>
+          <div className="text-base font-semibold">
+            00:00 Playoff 2 – Norge
+          </div>
+        </div>
       ),
       ticketUrl:
         "https://vif-hockey.ticketco.events/no/nb/e/norge__playoff_2/hjemmeside-%20fotballvm",
@@ -38,17 +40,15 @@ export default function ProgramPage() {
     {
       slug: "20-juni",
       title: "Lørdag 20. juni",
-     subtitle: (
-    <div className="space-y-2">
-      <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
-
-      <div className="text-base font-semibold">
-        19:00 Nederland – Playoff B
-      </div>
-
-      <div className="text-base font-semibold">
-        22:00 Tyskland – Elfenbenskysten
-      </div>
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
+          <div className="text-base font-semibold">
+            19:00 Nederland – Playoff B
+          </div>
+          <div className="text-base font-semibold">
+            22:00 Tyskland – Elfenbenskysten
+          </div>
         </div>
       ),
       ticketUrl:
@@ -57,13 +57,13 @@ export default function ProgramPage() {
     {
       slug: "26-juni",
       title: "Fredag 26. juni",
+      isNorway: true,
       subtitle: (
-  <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-
-    <div className="text-base font-semibold">
-      21:00 Norge – Frankrike
-    </div>
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+          <div className="text-base font-semibold">
+            21:00 Norge – Frankrike
+          </div>
         </div>
       ),
       ticketUrl:
@@ -73,11 +73,9 @@ export default function ProgramPage() {
       slug: "9-juli",
       title: "Torsdag 9. juli",
       subtitle: (
- <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner kl. 20:00 </div>
-
-    <div className="text-base font-semibold">
-          22:00 Kvartfinale</div>
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
+          <div className="text-base font-semibold">22:00 Kvartfinale</div>
         </div>
       ),
       ticketUrl:
@@ -88,10 +86,8 @@ export default function ProgramPage() {
       title: "Fredag 10. juli",
       subtitle: (
         <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner kl. 19:00 </div>
-
-    <div className="text-base font-semibold">
-          21:00 Kvartfinale</div>
+          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+          <div className="text-base font-semibold">21:00 Kvartfinale</div>
         </div>
       ),
       ticketUrl:
@@ -101,11 +97,9 @@ export default function ProgramPage() {
       slug: "11-juli",
       title: "Lørdag 11. juli",
       subtitle: (
-       <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner kl. 21:00 </div>
-
-    <div className="text-base font-semibold">
-          23:00 Kvartfinale</div>
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 21:00</div>
+          <div className="text-base font-semibold">23:00 Kvartfinale</div>
         </div>
       ),
       ticketUrl:
@@ -116,10 +110,8 @@ export default function ProgramPage() {
       title: "Tirsdag 14. juli",
       subtitle: (
         <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner kl. 19:00 </div>
-
-    <div className="text-base font-semibold">
-          21:00 Semifinale</div>
+          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+          <div className="text-base font-semibold">21:00 Semifinale</div>
         </div>
       ),
       ticketUrl:
@@ -130,10 +122,8 @@ export default function ProgramPage() {
       title: "Onsdag 15. juli",
       subtitle: (
         <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner kl. 19:00 </div>
-
-    <div className="text-base font-semibold">
-          21:00 Semifinale</div>
+          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+          <div className="text-base font-semibold">21:00 Semifinale</div>
         </div>
       ),
       ticketUrl:
@@ -144,10 +134,8 @@ export default function ProgramPage() {
       title: "Lørdag 18. juli",
       subtitle: (
         <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner kl. 20:00 </div>
-
-    <div className="text-base font-semibold">
-          23:00 Bronsefinale</div>
+          <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
+          <div className="text-base font-semibold">23:00 Bronsefinale</div>
         </div>
       ),
       ticketUrl:
@@ -156,17 +144,35 @@ export default function ProgramPage() {
     {
       slug: "19-juli",
       title: "Søndag 19. juli",
+      isFinal: true,
       subtitle: (
         <div className="space-y-2">
-    <div className="text-sm text-black/60">Dørene åpner kl. 18:00 </div>
-
-    <div className="text-base font-semibold">
-          21:00 Finale</div>
+          <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
+          <div className="text-base font-semibold">21:00 Finale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
     },
   ];
+
+  const Banner = ({ m }: { m: Match }) => {
+    if (m.isNorway) {
+      return (
+        <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[inherit]">
+          <div
+            className="absolute right-[-115px] top-[20px] h-6 w-[300px] rotate-[30deg] shadow-sm"
+            style={{
+              background:
+                "linear-gradient(to bottom, #BA0C2F 0%, #BA0C2F 28%, #FFFFFF 28%, #FFFFFF 36%, #00205B 36%, #00205B 64%, #FFFFFF 64%, #FFFFFF 72%, #BA0C2F 72%, #BA0C2F 100%)",
+            }}
+          />
+        </div>
+      );
+    }
+
+    return null;
+  };
 
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
@@ -194,11 +200,18 @@ export default function ProgramPage() {
         </Reveal>
 
         <div className="mt-10">
-          {/* Mobil */}
           <div className="md:hidden space-y-4">
             {matches.map((m, i) => (
               <Reveal key={m.slug} delayMs={i * 90}>
-                <section className="rounded-2xl p-5 bg-white border border-black/10">
+                <section
+                  className={`relative overflow-hidden rounded-2xl p-5 bg-white ${
+                    m.isFinal
+                      ? "border border-[#D4AF37]/40 shadow-[0_0_0_1px_rgba(212,175,55,0.20),0_10px_24px_rgba(212,175,55,0.14)]"
+                      : "border border-black/10"
+                  }`}
+                >
+                  <Banner m={m} />
+
                   <div className="text-base font-semibold">{m.title}</div>
 
                   {m.subtitle && (
@@ -236,11 +249,18 @@ export default function ProgramPage() {
             </Reveal>
           </div>
 
-          {/* Desktop */}
           <div className="hidden md:grid md:grid-cols-3 gap-6 items-stretch">
             {matches.map((m, i) => (
               <Reveal key={m.slug} delayMs={i * 90} className="h-full">
-                <section className="rounded-3xl p-8 bg-white border border-black/10 flex flex-col h-full">
+                <section
+                  className={`relative overflow-hidden rounded-3xl p-8 bg-white flex flex-col h-full ${
+                    m.isFinal
+                      ? "border border-[#D4AF37]/40 shadow-[0_0_0_1px_rgba(212,175,55,0.25),0_12px_32px_rgba(212,175,55,0.18)]"
+                      : "border border-black/10"
+                  }`}
+                >
+                  <Banner m={m} />
+
                   <div className="text-lg font-semibold">{m.title}</div>
 
                   {m.subtitle && (
