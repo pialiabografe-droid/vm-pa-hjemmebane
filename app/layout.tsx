@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Space_Grotesk } from "next/font/google";
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 
 const space = Space_Grotesk({
   subsets: ["latin"],
@@ -29,6 +30,20 @@ export default function RootLayout({
       <body
         className={`${space.className} min-h-screen bg-[#044EA2] text-white antialiased`}
       >
+        {/* GOOGLE ADS TAG */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17496864528"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17496864528');
+          `}
+        </Script>
+
         <Header />
         {children}
         <Footer />
