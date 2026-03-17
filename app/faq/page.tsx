@@ -172,24 +172,24 @@ export default function QaPage() {
       <main className="mx-auto max-w-6xl px-4 py-16">
         {/* intro */}
         <Reveal>
-          <div className="mt-6 flex flex-wrap items-start justify-between gap-6">
-            <div>
-              <h1 className="text-4xl font-semibold md:text-5xl">
-                Ofte stilte spørsmål om fotball-VM visning i Oslo
-              </h1>
-              <p className="mt-3 max-w-2xl text-black/70">
-                Her finner du praktisk informasjon om VM-visningene på Jordal.
-              </p>
-            </div>
+  <div className="mt-6 flex items-start justify-between gap-6">
+    <div className="max-w-3xl flex-1">
+      <h1 className="text-4xl font-semibold md:text-5xl">
+        Ofte stilte spørsmål om fotball-VM visning i Oslo
+      </h1>
+      <p className="mt-3 max-w-2xl text-black/70">
+        Her finner du praktisk informasjon om VM-visningene på Jordal.
+      </p>
+    </div>
 
-            <Link
-              href="/"
-              className="hidden shrink-0 rounded-2xl border border-black/10 bg-white px-5 py-3 text-sm md:inline-flex"
-            >
-              Tilbake til forsiden
-            </Link>
-          </div>
-        </Reveal>
+    <Link
+      href="/"
+      className="hidden shrink-0 rounded-2xl border border-black/10 bg-white px-5 py-3 text-sm md:inline-flex"
+    >
+      Tilbake til forsiden
+    </Link>
+  </div>
+</Reveal>
 
         {/* klikkbar inndeling */}
         <Reveal delayMs={120}>
