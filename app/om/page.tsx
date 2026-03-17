@@ -1,29 +1,53 @@
 import Link from "next/link";
 import Reveal from "../../components/Reveal";
 
-export default function OmPage() {
-  const VIF = {
-    blue: "#044EA2",
-    red: "#BC1823",
-  } as const;
+/* vif-farge til cta knapper */
+const VIF = {
+  blue: "#044EA2",
+} as const;
 
+/* klikkbare partnerlogoer nederst */
+const partners = [
+  {
+    name: "SpareBank 1",
+    href: "https://www.sparebank1.no/nb/ostlandet/privat.html",
+    logo: "/media/sparebank1-logo2.png",
+    className: "h-10 w-auto object-contain hover:opacity-80 transition",
+  },
+  {
+    name: "OBOS",
+    href: "https://www.obos.no/",
+    logo: "/media/obos-logo2.png",
+    className: "h-10 w-auto object-contain hover:opacity-80 transition",
+  },
+  {
+    name: "JCP",
+    href: "https://www.jcp.no/",
+    logo: "/media/jcp-logo-svart.png",
+    className: "h-16 w-auto object-contain hover:opacity-80 transition",
+  },
+  {
+    name: "Vålerenga Ishockey",
+    href: "https://www.vif-hockey.no/",
+    logo: "/media/vif-logo.png",
+    className: "h-16 w-auto object-contain hover:opacity-80 transition",
+  },
+];
+
+export default function OmPage() {
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
       <main className="mx-auto max-w-5xl px-6 py-24">
-
-        {/* Header */}
+        {/* overskift + tekst */}
         <div className="text-center">
-
           <Reveal>
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight">
+            <h1 className="text-5xl font-semibold tracking-tight md:text-6xl">
               VM på hjemmebane – møteplass på Oslo øst
-
             </h1>
           </Reveal>
 
           <Reveal delayMs={120}>
-            <div className="mt-10 text-lg leading-relaxed text-black/75 max-w-3xl mx-auto space-y-6">
-
+            <div className="mx-auto mt-10 max-w-3xl space-y-6 text-lg leading-relaxed text-black/75">
               <p>
                 Når fotball-VM spilles i USA, Canada og Mexico, lager vi en arena
                 for å se kampene sammen her hjemme i Oslo. I sommer åpner Jordal
@@ -47,9 +71,7 @@ export default function OmPage() {
                 base gjennom kvelden.
               </p>
 
-              <p className="font-semibold text-[#1A2238]">
-                Dette viser vi
-              </p>
+              <p className="font-semibold text-[#1A2238]">Dette viser vi</p>
 
               <p>
                 Vi viser Norges to kamper som går tidlig, og hele sluttspillet.
@@ -66,93 +88,56 @@ export default function OmPage() {
                 minutter – det handler om å bruke VM til å styrke fellesskapet
                 lokalt.
               </p>
-
             </div>
           </Reveal>
 
+          {/* tilbakeknapp */}
           <Reveal delayMs={200}>
-  <div className="mt-10">
-    <Link
-      href="/"
-      className="inline-flex px-5 py-3 rounded-2xl bg-white border border-black/10 text-sm text-[#1A2238] hover:bg-black/[0.03] transition"
-    >
-      Tilbake til forsiden
-    </Link>
-  </div>
-</Reveal>
-
+            <div className="mt-10">
+              <Link
+                href="/"
+                className="inline-flex rounded-2xl border border-black/10 bg-white px-5 py-3 text-sm text-[#1A2238] transition hover:bg-black/[0.03]"
+              >
+                Tilbake til forsiden
+              </Link>
+            </div>
+          </Reveal>
         </div>
 
-        {/* PARTNERE */}
-<Reveal delayMs={260}>
-  <div className="mt-24 text-center">
-    <div className="mt-10 flex flex-wrap items-center justify-center gap-12">
+        {/* partnere */}
+        <Reveal delayMs={260}>
+          <div className="mt-24 text-center">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-12">
+              {partners.map((partner) => (
+                <a
+                  key={partner.name}
+                  href={partner.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className={partner.className}
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+        </Reveal>
 
-      <a
-        href="https://www.sparebank1.no/nb/ostlandet/privat.html"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/media/sparebank1-logo2.png"
-          alt="SpareBank 1"
-          className="h-10 w-auto object-contain hover:opacity-80 transition"
-        />
-      </a>
-
-      <a
-        href="https://www.obos.no/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/media/obos-logo2.png"
-          alt="OBOS"
-          className="h-10 w-auto object-contain hover:opacity-80 transition"
-        />
-      </a>
-
-      <a
-        href="https://www.jcp.no/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/media/jcp-logo-svart.png"
-          alt="JCP"
-          className="h-16 w-auto object-contain hover:opacity-80 transition"
-        />
-      </a>
-
-      <a
-        href="https://www.vif-hockey.no/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/media/vif-logo.png"
-          alt="Vålerenga Ishockey"
-          className="h-16 w-auto object-contain hover:opacity-80 transition"
-        />
-      </a>
-
-    </div>
-  </div>
-</Reveal>
-
-        {/* CTA */}
+        {/* cta videre til program */}
         <Reveal delayMs={340}>
           <div className="mt-24 text-center">
             <Link
               href="/program"
-              className="px-10 py-4 rounded-2xl text-white font-semibold inline-block shadow-md hover:scale-[1.02] transition"
+              className="inline-block rounded-2xl px-10 py-4 font-semibold text-white shadow-md transition hover:scale-[1.02]"
               style={{ backgroundColor: VIF.blue }}
             >
               Se program
             </Link>
           </div>
         </Reveal>
-
       </main>
     </div>
   );

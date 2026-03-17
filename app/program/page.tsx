@@ -13,11 +13,13 @@ type Match = {
   isFinal?: boolean;
 };
 
-export default function ProgramPage() {
-  const VIF = {
-    blue: "#044EA2",
-  } as const;
+/* "vif-farger" til cta knapper */
+const VIF = {
+  blue: "#044EA2",
+} as const;
 
+export default function ProgramPage() {
+  /* kampkort */
   const matches: Match[] = [
     {
       slug: "16-juni",
@@ -156,8 +158,9 @@ export default function ProgramPage() {
     },
   ];
 
-  const Banner = ({ m }: { m: Match }) => {
-    if (m.isNorway) {
+  /* norge-banner på norges kampene */
+  const Banner = ({ match }: { match: Match }) => {
+    if (match.isNorway) {
       return (
         <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[inherit]">
           <div
@@ -177,10 +180,11 @@ export default function ProgramPage() {
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
       <main className="mx-auto max-w-6xl px-4 py-16">
+        {/* brødtekst */}
         <Reveal>
-          <div className="flex items-start justify-between gap-6 flex-wrap">
+          <div className="flex flex-wrap items-start justify-between gap-6">
             <div className="max-w-3xl">
-              <h1 className="mt-5 text-4xl md:text-5xl font-semibold">
+              <h1 className="mt-5 text-4xl font-semibold md:text-5xl">
                 Velg kamp
               </h1>
 
@@ -192,7 +196,7 @@ export default function ProgramPage() {
 
             <Link
               href="/"
-              className="px-5 py-3 rounded-2xl bg-white border border-black/10 text-sm"
+              className="rounded-2xl border border-black/10 bg-white px-5 py-3 text-sm"
             >
               Tilbake til forsiden
             </Link>
@@ -200,32 +204,33 @@ export default function ProgramPage() {
         </Reveal>
 
         <div className="mt-10">
-          <div className="md:hidden space-y-4">
-            {matches.map((m, i) => (
-              <Reveal key={m.slug} delayMs={i * 90}>
+          {/* på mobil */}
+          <div className="space-y-4 md:hidden">
+            {matches.map((match, index) => (
+              <Reveal key={match.slug} delayMs={index * 90}>
                 <section
-                  className={`relative overflow-hidden rounded-2xl p-5 bg-white ${
-                    m.isFinal
+                  className={`relative overflow-hidden rounded-2xl bg-white p-5 ${
+                    match.isFinal
                       ? "border border-[#D4AF37]/40 shadow-[0_0_0_1px_rgba(212,175,55,0.20),0_10px_24px_rgba(212,175,55,0.14)]"
                       : "border border-black/10"
                   }`}
                 >
-                  <Banner m={m} />
+                  <Banner match={match} />
 
-                  <div className="text-base font-semibold">{m.title}</div>
+                  <div className="text-base font-semibold">{match.title}</div>
 
-                  {m.subtitle && (
+                  {match.subtitle ? (
                     <div className="mt-3 text-sm text-black/70">
-                      {m.subtitle}
+                      {match.subtitle}
                     </div>
-                  )}
+                  ) : null}
 
                   <div className="mt-4">
                     <a
-                      href={m.ticketUrl}
+                      href={match.ticketUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full text-center px-4 py-3 rounded-2xl font-semibold text-white inline-block"
+                      className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold text-white"
                       style={{ backgroundColor: VIF.blue }}
                     >
                       Kjøp billett
@@ -236,10 +241,10 @@ export default function ProgramPage() {
             ))}
 
             <Reveal delayMs={120}>
-              <section className="rounded-2xl p-5 bg-white border border-black/10">
+              <section className="rounded-2xl border border-black/10 bg-white p-5">
                 <div className="text-base font-semibold">Øvrig program</div>
 
-                <div className="mt-2 text-sm text-black/70 leading-relaxed">
+                <div className="mt-2 text-sm leading-relaxed text-black/70">
                   Kom tidlig og få med deg mer enn selve kampen. Gratis
                   aktiviteter, underholdning før avspark og uteservering når
                   været tillater det. Opplevelser for både store og små! Se
@@ -249,32 +254,33 @@ export default function ProgramPage() {
             </Reveal>
           </div>
 
-          <div className="hidden md:grid md:grid-cols-3 gap-6 items-stretch">
-            {matches.map((m, i) => (
-              <Reveal key={m.slug} delayMs={i * 90} className="h-full">
+          {/* på desktop */}
+          <div className="hidden items-stretch gap-6 md:grid md:grid-cols-3">
+            {matches.map((match, index) => (
+              <Reveal key={match.slug} delayMs={index * 90} className="h-full">
                 <section
-                  className={`relative overflow-hidden rounded-3xl p-8 bg-white flex flex-col h-full ${
-                    m.isFinal
+                  className={`relative flex h-full flex-col overflow-hidden rounded-3xl bg-white p-8 ${
+                    match.isFinal
                       ? "border border-[#D4AF37]/40 shadow-[0_0_0_1px_rgba(212,175,55,0.25),0_12px_32px_rgba(212,175,55,0.18)]"
                       : "border border-black/10"
                   }`}
                 >
-                  <Banner m={m} />
+                  <Banner match={match} />
 
-                  <div className="text-lg font-semibold">{m.title}</div>
+                  <div className="text-lg font-semibold">{match.title}</div>
 
-                  {m.subtitle && (
-                    <div className="mt-2 text-sm text-black/70 flex-1">
-                      {m.subtitle}
+                  {match.subtitle ? (
+                    <div className="mt-2 flex-1 text-sm text-black/70">
+                      {match.subtitle}
                     </div>
-                  )}
+                  ) : null}
 
                   <div className="mt-6">
                     <a
-                      href={m.ticketUrl}
+                      href={match.ticketUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-3 rounded-2xl font-semibold text-white inline-block"
+                      className="inline-block rounded-2xl px-5 py-3 font-semibold text-white"
                       style={{ backgroundColor: VIF.blue }}
                     >
                       Kjøp billett
@@ -285,10 +291,10 @@ export default function ProgramPage() {
             ))}
 
             <Reveal delayMs={120} className="md:col-span-3">
-              <section className="rounded-3xl p-8 bg-white border border-black/10">
+              <section className="rounded-3xl border border-black/10 bg-white p-8">
                 <div className="text-lg font-semibold">Øvrig program</div>
 
-                <div className="mt-2 text-sm text-black/70 leading-relaxed">
+                <div className="mt-2 text-sm leading-relaxed text-black/70">
                   Kom tidlig og få med deg mer enn selve kampen. Gratis
                   aktiviteter, underholdning før avspark og uteservering når
                   været tillater det. Opplevelser for både store og små! Se

@@ -2,16 +2,19 @@
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black/10 mt-16">
-      <div className="mx-auto max-w-6xl px-4 py-10 flex justify-between items-center text-sm text-white/80">
+    <footer className="mt-16 border-t border-black/10">
+      {/* footer innhold */}
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-10 text-sm text-white/80">
         
+        {/* logo */}
         <img
           src="/media/fotball-pa-jordal-logo-h.png"
           alt="Fotball på Jordal"
           className="h-10 w-auto"
         />
 
-        <a href="#top">
+        {/* automatisk scroll opp */}
+        <a href="#top" className="hover:opacity-80 transition">
           Til toppen
         </a>
 

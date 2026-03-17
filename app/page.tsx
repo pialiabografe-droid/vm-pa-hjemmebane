@@ -15,14 +15,10 @@ export default function FotballVMJordal() {
     []
   );
 
-  const BG = {
-    hero: "/media/hero-med-lys.png",
-  } as const;
+  const heroImage = "/media/hero-med-lys.png";
+  const ticketcoUrl = "https://vif-hockey.ticketco.shop/?tag=fotballVM";
 
-  const ticketcoUrl =
-    "https://vif-hockey.ticketco.shop/?tag=fotballVM";
-
-  const quick = [
+  const aboutCards = [
     {
       title: "Fotball handler om mer enn de 90 minuttene.",
       desc: "For Vålerenga handler det om å samle folk og bygge felleskap. Vi ønsker å ta samfunnsansvar og gi noe tilbake til nærmiljøet vårt.",
@@ -60,6 +56,7 @@ export default function FotballVMJordal() {
         "Fast track",
       ],
       href: "/program",
+      cta: "VELG KAMP",
     },
     {
       title: "VOKSEN",
@@ -76,6 +73,7 @@ export default function FotballVMJordal() {
         "Fast track",
       ],
       href: "/program",
+      cta: "VELG KAMP",
     },
     {
       title: "PREMIUM BORD",
@@ -92,6 +90,7 @@ export default function FotballVMJordal() {
         "Fast track",
       ],
       href: "/program",
+      cta: "VELG KAMP",
     },
     {
       title: "TO KVELDER PÅ VIP RESTAURANT",
@@ -110,10 +109,17 @@ export default function FotballVMJordal() {
         "Fast track",
       ],
       href: "mailto:daniel@vif-hockey.no?subject=Forespørsel%20VIP-pakke%20Norge-kampene",
+      cta: "KONTAKT OSS",
     },
   ];
 
-  const practical = [{ title: "FAQ", desc: "Ofte stilte spørsmål." }];
+  const practicalCards = [
+    {
+      title: "FAQ",
+      desc: "Ofte stilte spørsmål.",
+      href: "/faq",
+    },
+  ];
 
   return (
     <div
@@ -123,65 +129,69 @@ export default function FotballVMJordal() {
       <style>{`html { scroll-behavior: smooth; }`}</style>
 
       <main id="top">
+        {/* hero */}
         <Reveal>
           <section className="relative overflow-hidden">
             <div className="absolute inset-0">
               {bgOk ? (
                 <>
                   <img
-                    src={BG.hero}
+                    src={heroImage}
                     alt="Publikum ser VM på storskjerm"
                     className="h-full w-full object-cover md:hidden"
                     onError={() => setBgOk(false)}
                   />
 
                   <img
-                    src="/media/hero-med-lys.png"
+                    src={heroImage}
                     alt="Publikum ser VM på storskjerm"
-                    className="hidden md:block h-full w-full object-cover object-[center_30%]"
+                    className="hidden h-full w-full object-cover object-[center_30%] md:block"
                     onError={() => setBgOk(false)}
                   />
                 </>
               ) : null}
+
               <div className="absolute inset-0 bg-black/35" />
             </div>
 
             <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
-              <div className="hidden md:flex justify-center gap-3">
+              {/* meny på desktop */}
+              <div className="hidden justify-center gap-3 md:flex">
                 <Link
                   href="/om"
-                  className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
+                  className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90"
                 >
                   Om oss
                 </Link>
 
                 <Link
                   href="/program"
-                  className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
+                  className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90"
                 >
                   Program
                 </Link>
 
                 <a
                   href="#pakker"
-                  className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
+                  className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90"
                 >
                   Plasser
                 </a>
 
                 <Link
                   href="/faq"
-                  className="px-5 py-2 rounded-full text-sm font-medium bg-white border border-white shadow-md hover:bg-white/90 transition"
+                  className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90"
                 >
                   FAQ
                 </Link>
               </div>
 
+              {/* fpj + vif logo på hero */}
               <div className="mt-10 text-center md:mt-12">
                 <img
                   src="/media/fotball-pa-jordal-logo-h.png"
                   alt="Fotball på Jordal"
-                  className="mx-auto w-[260px] md:w-[420px] h-auto"
+                  className="mx-auto h-auto w-[260px] md:w-[420px]"
                 />
 
                 <a
@@ -193,17 +203,18 @@ export default function FotballVMJordal() {
                   <img
                     src="/media/vif-logo.png"
                     alt="Vålerenga Ishockey"
-                    className="mx-auto h-14 md:h-15 w-auto"
+                    className="mx-auto h-14 w-auto md:h-15"
                   />
                 </a>
 
-                <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
+                <p className="mt-3 text-base text-white/90 md:mt-4 md:text-lg">
                   Vi viser de beste kampene, og hele sluttspillet. <br />
                   Uansett vær.
                 </p>
 
+                {/* partnere på mobil */}
                 <div className="mt-8 flex justify-center md:hidden">
-                  <div className="flex items-center gap-3 bg-white text-[#1A2238] border border-black/10 rounded-3xl px-5 py-3 shadow-md">
+                  <div className="flex items-center gap-3 rounded-3xl border border-black/10 bg-white px-5 py-3 text-[#1A2238] shadow-md">
                     <img
                       src="/media/sparebank1-logo2.png"
                       alt="SpareBank 1"
@@ -220,17 +231,18 @@ export default function FotballVMJordal() {
                   </div>
                 </div>
 
-                <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                {/* cta knapper på hero */}
+                <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                   <Link
                     href="/program"
-                    className="px-7 py-3 rounded-2xl font-semibold bg-white text-[#1A2238] shadow-md hover:bg-white/90 transition"
+                    className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
                   >
                     Kjøp billetter
                   </Link>
 
                   <a
                     href="#pakker"
-                    className="px-7 py-3 rounded-2xl bg-white/10 text-white border border-white/25 font-medium hover:bg-white/20 transition"
+                    className="rounded-2xl border border-white/25 bg-white/10 px-7 py-3 font-medium text-white transition hover:bg-white/20"
                   >
                     Velg pakke
                   </a>
@@ -240,9 +252,10 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
-        <section id="pakker" className="mx-auto max-w-6xl px-4 pt-16 pb-16">
+        {/* pakkene */}
+        <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-16">
           <Reveal>
-            <div className="flex items-end justify-between gap-6 flex-wrap">
+            <div className="flex flex-wrap items-end justify-between gap-6">
               <div>
                 <h2 className="text-3xl font-semibold">Billetter og pakker</h2>
                 <p className="mt-2 text-sm text-black/60">
@@ -254,42 +267,42 @@ export default function FotballVMJordal() {
 
               <Link
                 href="/program"
-                className="px-5 py-3 rounded-2xl bg-white border border-black/10 text-sm font-semibold hover:bg-black/[0.02] transition"
+                className="rounded-2xl border border-black/10 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-black/[0.02]"
               >
                 Velg kamp
               </Link>
             </div>
           </Reveal>
 
-          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-            {packages.map((p, i) => (
-              <Reveal key={p.title} delayMs={i * 110}>
-                <div className="rounded-3xl bg-white border border-black/10 p-8 flex flex-col h-full">
+          <div className="mt-8 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {packages.map((item, index) => (
+              <Reveal key={item.title} delayMs={index * 110}>
+                <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-white p-8">
                   <div className="min-h-[96px]">
                     <div className="text-sm font-semibold tracking-wide text-[#1A2238]">
-                      {p.title}
+                      {item.title}
                     </div>
-                    <div className="mt-1 text-sm text-black/60 leading-relaxed">
-                      {p.subtitle}
+                    <div className="mt-1 text-sm leading-relaxed text-black/60">
+                      {item.subtitle}
                     </div>
                   </div>
 
                   <div className="mt-6">
-                    <div className="min-h-[18px] text-sm font-semibold text-black/50 leading-none">
+                    <div className="min-h-[18px] text-sm font-semibold leading-none text-black/50">
                       &nbsp;
                     </div>
 
-                    <div className="mt-1 text-5xl font-semibold tracking-tight text-[#0E2433] leading-none tabular-nums whitespace-nowrap">
-                      {p.price}
+                    <div className="mt-1 whitespace-nowrap text-5xl font-semibold leading-none tracking-tight tabular-nums text-[#0E2433]">
+                      {item.price}
                     </div>
 
                     <div className="mt-0.5 flex items-end justify-between">
-                      <span className="text-5xl font-semibold tracking-tight text-[#0E2433] leading-none">
-                        {p.currency}
+                      <span className="text-5xl font-semibold leading-none tracking-tight text-[#0E2433]">
+                        {item.currency}
                       </span>
 
-                      <span className="text-sm text-black/60 pb-1">
-                        {p.unit}
+                      <span className="pb-1 text-sm text-black/60">
+                        {item.unit}
                       </span>
                     </div>
 
@@ -297,30 +310,30 @@ export default function FotballVMJordal() {
                   </div>
 
                   <div className="mt-6 space-y-4">
-                    {p.items.map((it) => (
-                      <div key={it} className="flex items-start gap-4">
-                        <span className="mt-1 h-6 w-6 rounded-full bg-[#044EA2] shrink-0" />
-                        <div className="text-sm text-black/70">{it}</div>
+                    {item.items.map((feature) => (
+                      <div key={feature} className="flex items-start gap-4">
+                        <span className="mt-1 h-6 w-6 shrink-0 rounded-full bg-[#044EA2]" />
+                        <div className="text-sm text-black/70">{feature}</div>
                       </div>
                     ))}
                   </div>
 
                   <div className="mt-auto pt-8">
-                    {p.title === "TO KVELDER PÅ VIP RESTAURANT" ? (
+                    {item.title === "TO KVELDER PÅ VIP RESTAURANT" ? (
                       <a
-                        href={p.href}
+                        href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
+                        className="inline-flex w-full items-center justify-center rounded-2xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold tracking-wide transition hover:bg-black/[0.02]"
                       >
-                        KONTAKT OSS
+                        {item.cta}
                       </a>
                     ) : (
                       <Link
-                        href="/program"
-                        className="w-full inline-flex items-center justify-center px-6 py-4 rounded-2xl border border-black/15 bg-white hover:bg-black/[0.02] text-sm font-semibold tracking-wide"
+                        href={item.href}
+                        className="inline-flex w-full items-center justify-center rounded-2xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold tracking-wide transition hover:bg-black/[0.02]"
                       >
-                        VELG KAMP
+                        {item.cta}
                       </Link>
                     )}
                   </div>
@@ -330,39 +343,41 @@ export default function FotballVMJordal() {
           </div>
         </section>
 
+        {/* salkart bilde */}
         <section className="mx-auto max-w-6xl px-4 pb-12">
           <Reveal>
             <h2 className="text-3xl font-semibold">Salkart</h2>
           </Reveal>
 
           <Reveal delayMs={120}>
-            <div className="mt-8 max-w-3xl rounded-3xl overflow-hidden border border-black/10 bg-white">
+            <div className="mt-8 max-w-3xl overflow-hidden rounded-3xl border border-black/10 bg-white">
               <img
                 src="/media/salkart-med-tribune3.png"
                 alt="Salkart Jordal"
-                className="w-full h-auto object-contain block"
+                className="block h-auto w-full object-contain"
               />
             </div>
           </Reveal>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 pt-10 pb-16">
+        {/* om arrangementet */}
+        <section className="mx-auto max-w-6xl px-4 pb-16 pt-10">
           <div className="mb-10">
             <h2 className="text-3xl font-semibold">Om arrangementet</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 items-stretch">
-            {quick.map((q, i) => (
-              <Reveal key={q.title} delayMs={i * 90}>
-                <div className="rounded-3xl p-8 bg-white border border-black/10 h-full flex flex-col">
+          <div className="grid items-stretch gap-6 md:grid-cols-3">
+            {aboutCards.map((card, index) => (
+              <Reveal key={card.title} delayMs={index * 90}>
+                <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-white p-8">
                   <div className="min-h-[56px]">
                     <div className="text-lg font-semibold leading-snug">
-                      {q.title}
+                      {card.title}
                     </div>
                   </div>
 
-                  <div className="mt-3 text-sm text-black/70 leading-relaxed">
-                    {q.desc}
+                  <div className="mt-3 text-sm leading-relaxed text-black/70">
+                    {card.desc}
                   </div>
                 </div>
               </Reveal>
@@ -370,23 +385,24 @@ export default function FotballVMJordal() {
           </div>
         </section>
 
+        {/* praktisk */}
         <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-12">
           <Reveal>
             <h2 className="text-3xl font-semibold">Praktisk</h2>
           </Reveal>
 
-          <div className="mt-8 grid md:grid-cols-3 gap-6">
-            {practical.map((f, i) => (
-             <Reveal key={f.title} delayMs={i * 120}>
-  <Link href="/faq">
-    <div className="rounded-3xl p-8 bg-white border border-black/10 hover:shadow-md transition cursor-pointer">
-      <div className="font-semibold">{f.title}</div>
-      <div className="mt-2 text-sm text-black/70 leading-relaxed">
-        {f.desc}
-      </div>
-    </div>
-  </Link>
-</Reveal>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {practicalCards.map((card, index) => (
+              <Reveal key={card.title} delayMs={index * 120}>
+                <Link href={card.href}>
+                  <div className="cursor-pointer rounded-3xl border border-black/10 bg-white p-8 transition hover:shadow-md">
+                    <div className="font-semibold">{card.title}</div>
+                    <div className="mt-2 text-sm leading-relaxed text-black/70">
+                      {card.desc}
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </section>

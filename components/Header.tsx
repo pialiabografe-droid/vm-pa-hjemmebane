@@ -15,7 +15,9 @@ export default function Header() {
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   const goSection = (id: string) => {
@@ -23,10 +25,12 @@ export default function Header() {
 
     if (!isHome) {
       router.push(`/#${id}`);
+
       setTimeout(() => {
         scrollToId(id);
         window.history.replaceState(null, "", "/");
       }, 80);
+
       return;
     }
 
@@ -36,32 +40,39 @@ export default function Header() {
 
   useEffect(() => {
     if (!mobileOpen) return;
+
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setMobileOpen(false);
+      if (e.key === "Escape") {
+        setMobileOpen(false);
+      }
     };
+
     window.addEventListener("keydown", onKeyDown);
+
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-black/10 text-[#071427]">
+    <header className="sticky top-0 z-40 border-b border-black/10 bg-white text-[#071427]">
       <div className="mx-auto max-w-6xl px-4 py-3">
-        {/* DESKTOP */}
-        <div className="hidden md:grid grid-cols-3 items-center">
+        {/* desktop header */}
+        <div className="hidden grid-cols-3 items-center md:grid">
+          {/* fpj logo */}
           <div className="flex items-center">
             <Link
               href="/"
-              className="hover:opacity-75 transition-opacity"
               aria-label="Fotball på Jordal"
+              className="transition-opacity hover:opacity-75"
             >
               <img
                 src="/media/fotball-pa-jordal-logo.png"
                 alt="Fotball på Jordal"
-                className="block w-[100px] h-auto"
+                className="block h-auto w-[100px]"
               />
             </Link>
           </div>
 
+          {/* logo partnere desktop main */}
           <div className="flex justify-center">
             {isHome ? (
               <div className="flex items-center gap-4">
@@ -81,13 +92,13 @@ export default function Header() {
               </div>
             ) : (
               <nav className="flex gap-6 text-sm text-black/70">
-                <Link href="/om" className="hover:text-black transition-colors">
+                <Link href="/om" className="transition-colors hover:text-black">
                   Om oss
                 </Link>
 
                 <Link
                   href="/program"
-                  className="hover:text-black transition-colors"
+                  className="transition-colors hover:text-black"
                 >
                   Program
                 </Link>
@@ -95,19 +106,20 @@ export default function Header() {
                 <button
                   type="button"
                   onClick={() => goSection(ticketsSectionId)}
-                  className="hover:text-black transition-colors"
+                  className="transition-colors hover:text-black"
                 >
                   Plasser
                 </button>
 
-                <Link href="/faq" className="hover:text-black transition-colors">
+                <Link href="/faq" className="transition-colors hover:text-black">
                   FAQ
                 </Link>
               </nav>
             )}
           </div>
 
-          <div className="flex justify-end items-center gap-4">
+          {/* logo partnere desktop øvrige */}
+          <div className="flex items-center justify-end gap-4">
             {!isHome && (
               <div className="flex items-center gap-4">
                 <img
@@ -128,37 +140,38 @@ export default function Header() {
 
             <Link
               href="/program"
-              className="px-4 py-2 rounded-xl bg-[#BC1823] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="rounded-xl bg-[#BC1823] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Billetter
             </Link>
           </div>
         </div>
 
-        {/* MOBILE */}
-        <div className="md:hidden flex items-center justify-between gap-3">
+        {/* mobil header */}
+        <div className="flex items-center justify-between gap-3 md:hidden">
           <Link
             href="/"
+            aria-label="Fotball på Jordal"
             className="flex items-center"
             onClick={() => setMobileOpen(false)}
-            aria-label="Fotball på Jordal"
           >
             <img
               src="/media/fotball-pa-jordal-logo.png"
               alt="Fotball på Jordal"
-              className="block w-[90px] h-auto"
+              className="block h-auto w-[90px]"
             />
           </Link>
 
           <button
             type="button"
-            className="h-10 w-10 shrink-0 border border-black/10 rounded-xl bg-white"
-            onClick={() => setMobileOpen((v) => !v)}
             aria-label="Åpne meny"
             aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((open) => !open)}
+            className="h-10 w-10 shrink-0 rounded-xl border border-black/10 bg-white"
           >
             <span className="sr-only">Meny</span>
-            <div className="flex flex-col gap-1.5 items-center justify-center">
+
+            <div className="flex flex-col items-center justify-center gap-1.5">
               <span className="block h-0.5 w-5 bg-black/80" />
               <span className="block h-0.5 w-5 bg-black/80" />
               <span className="block h-0.5 w-5 bg-black/80" />
@@ -166,9 +179,10 @@ export default function Header() {
           </button>
         </div>
 
+        {/* hamburger */}
         {mobileOpen ? (
-          <div className="md:hidden border-t border-black/10 bg-white mt-3">
-            <div className="px-4 py-4 flex flex-col gap-3 text-sm">
+          <div className="mt-3 border-t border-black/10 bg-white md:hidden">
+            <div className="flex flex-col gap-3 px-4 py-4 text-sm">
               <Link
                 href="/om"
                 onClick={() => setMobileOpen(false)}
@@ -203,8 +217,8 @@ export default function Header() {
 
               <Link
                 href="/program"
-                className="px-3 py-3 rounded-xl bg-[#BC1823] text-white font-semibold text-center hover:opacity-90 transition-opacity"
                 onClick={() => setMobileOpen(false)}
+                className="rounded-xl bg-[#BC1823] px-3 py-3 text-center font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Billetter
               </Link>

@@ -8,20 +8,24 @@ type Props = {
   delayMs?: number;
 };
 
-export default function Reveal({ children, className = "", delayMs = 0 }: Props) {
+export default function Reveal({
+  children,
+  className = "",
+  delayMs = 0,
+}: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [show, setShow] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const element = ref.current;
+    if (!element) return;
 
-    const io = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            setShow(true);
-            io.disconnect();
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
             break;
           }
         }
@@ -32,17 +36,20 @@ export default function Reveal({ children, className = "", delayMs = 0 }: Props)
       }
     );
 
-    io.observe(el);
-    return () => io.disconnect();
+    observer.observe(element);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div
       ref={ref}
-      className={`${className} transition-all duration-700 ease-out will-change-transform ${
-        show ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-10 blur-[2px]"
-      }`}
       style={{ transitionDelay: `${delayMs}ms` }}
+      className={`${className} will-change-transform transition-all duration-700 ease-out ${
+        isVisible
+          ? "translate-y-0 opacity-100 blur-0"
+          : "translate-y-10 opacity-0 blur-[2px]"
+      }`}
     >
       {children}
     </div>
