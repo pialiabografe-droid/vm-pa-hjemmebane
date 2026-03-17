@@ -13,13 +13,11 @@ type Match = {
   isFinal?: boolean;
 };
 
-/* "vif-farger" til cta knapper */
 const VIF = {
   blue: "#044EA2",
 } as const;
 
 export default function ProgramPage() {
-  /* kampkort */
   const matches: Match[] = [
     {
       slug: "16-juni",
@@ -158,7 +156,6 @@ export default function ProgramPage() {
     },
   ];
 
-  /* norge-banner på norges kampene */
   const Banner = ({ match }: { match: Match }) => {
     if (match.isNorway) {
       return (
@@ -179,18 +176,23 @@ export default function ProgramPage() {
 
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
-      <main className="mx-auto max-w-6xl px-4 py-16">
-        {/* brødtekst */}
+      <main className="mx-auto max-w-6xl px-4 py-20 md:py-24">
         <Reveal>
-          <div className="flex flex-wrap items-start justify-between gap-6">
+          <div className="flex flex-wrap items-start justify-between gap-6 pt-2 md:pt-4">
             <div className="max-w-3xl">
-              <h1 className="mt-5 text-4xl font-semibold md:text-5xl">
-                Velg kamp
+              <h1 className="text-4xl font-semibold md:text-5xl">
+                Kampprogram
               </h1>
 
+              <h2 className="mt-3 text-lg font-medium text-black/60 md:text-xl">
+                Se fotball-VM på Jordal Amfi
+              </h2>
+
               <p className="mt-3 text-black/70">
-                Vi viser utvalgte toppkamper og hele sluttspillet, og programmet
-                oppdateres løpende. Følg med for flere kampdager og nye oppsett.
+                Her finner du programmet for fotball-VM visningen på Jordal Amfi i Oslo.
+                Vi viser utvalgte kamper og hele sluttspillet på storskjerm, følg med
+                for flere kampdager og nye oppsett. Sikre deg billetter til kampene du
+                vil oppleve live sammen med andre supportere!
               </p>
             </div>
 
@@ -204,7 +206,7 @@ export default function ProgramPage() {
         </Reveal>
 
         <div className="mt-10">
-          {/* på mobil */}
+          {/* mobil */}
           <div className="space-y-4 md:hidden">
             {matches.map((match, index) => (
               <Reveal key={match.slug} delayMs={index * 90}>
@@ -254,7 +256,7 @@ export default function ProgramPage() {
             </Reveal>
           </div>
 
-          {/* på desktop */}
+          {/* desktop */}
           <div className="hidden items-stretch gap-6 md:grid md:grid-cols-3">
             {matches.map((match, index) => (
               <Reveal key={match.slug} delayMs={index * 90} className="h-full">
@@ -303,6 +305,11 @@ export default function ProgramPage() {
               </section>
             </Reveal>
           </div>
+
+          <p className="mt-8 max-w-3xl text-sm leading-relaxed text-black/70">
+            Dette er et av de største arrangementene for å se fotball-VM i Oslo.
+            Programmet oppdateres fortløpende med nye kamper og billettmuligheter.
+          </p>
         </div>
       </main>
     </div>

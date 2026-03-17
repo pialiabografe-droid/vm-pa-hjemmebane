@@ -66,7 +66,7 @@ const tickets: QAItem[] = [
 /* delt inn - praktisk info */
 const info: QAItem[] = [
   {
-    q: "Hvor foregår arrangementet, og hvordan kommer man seg dit?",
+    q: "Hvor kan jeg se fotball-VM i Oslo? Og hvordan kommer man seg dit?",
     a: (
       <>
         Arrangementet finner sted på Jordal Amfi, Jordalgata 12. Nærmeste
@@ -92,7 +92,7 @@ const info: QAItem[] = [
     ),
   },
   {
-    q: "Hvilke kamper vises på Jordal?",
+    q: "Hvilke fotball-VM kamper vises på Jordal?",
     a: (
       <>
         Vi viser Norges beste gruppespillkamper, og sluttspillet. Vi legger ut
@@ -175,7 +175,7 @@ export default function QaPage() {
           <div className="mt-6 flex flex-wrap items-start justify-between gap-6">
             <div>
               <h1 className="text-4xl font-semibold md:text-5xl">
-                Ofte stilte spørsmål
+                Ofte stilte spørsmål om fotball-VM visning i Oslo
               </h1>
               <p className="mt-3 max-w-2xl text-black/70">
                 Her finner du praktisk informasjon om VM-visningene på Jordal.

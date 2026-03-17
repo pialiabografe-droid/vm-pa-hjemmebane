@@ -20,7 +20,7 @@ export default function FotballVMJordal() {
 
   const aboutCards = [
     {
-      title: "Fotball handler om mer enn de 90 minuttene.",
+      title: "Se fotball-VM sammen med andre i Oslo",
       desc: "For Vålerenga handler det om å samle folk og bygge felleskap. Vi ønsker å ta samfunnsansvar og gi noe tilbake til nærmiljøet vårt.",
     },
     {
@@ -116,7 +116,7 @@ export default function FotballVMJordal() {
   const practicalCards = [
     {
       title: "FAQ",
-      desc: "Ofte stilte spørsmål.",
+      desc: "Ofte stilte spørsmål om visning av fotball-VM.",
       href: "/faq",
     },
   ];
@@ -193,6 +193,9 @@ export default function FotballVMJordal() {
                   alt="Fotball på Jordal"
                   className="mx-auto h-auto w-[260px] md:w-[420px]"
                 />
+                <h1 className="sr-only">
+                Fotball på Jordal – se fotball-VM på storskjerm i Oslo
+                </h1>
 
                 <a
                   href="https://www.vif-hockey.no/"
@@ -208,7 +211,8 @@ export default function FotballVMJordal() {
                 </a>
 
                 <p className="mt-3 text-base text-white/90 md:mt-4 md:text-lg">
-                  Vi viser de beste kampene, og hele sluttspillet. <br />
+                  Opplev fotball-VM 2026 i Oslo, med lyd, lys
+                  og ekte stadionstemning! <br />
                   Uansett vær.
                 </p>
 
@@ -237,14 +241,14 @@ export default function FotballVMJordal() {
                     href="/program"
                     className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
                   >
-                    Kjøp billetter
+                    Kjøp billetter til fotball-VM
                   </Link>
 
                   <a
                     href="#pakker"
                     className="rounded-2xl border border-white/25 bg-white/10 px-7 py-3 font-medium text-white transition hover:bg-white/20"
                   >
-                    Velg pakke
+                    Se billetter og pakker
                   </a>
                 </div>
               </div>
@@ -259,8 +263,10 @@ export default function FotballVMJordal() {
               <div>
                 <h2 className="text-3xl font-semibold">Billetter og pakker</h2>
                 <p className="mt-2 text-sm text-black/60">
-                  Kjøp billett allerede nå for å sikre deg plass, fast track og
-                  reservert bord <strong>hele</strong> dagen! <br />
+                  Velg billetter til fotball-VM visningen på Jordal Amfi i Oslo. Vi tilbyr alt
+                  fra enkle plasser til premium bord nær skjermen.
+                  Kjøp billett allerede nå for å sikre deg plass, fast track og reservert
+                  bord <strong>hele</strong> dagen! <br /><br />
                   Alle kjøp går via TicketCo.
                 </p>
               </div>
@@ -347,6 +353,7 @@ export default function FotballVMJordal() {
         <section className="mx-auto max-w-6xl px-4 pb-12">
           <Reveal>
             <h2 className="text-3xl font-semibold">Salkart</h2>
+            Se hvor du kan sitte under fotball-VM visningen på Jordal Amfi i Oslo.
           </Reveal>
 
           <Reveal delayMs={120}>
@@ -363,27 +370,34 @@ export default function FotballVMJordal() {
         {/* om arrangementet */}
         <section className="mx-auto max-w-6xl px-4 pb-16 pt-10">
           <div className="mb-10">
-            <h2 className="text-3xl font-semibold">Om arrangementet</h2>
+            <h2 className="text-3xl font-semibold">Se fotball-VM på storskjerm i Oslo</h2>
           </div>
 
           <div className="grid items-stretch gap-6 md:grid-cols-3">
-            {aboutCards.map((card, index) => (
-              <Reveal key={card.title} delayMs={index * 90}>
-                <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-white p-8">
-                  <div className="min-h-[56px]">
-                    <div className="text-lg font-semibold leading-snug">
-                      {card.title}
-                    </div>
-                  </div>
-
-                  <div className="mt-3 text-sm leading-relaxed text-black/70">
-                    {card.desc}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+        {aboutCards.map((card, index) => (
+          <Reveal key={card.title} delayMs={index * 90}>
+           <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-white p-8">
+             <div className="min-h-[56px]">
+              <div className="text-lg font-semibold leading-snug">
+            {card.title}
           </div>
+        </div>
+
+        <div className="mt-3 text-sm leading-relaxed text-black/70">
+          {card.desc}
+        </div>
+      </div>
+    </Reveal>
+  ))}
+</div>
+
+<div className="mt-8 max-w-3xl text-sm leading-relaxed text-black/70">
+  Fotball på Jordal er en av de største visningene av fotball-VM i Oslo.
+  Vi samler supportere til storskjermvisning i Jordal Amfi, med fokus på
+  stemning, fellesskap og gode opplevelser.
+</div>
         </section>
+        
 
         {/* praktisk */}
         <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-12">
