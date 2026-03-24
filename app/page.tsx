@@ -93,13 +93,13 @@ export default function FotballVMJordal() {
       cta: "VELG KAMP",
     },
     {
-      title: "TO KVELDER PÅ VIP RESTAURANT",
-      subtitle: "Norges kamper for 4 personer.",
-      price: "25 000",
+      title: "VIP RESTAURANT",
+      subtitle: "En eller to Norge kamper for 4 personer.",
+      price: "12 000",
       currency: "NOK",
       unit: "per bord",
       items: [
-        "Bord til Norge - Playoff 2 og Norge - Frankrike",
+        "Bord til Norge - Playoff 2 og/eller Norge - Frankrike",
         "Inngang til VIP-området",
         "Tre drikkeenheter",
         "Middag og dessert",
@@ -111,6 +111,7 @@ export default function FotballVMJordal() {
       href: "mailto:daniel@vif-hockey.no?subject=Forespørsel%20VIP-pakke%20Norge-kampene",
       cta: "KONTAKT OSS",
     },
+  
   ];
 
   const practicalCards = [
@@ -298,9 +299,13 @@ export default function FotballVMJordal() {
                       &nbsp;
                     </div>
 
-                    <div className="mt-1 whitespace-nowrap text-5xl font-semibold leading-none tracking-tight tabular-nums text-[#0E2433]">
-                      {item.price}
-                    </div>
+                   <div className="h-[18px] text-sm font-semibold leading-none text-black/50">
+  {item.title === "VIP RESTAURANT" ? "Fra" : "\u00A0"}
+</div>
+
+<div className="mt-1 whitespace-nowrap text-5xl font-semibold leading-none tracking-tight tabular-nums text-[#0E2433]">
+  {item.price}
+</div>
 
                     <div className="mt-0.5 flex items-end justify-between">
                       <span className="text-5xl font-semibold leading-none tracking-tight text-[#0E2433]">
