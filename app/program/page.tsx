@@ -30,7 +30,7 @@ export default function ProgramPage() {
             21:00 Senegal – Frankrike
           </div>
           <div className="text-base font-semibold">
-            00:00 Playoff 2 – Norge
+            00:00 Irak – Norge
           </div>
         </div>
       ),
