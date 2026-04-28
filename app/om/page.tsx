@@ -6,20 +6,8 @@ const VIF = {
   blue: "#044EA2",
 } as const;
 
-/* klikkbare partnerlogoer nederst */
+/* klikkbare logoer nederst */
 const partners = [
-  {
-    name: "SpareBank 1",
-    href: "https://www.sparebank1.no/nb/ostlandet/privat.html",
-    logo: "/media/sparebank1-logo2.png",
-    className: "h-10 w-auto object-contain hover:opacity-80 transition",
-  },
-  {
-    name: "OBOS",
-    href: "https://www.obos.no/",
-    logo: "/media/obos-logo2.png",
-    className: "h-10 w-auto object-contain hover:opacity-80 transition",
-  },
   {
     name: "JCP",
     href: "https://www.jcp.no/",
@@ -38,23 +26,25 @@ export default function OmPage() {
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
       <main className="mx-auto max-w-5xl px-6 py-24">
-        {/* overskift + tekst */}
+        {/* overskrift + tekst */}
         <div className="text-center">
           <Reveal>
             <h1 className="text-5xl font-semibold tracking-tight md:text-6xl">
               Se fotball-VM på storskjerm i Oslo
             </h1>
-              <h2 className="mt-4 text-2xl font-semibold">
+            <h2 className="mt-4 text-2xl font-semibold">
               Møteplass på Oslo øst
-              </h2>
+            </h2>
           </Reveal>
 
           <Reveal delayMs={120}>
             <div className="mx-auto mt-10 max-w-3xl space-y-6 text-lg leading-relaxed text-black/75">
-                Leter du etter et sted å se fotball-VM i Oslo? På Jordal Amfi inviterer vi til
-                storskjermvisning av fotball-VM 2026. Her kan du oppleve kampene sammen med
-                hundrevis/tusenvis av andre – med lyd, lys og ekte stadionstemning.
-              <p> <br/>
+              Leter du etter et sted å se fotball-VM i Oslo? På Jordal Amfi inviterer vi til
+              storskjermvisning av fotball-VM 2026. Her kan du oppleve kampene sammen med
+              hundrevis/tusenvis av andre – med lyd, lys og ekte stadionstemning.
+
+              <p>
+                <br />
                 Når fotball-VM spilles i USA, Canada og Mexico, lager vi en arena
                 for å se kampene sammen her hjemme i Oslo. I sommer åpner Jordal
                 Amfi for felles visning på storskjerm.
@@ -77,7 +67,9 @@ export default function OmPage() {
                 base gjennom kvelden.
               </p>
 
-              <p className="font-semibold text-[#1A2238]">Dette viser vi</p>
+              <p className="font-semibold text-[#1A2238]">
+                Dette viser vi
+              </p>
 
               <p>
                 Vi viser Norges to kamper som går tidlig, og hele sluttspillet.
@@ -93,11 +85,11 @@ export default function OmPage() {
                 breddeidrett og nærmiljøet. For oss handler dette om mer enn 90
                 minutter – det handler om å bruke VM til å styrke fellesskapet
                 lokalt.
-
-                <br/><br/>
+                <br />
+                <br />
                 Fotball på Jordal er en av de største visningene av fotball-VM i Oslo.
-                Vi viser utvalgte kamper og hele sluttspillet på storskjerm i Jordal Amfi. For deg som lurer på
-                hvor du kan se fotball-VM i Oslo, er dette et av de beste alternativene.
+                Vi viser utvalgte kamper og hele sluttspillet på storskjerm i Jordal Amfi.
+                For deg som lurer på hvor du kan se fotball-VM i Oslo, er dette et av de beste alternativene.
               </p>
             </div>
           </Reveal>
@@ -137,7 +129,7 @@ export default function OmPage() {
           </div>
         </Reveal>
 
-        {/* cta videre til program */}
+        {/* cta */}
         <Reveal delayMs={340}>
           <div className="mt-24 text-center">
             <Link

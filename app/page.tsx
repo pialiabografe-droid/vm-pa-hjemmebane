@@ -217,25 +217,6 @@ export default function FotballVMJordal() {
                   Uansett vær.
                 </p>
 
-                {/* partnere på mobil */}
-                <div className="mt-8 flex justify-center md:hidden">
-                  <div className="flex items-center gap-3 rounded-3xl border border-black/10 bg-white px-5 py-3 text-[#1A2238] shadow-md">
-                    <img
-                      src="/media/sparebank1-logo2.png"
-                      alt="SpareBank 1"
-                      className="h-6 w-auto object-contain"
-                    />
-
-                    <div className="h-6 w-px bg-black/10" />
-
-                    <img
-                      src="/media/obos-logo2.png"
-                      alt="OBOS"
-                      className="h-6 w-auto object-contain"
-                    />
-                  </div>
-                </div>
-
                 {/* cta knapper på hero */}
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                   <Link
