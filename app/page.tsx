@@ -217,27 +217,27 @@ export default function FotballVMJordal() {
                   Uansett vær.
                 </p>
 
-                {/* cta knapper på hero */}
-                <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <Link
-                    href="/program"
-                    className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
-                  >
-                    Kjøp billetter til fotball-VM
-                  </Link>
+               {/* cta knapper på hero */}
+<div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+  <Link
+    href="/program"
+    className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
+  >
+    Kjøp billetter til fotball-VM
+  </Link>
 
-                  <a
-                    href="#pakker"
-                    className="rounded-2xl border border-white/25 bg-white/10 px-7 py-3 font-medium text-white transition hover:bg-white/20"
-                  >
-                    Se billetter og pakker
-                  </a>
-                </div>
+  <Link
+    href="/program"
+className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"  >
+    Kjøp billetter til Champions League-finalen
+  </Link>
+</div>
               </div>
             </div>
           </section>
         </Reveal>
 
+        
         {/* pakkene */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-16">
           <Reveal>

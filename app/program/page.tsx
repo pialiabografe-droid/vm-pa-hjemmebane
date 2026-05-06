@@ -20,6 +20,20 @@ const VIF = {
 export default function ProgramPage() {
   const matches: Match[] = [
     {
+      slug: "5-mai",
+      title: "Lørdag 30. mai",
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner 15:00</div>
+          <div className="text-base font-semibold">
+            18:00 Champions League-finale
+          </div>
+        </div>
+      ),
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/champions_league_finale/566f47a2-d28b-444c-a130-4b5acf426b34",
+    },
+    {
       slug: "16-juni",
       title: "Tirsdag 16. juni",
       isNorway: true,
