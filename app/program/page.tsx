@@ -83,78 +83,7 @@ export default function ProgramPage() {
       ticketUrl:
         "https://vif-hockey.ticketco.events/no/nb/e/fotball_paa_jordal/hjemmeside-%20",
     },
-    {
-      slug: "9-juli",
-      title: "Torsdag 9. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
-          <div className="text-base font-semibold">22:00 Kvartfinale</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_1/hjemmeside",
-    },
-    {
-      slug: "10-juli",
-      title: "Fredag 10. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">21:00 Kvartfinale</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_2/hjemmeside",
-    },
-    {
-      slug: "11-juli",
-      title: "Lørdag 11. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 21:00</div>
-          <div className="text-base font-semibold">23:00 Kvartfinale</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
-    },
-    {
-      slug: "14-juli",
-      title: "Tirsdag 14. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">21:00 Semifinale</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_1/hjemmeside",
-    },
-    {
-      slug: "15-juli",
-      title: "Onsdag 15. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">21:00 Semifinale</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_2/hjemmeside",
-    },
-    {
-      slug: "18-juli",
-      title: "Lørdag 18. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
-          <div className="text-base font-semibold">23:00 Bronsefinale</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/bronsefinale/hjemmeside",
-    },
+
     {
       slug: "19-juli",
       title: "Søndag 19. juli",
@@ -262,8 +191,7 @@ export default function ProgramPage() {
 
                 <div className="mt-2 text-sm leading-relaxed text-black/70">
                   Kom tidlig og få med deg mer enn selve kampen. Gratis
-                  aktiviteter, underholdning før avspark og uteservering når
-                  været tillater det. Opplevelser for både store og små! Se
+                  aktiviteter, underholdning før avspark. Opplevelser for både store og små! Se
                   billettsiden for hver kamp for detaljer og tidspunkt.
                 </div>
               </section>
@@ -321,8 +249,10 @@ export default function ProgramPage() {
           </div>
 
           <p className="mt-8 max-w-3xl text-sm leading-relaxed text-black/70">
-            Dette er et av de største arrangementene for å se fotball-VM i Oslo.
-            Programmet oppdateres fortløpende med nye kamper og billettmuligheter.
+            Dette er et av de største arrangementene for å se fotball-VM i Oslo. 
+
+             <br/>
+             <b> Programmet oppdateres fortløpende med nye kamper og billettmuligheter.</b>
           </p>
         </div>
       </main>
