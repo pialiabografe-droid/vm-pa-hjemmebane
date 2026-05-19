@@ -190,9 +190,9 @@ export default function FotballVMJordal() {
               {/* fpj + vif logo på hero */}
               <div className="mt-10 text-center md:mt-12">
                 <img
-                  src="/media/fotball-pa-jordal-logo-h.png"
+                  src="/media/logo-hvit-2.png"
                   alt="Fotball på Jordal"
-                  className="mx-auto h-auto w-[260px] md:w-[420px]"
+                  className="mx-auto -mb-6 h-auto w-[260px] md:w-[420px]"
                 />
                 <h1 className="sr-only">
                 Fotball på Jordal – se fotball-VM på storskjerm i Oslo
@@ -205,10 +205,10 @@ export default function FotballVMJordal() {
                   className="mt-6 inline-block"
                 >
                   <img
-                    src="/media/vif-logo.png"
-                    alt="Vålerenga Ishockey"
-                    className="mx-auto h-14 w-auto md:h-15"
-                  />
+  src="/media/vif-logo.png"
+  alt="Vålerenga Ishockey"
+  className="mx-auto -mt-3 h-14 w-auto md:-mt-5 md:h-15"
+/>
                 </a>
 
                 <p className="mt-3 text-base text-white/90 md:mt-4 md:text-lg">

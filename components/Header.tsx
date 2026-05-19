@@ -58,7 +58,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="hover:opacity-75">
               <img
-                src="/media/fotball-pa-jordal-logo.png"
+                src="/media/logo-blå-2.png"
                 alt="Fotball på Jordal"
                 className="w-[100px]"
               />
@@ -94,7 +94,7 @@ export default function Header() {
         <div className="flex items-center justify-between md:hidden">
           <Link href="/" onClick={() => setMobileOpen(false)}>
             <img
-              src="/media/fotball-pa-jordal-logo.png"
+              src="/media/logo-blå-2.png"
               alt="Fotball på Jordal"
               className="w-[90px]"
             />
@@ -106,23 +106,30 @@ export default function Header() {
         </div>
 
         {mobileOpen && (
-          <div className="mt-3 border-t pt-4 md:hidden">
-            <div className="flex flex-col gap-3">
-              <Link href="/om">Om oss</Link>
-              <Link href="/program">Program</Link>
-              <button onClick={() => goSection(ticketsSectionId)}>
-                Plasser
-              </button>
-              <Link href="/faq">FAQ</Link>
-              <Link
-                href="/program"
-                className="rounded-xl bg-[#BC1823] px-3 py-3 text-center text-white"
-              >
-                Billetter
-              </Link>
-            </div>
-          </div>
-        )}
+  <div className="mt-3 border-t pt-4 md:hidden">
+    <div className="flex flex-col gap-3">
+      <Link href="/om">Om oss</Link>
+
+      <Link href="/program">Program</Link>
+
+      <button
+        onClick={() => goSection(ticketsSectionId)}
+        className="text-left text-black"
+      >
+        Plasser
+      </button>
+
+      <Link href="/faq">FAQ</Link>
+
+      <Link
+        href="/program"
+        className="rounded-xl bg-[#BC1823] px-3 py-3 text-center text-white"
+      >
+        Billetter
+      </Link>
+    </div>
+  </div>
+)}
       </div>
     </header>
   );
