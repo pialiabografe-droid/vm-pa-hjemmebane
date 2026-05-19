@@ -8,9 +8,9 @@ export default function Footer() {
         
         {/* logo */}
         <img
-          src="/media/fotball-pa-jordal-logo-h.png"
+          src="/media/logo-hvit-2.png"
           alt="Fotball på Jordal"
-          className="h-10 w-auto"
+          className="h-16 w-auto"
         />
 
         {/* automatisk scroll opp */}
