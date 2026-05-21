@@ -152,7 +152,7 @@ export default function FotballVMJordal() {
                 </>
               ) : null}
 
-              <div className="absolute inset-0 bg-black/35" />
+              <div className="absolute inset-0 bg-black/55" />
             </div>
 
             <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
