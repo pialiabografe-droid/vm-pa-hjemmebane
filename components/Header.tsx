@@ -58,7 +58,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="hover:opacity-75">
               <img
-                src="/media/logo-blå-2.png"
+                src="/media/logo-bla-2.png"
                 alt="Fotball på Jordal"
                 className="w-[100px]"
               />
@@ -94,7 +94,7 @@ export default function Header() {
         <div className="flex items-center justify-between md:hidden">
           <Link href="/" onClick={() => setMobileOpen(false)}>
             <img
-              src="/media/logo-blå-2.png"
+              src="/media/logo-bla-2.png"
               alt="Fotball på Jordal"
               className="w-[90px]"
             />
