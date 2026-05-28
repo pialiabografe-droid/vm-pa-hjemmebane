@@ -92,25 +92,7 @@ export default function FotballVMJordal() {
       href: "/program",
       cta: "VELG KAMP",
     },
-    {
-      title: "VIP RESTAURANT",
-      subtitle: "En eller to Norge kamper for 4 personer.",
-      price: "12 000",
-      currency: "NOK",
-      unit: "per bord",
-      items: [
-        "Bord til Norge - Playoff 2 og/eller Norge - Frankrike",
-        "Inngang til VIP-området",
-        "Tre drikkeenheter",
-        "Middag og dessert",
-        "Egen VIP-bar",
-        "Underholdning",
-        "Oppsnakk før kamp",
-        "Fast track",
-      ],
-      href: "mailto:daniel@vif-hockey.no?subject=Forespørsel%20VIP-pakke%20Norge-kampene",
-      cta: "KONTAKT OSS",
-    },
+    
   
   ];
 
@@ -262,7 +244,7 @@ className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md
             </div>
           </Reveal>
 
-          <div className="mt-8 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid items-stretch justify-center gap-6 md:grid-cols-2 lg:grid-cols-3">
             {packages.map((item, index) => (
               <Reveal key={item.title} delayMs={index * 110}>
                 <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-white p-8">
