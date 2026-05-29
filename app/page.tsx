@@ -177,14 +177,26 @@ export default function FotballVMJordal() {
   fotball-VM
 </Link>
 
-                  <Link
-                    href="/program"
-                    className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
-                  >
-                    Kjøp billetter til Champions League-finalen
-                    <br />
-                    og semifinalen i Hockey-VM
-                  </Link>
+                  {/* CTA KNAPP - CHAMPIONS LEAGUE + HOCKEY VM */}
+
+<Link
+  href="/program"
+  className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
+>
+  {/* MOBIL */}
+  <span className="md:hidden">
+    Kjøp billetter til CL-finalen
+    <br />
+    og Hockey-VM
+  </span>
+
+  {/* DESKTOP */}
+  <span className="hidden md:inline">
+    Kjøp billetter til Champions League-finalen
+    <br />
+    og semifinalen i Hockey-VM
+  </span>
+</Link>
                 </div>
               </div>
             </div>
