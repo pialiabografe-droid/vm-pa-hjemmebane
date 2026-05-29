@@ -25,7 +25,7 @@ export default function ProgramPage() {
   isNorway: true,
   subtitle: (
     <div className="space-y-2">
-      <div className="text-sm text-black/60">Dørene åpner 15:00</div>
+      <div className="text-sm text-black/60">Dørene åpner 14:30</div>
 
       <div className="text-base font-semibold">
         15:20 Hockey-VM semifinale
