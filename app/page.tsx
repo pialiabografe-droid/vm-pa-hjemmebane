@@ -16,7 +16,6 @@ export default function FotballVMJordal() {
   );
 
   const heroImage = "/media/hero-med-lys.png";
-  const ticketcoUrl = "https://vif-hockey.ticketco.shop/?tag=fotballVM";
 
   const aboutCards = [
     {
@@ -49,12 +48,7 @@ export default function FotballVMJordal() {
       price: "99",
       currency: "NOK",
       unit: "per person",
-      items: [
-        "Inngang til familieområdet",
-        "Tribune",
-        "Kiosk",
-        "Fast track",
-      ],
+      items: ["Inngang til familieområdet", "Tribune", "Kiosk", "Fast track"],
       href: "/program",
       cta: "VELG KAMP",
     },
@@ -64,14 +58,7 @@ export default function FotballVMJordal() {
       price: "99",
       currency: "NOK",
       unit: "per person",
-      items: [
-        "Inngang til 18+ området",
-        "Tribune",
-        "Bar",
-        "Serveringstilbud",
-        "Kiosk",
-        "Fast track",
-      ],
+      items: ["Inngang til 18+ området", "Tribune", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
       href: "/program",
       cta: "VELG KAMP",
     },
@@ -81,19 +68,10 @@ export default function FotballVMJordal() {
       price: "1 499",
       currency: "NOK",
       unit: "per bord",
-      items: [
-        "Reservert langbord",
-        "Nærmest skjermen",
-        "Bar",
-        "Serveringstilbud",
-        "Kiosk",
-        "Fast track",
-      ],
+      items: ["Reservert langbord", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
       href: "/program",
       cta: "VELG KAMP",
     },
-    
-  
   ];
 
   const practicalCards = [
@@ -140,31 +118,19 @@ export default function FotballVMJordal() {
             <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
               {/* meny på desktop */}
               <div className="hidden justify-center gap-3 md:flex">
-                <Link
-                  href="/om"
-                  className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90"
-                >
+                <Link href="/om" className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90">
                   Om oss
                 </Link>
 
-                <Link
-                  href="/program"
-                  className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90"
-                >
+                <Link href="/program" className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90">
                   Program
                 </Link>
 
-                <a
-                  href="#pakker"
-                  className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90"
-                >
+                <a href="#pakker" className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90">
                   Plasser
                 </a>
 
-                <Link
-                  href="/faq"
-                  className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90"
-                >
+                <Link href="/faq" className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90">
                   FAQ
                 </Link>
               </div>
@@ -176,8 +142,9 @@ export default function FotballVMJordal() {
                   alt="Fotball på Jordal"
                   className="mx-auto -mb-6 h-auto w-[260px] md:w-[420px]"
                 />
+
                 <h1 className="sr-only">
-                Fotball på Jordal – se fotball-VM på storskjerm i Oslo
+                  Fotball på Jordal – se fotball-VM på storskjerm i Oslo
                 </h1>
 
                 <a
@@ -187,10 +154,10 @@ export default function FotballVMJordal() {
                   className="mt-6 inline-block"
                 >
                   <img
-  src="/media/vif-logo.png"
-  alt="Vålerenga Ishockey"
-  className="mx-auto -mt-3 h-14 w-auto md:-mt-5 md:h-15"
-/>
+                    src="/media/vif-logo.png"
+                    alt="Vålerenga Ishockey"
+                    className="mx-auto -mt-3 h-14 w-auto md:-mt-5 md:h-15"
+                  />
                 </a>
 
                 <p className="mt-3 text-base text-white/90 md:mt-4 md:text-lg">
@@ -199,27 +166,31 @@ export default function FotballVMJordal() {
                   Uansett vær.
                 </p>
 
-               {/* cta knapper på hero */}
-<div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-  <Link
-    href="/program"
-    className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
-  >
-    Kjøp billetter til fotball-VM
-  </Link>
+                {/* cta knapper på hero */}
+                <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                  <Link
+  href="/program"
+  className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
+>
+  Kjøp billetter til
+  <br />
+  fotball-VM
+</Link>
 
-  <Link
-    href="/program"
-className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"  >
-    Kjøp billetter til Champions League-finalen
-  </Link>
-</div>
+                  <Link
+                    href="/program"
+                    className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
+                  >
+                    Kjøp billetter til Champions League-finalen
+                    <br />
+                    og semifinalen i Hockey-VM
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
         </Reveal>
 
-        
         {/* pakkene */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-16">
           <Reveal>
@@ -258,17 +229,13 @@ className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md
                   </div>
 
                   <div className="mt-6">
-                    <div className="min-h-[18px] text-sm font-semibold leading-none text-black/50">
-                      &nbsp;
+                    <div className="h-[18px] text-sm font-semibold leading-none text-black/50">
+                      {item.title === "VIP RESTAURANT" ? "Fra" : "\u00A0"}
                     </div>
 
-                   <div className="h-[18px] text-sm font-semibold leading-none text-black/50">
-  {item.title === "VIP RESTAURANT" ? "Fra" : "\u00A0"}
-</div>
-
-<div className="mt-1 whitespace-nowrap text-5xl font-semibold leading-none tracking-tight tabular-nums text-[#0E2433]">
-  {item.price}
-</div>
+                    <div className="mt-1 whitespace-nowrap text-5xl font-semibold leading-none tracking-tight tabular-nums text-[#0E2433]">
+                      {item.price}
+                    </div>
 
                     <div className="mt-0.5 flex items-end justify-between">
                       <span className="text-5xl font-semibold leading-none tracking-tight text-[#0E2433]">
@@ -293,23 +260,12 @@ className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md
                   </div>
 
                   <div className="mt-auto pt-8">
-                    {item.title === "TO KVELDER PÅ VIP RESTAURANT" ? (
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex w-full items-center justify-center rounded-2xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold tracking-wide transition hover:bg-black/[0.02]"
-                      >
-                        {item.cta}
-                      </a>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className="inline-flex w-full items-center justify-center rounded-2xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold tracking-wide transition hover:bg-black/[0.02]"
-                      >
-                        {item.cta}
-                      </Link>
-                    )}
+                    <Link
+                      href={item.href}
+                      className="inline-flex w-full items-center justify-center rounded-2xl border border-black/15 bg-white px-6 py-4 text-sm font-semibold tracking-wide transition hover:bg-black/[0.02]"
+                    >
+                      {item.cta}
+                    </Link>
                   </div>
                 </div>
               </Reveal>
@@ -321,7 +277,9 @@ className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md
         <section className="mx-auto max-w-6xl px-4 pb-12">
           <Reveal>
             <h2 className="text-3xl font-semibold">Salkart</h2>
-            Se hvor du kan sitte under fotball-VM visningen på Jordal Amfi i Oslo.
+            <p className="mt-2 text-sm text-black/60">
+              Se hvor du kan sitte under fotball-VM visningen på Jordal Amfi i Oslo.
+            </p>
           </Reveal>
 
           <Reveal delayMs={120}>
@@ -338,34 +296,35 @@ className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md
         {/* om arrangementet */}
         <section className="mx-auto max-w-6xl px-4 pb-16 pt-10">
           <div className="mb-10">
-            <h2 className="text-3xl font-semibold">Se fotball-VM på storskjerm i Oslo</h2>
+            <h2 className="text-3xl font-semibold">
+              Se fotball-VM på storskjerm i Oslo
+            </h2>
           </div>
 
           <div className="grid items-stretch gap-6 md:grid-cols-3">
-        {aboutCards.map((card, index) => (
-          <Reveal key={card.title} delayMs={index * 90}>
-           <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-white p-8">
-             <div className="min-h-[56px]">
-              <div className="text-lg font-semibold leading-snug">
-            {card.title}
+            {aboutCards.map((card, index) => (
+              <Reveal key={card.title} delayMs={index * 90}>
+                <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-white p-8">
+                  <div className="min-h-[56px]">
+                    <div className="text-lg font-semibold leading-snug">
+                      {card.title}
+                    </div>
+                  </div>
+
+                  <div className="mt-3 text-sm leading-relaxed text-black/70">
+                    {card.desc}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </div>
 
-        <div className="mt-3 text-sm leading-relaxed text-black/70">
-          {card.desc}
-        </div>
-      </div>
-    </Reveal>
-  ))}
-</div>
-
-<div className="mt-8 max-w-3xl text-sm leading-relaxed text-black/70">
-  Fotball på Jordal er en av de største visningene av fotball-VM i Oslo.
-  Vi samler supportere til storskjermvisning i Jordal Amfi, med fokus på
-  stemning, fellesskap og gode opplevelser.
-</div>
+          <div className="mt-8 max-w-3xl text-sm leading-relaxed text-black/70">
+            Fotball på Jordal er en av de største visningene av fotball-VM i Oslo.
+            Vi samler supportere til storskjermvisning i Jordal Amfi, med fokus på
+            stemning, fellesskap og gode opplevelser.
+          </div>
         </section>
-        
 
         {/* praktisk */}
         <section id="praktisk" className="mx-auto max-w-6xl px-4 pb-12">
