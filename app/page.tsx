@@ -173,9 +173,7 @@ export default function FotballVMJordal() {
   href="/program"
   className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
 >
-  Kjøp billetter til
-  <br />
-  fotball-VM
+  Kjøp billetter til fotball-VM
 </Link>
 
                   {/* CTA KNAPP - CHAMPIONS LEAGUE + HOCKEY VM */}
@@ -186,16 +184,12 @@ export default function FotballVMJordal() {
 >
   {/* MOBIL */}
   <span className="md:hidden">
-    Kjøp billetter til CL-finalen
-    <br />
-    og Hockey-VM
+    Se program
   </span>
 
   {/* DESKTOP */}
   <span className="hidden md:inline">
-    Kjøp billetter til Champions League-finalen
-    <br />
-    og semifinalen i Hockey-VM
+    Se program
   </span>
 </Link>
                 </div>
@@ -204,34 +198,7 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
-<section className="mx-auto max-w-6xl px-4 pt-8">
-  <Link
-    href="artikkelside"
-    className="block overflow-hidden rounded-3xl border border-black/10 bg-white transition hover:shadow-lg"
-  >
-    <div className="border-b border-black/5 bg-[#044EA2] px-6 py-3">
-      <span className="text-sm font-semibold uppercase tracking-wide text-white">
-        Kampdag
-      </span>
-    </div>
 
-    <div className="p-6">
-      <h2 className="text-2xl font-semibold text-[#1A2238]">
-        Praktisk informasjon før Champions League-finalen
-      </h2>
-
-      <p className="mt-3 text-black/70">
-        Over 3 000 har sikret seg billett. Les om innganger, mat og drikke,
-        hockey-VM, studio med Thomas Aune og Kasper Wikestad og alt du trenger
-        å vite før avspark.
-      </p>
-
-      <div className="mt-5 inline-flex rounded-xl bg-[#044EA2] px-4 py-2 font-semibold text-white">
-        Les artikkelen →
-      </div>
-    </div>
-  </Link>
-</section>
 
         {/* pakkene */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-16">
