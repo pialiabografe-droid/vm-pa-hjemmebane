@@ -41,7 +41,7 @@ export default function OmPage() {
             <div className="mx-auto mt-10 max-w-3xl space-y-6 text-lg leading-relaxed text-black/75">
               Leter du etter et sted å se fotball-VM i Oslo? På Jordal Amfi inviterer vi til
               storskjermvisning av fotball-VM 2026. Her kan du oppleve kampene sammen med
-              hundrevis/tusenvis av andre – med lyd, lys og ekte stadionstemning.
+             tusenvis av andre – med lyd, lys og ekte stadionstemning.
 
               <p>
                 <br />
@@ -53,7 +53,7 @@ export default function OmPage() {
               <p>
                 Arrangementet lages av Vålerenga i samarbeid med JCP som
                 eventpartner. Målet er å skape en inkluderende møteplass på Oslo
-                øst – et sted der folk kan møtes, ta med venner og dele kampene i
+                øst – et sted der oppleve ekte stadionsteming, ta med venner og dele kampene i
                 fellesskap.
               </p>
 
@@ -72,7 +72,7 @@ export default function OmPage() {
               </p>
 
               <p>
-                Vi viser Norges to kamper som går tidlig, og hele sluttspillet.
+                Vi viser alle Norges kamper med forbehold om gunstig tidspunkt, og de beste kampene i sluttspillet.
                 Program og kampdager oppdateres fortløpende på nettsiden.
               </p>
 
@@ -81,17 +81,17 @@ export default function OmPage() {
               </p>
 
               <p>
-                En del av inntektene fra plassgaranti og bord går tilbake til
+                En del av inntektene fra billettsalget går tilbake til
                 breddeidrett og nærmiljøet. For oss handler dette om mer enn 90
                 minutter – det handler om å bruke VM til å styrke fellesskapet
                 lokalt.
                 <br />
                 <br />
                 Fotball på Jordal er en av de største visningene av fotball-VM i Oslo.
-                Vi viser utvalgte kamper og hele sluttspillet på storskjerm i Jordal Amfi.
+                Vi viser utvalgte kamper på storskjerm i Jordal Amfi.
                 For deg som lurer på hvor du kan se fotball-VM i Oslo, er dette et av de beste alternativene.
               </p>
-            </div>
+            </div>e
           </Reveal>
 
           {/* tilbakeknapp */}
