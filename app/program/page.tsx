@@ -11,6 +11,7 @@ type Match = {
   ticketUrl?: string;
   isNorway?: boolean;
   isFinal?: boolean;
+  ticketsComingSoon?: boolean;
 };
 
 const VIF = {
@@ -19,7 +20,6 @@ const VIF = {
 
 export default function ProgramPage() {
   const matches: Match[] = [
-   
     {
       slug: "16-juni",
       title: "Tirsdag 16. juni",
@@ -70,7 +70,61 @@ export default function ProgramPage() {
       ticketUrl:
         "https://vif-hockey.ticketco.events/no/nb/e/fotball_paa_jordal/hjemmeside-%20",
     },
-    
+    {
+      slug: "9-juli",
+      title: "Torsdag 9. juli",
+      ticketsComingSoon: true,
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
+          <div className="text-base font-semibold">22:00 Kvartfinale</div>
+        </div>
+      ),
+    },
+    {
+      slug: "10-juli",
+      title: "Fredag 10. juli",
+      ticketsComingSoon: true,
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+          <div className="text-base font-semibold">21:00 Kvartfinale</div>
+        </div>
+      ),
+    },
+    {
+      slug: "11-juli",
+      title: "Lørdag 11. juli",
+      ticketsComingSoon: true,
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 21:00</div>
+          <div className="text-base font-semibold">23:00 Kvartfinale</div>
+        </div>
+      ),
+    },
+    {
+      slug: "14-juli",
+      title: "Tirsdag 14. juli",
+      ticketsComingSoon: true,
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+          <div className="text-base font-semibold">21:00 Semifinale</div>
+        </div>
+      ),
+    },
+    {
+      slug: "15-juli",
+      title: "Onsdag 15. juli",
+      ticketsComingSoon: true,
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
+          <div className="text-base font-semibold">21:00 Semifinale</div>
+        </div>
+      ),
+    },
     {
       slug: "19-juli",
       title: "Søndag 19. juli",
@@ -104,6 +158,40 @@ export default function ProgramPage() {
     return null;
   };
 
+  const TicketButton = ({ match }: { match: Match }) => {
+    if (match.ticketsComingSoon) {
+      return (
+        <div>
+  <div
+    className="inline-block rounded-2xl px-5 py-3 font-semibold"
+    style={{
+      backgroundColor: "#EAF3FF",
+      color: "#044EA2",
+    }}
+  >
+    Billetter kommer snart
+  </div>
+
+  <div className="mt-2 text-xs text-black/60">
+    Billettsalget åpner når lagene er klare
+  </div>
+</div>
+      );
+    }
+
+    return (
+      <a
+        href={match.ticketUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold text-white md:w-auto md:px-5"
+        style={{ backgroundColor: VIF.blue }}
+      >
+        Kjøp billett
+      </a>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
       <main className="mx-auto max-w-6xl px-4 py-20 md:py-24">
@@ -119,10 +207,11 @@ export default function ProgramPage() {
               </h2>
 
               <p className="mt-3 text-black/70">
-                Her finner du programmet for fotball-VM visningen på Jordal Amfi i Oslo.
-                Vi viser utvalgte kamper og hele sluttspillet på storskjerm, følg med
-                for flere kampdager og nye oppsett. Sikre deg billetter til kampene du
-                vil oppleve live sammen med andre supportere!
+                Her finner du programmet for fotball-VM visningen på Jordal Amfi
+                i Oslo. Vi viser utvalgte kamper og hele sluttspillet på
+                storskjerm, følg med for flere kampdager og nye oppsett. Sikre
+                deg billetter til kampene du vil oppleve live sammen med andre
+                supportere!
               </p>
             </div>
 
@@ -158,15 +247,7 @@ export default function ProgramPage() {
                   ) : null}
 
                   <div className="mt-4">
-                    <a
-                      href={match.ticketUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold text-white"
-                      style={{ backgroundColor: VIF.blue }}
-                    >
-                      Kjøp billett
-                    </a>
+                    <TicketButton match={match} />
                   </div>
                 </section>
               </Reveal>
@@ -178,8 +259,9 @@ export default function ProgramPage() {
 
                 <div className="mt-2 text-sm leading-relaxed text-black/70">
                   Kom tidlig og få med deg mer enn selve kampen. Gratis
-                  aktiviteter, underholdning før avspark. Opplevelser for både store og små! Se
-                  billettsiden for hver kamp for detaljer og tidspunkt.
+                  aktiviteter, underholdning før avspark. Opplevelser for både
+                  store og små! Se billettsiden for hver kamp for detaljer og
+                  tidspunkt.
                 </div>
               </section>
             </Reveal>
@@ -207,15 +289,7 @@ export default function ProgramPage() {
                   ) : null}
 
                   <div className="mt-6">
-                    <a
-                      href={match.ticketUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block rounded-2xl px-5 py-3 font-semibold text-white"
-                      style={{ backgroundColor: VIF.blue }}
-                    >
-                      Kjøp billett
-                    </a>
+                    <TicketButton match={match} />
                   </div>
                 </section>
               </Reveal>
@@ -227,19 +301,21 @@ export default function ProgramPage() {
 
                 <div className="mt-2 text-sm leading-relaxed text-black/70">
                   Kom tidlig og få med deg mer enn selve kampen. Gratis
-                  aktiviteter, DJ og oppsnakk før avspark!
-                  Opplevelser for både store og små! Se
-                  billettsiden for hver kamp for detaljer og tidspunkt.
+                  aktiviteter, DJ og oppsnakk før avspark! Opplevelser for både
+                  store og små! Se billettsiden for hver kamp for detaljer og
+                  tidspunkt.
                 </div>
               </section>
             </Reveal>
           </div>
 
           <p className="mt-8 max-w-3xl text-sm leading-relaxed text-black/70">
-            Dette er et av de største arrangementene for å se fotball-VM i Oslo. 
-
-             <br/>
-             <b> Programmet oppdateres fortløpende med nye kamper og billettmuligheter.</b>
+            Dette er et av de største arrangementene for å se fotball-VM i Oslo.
+            <br />
+            <b>
+              Programmet oppdateres fortløpende med nye kamper og
+              billettmuligheter.
+            </b>
           </p>
         </div>
       </main>
