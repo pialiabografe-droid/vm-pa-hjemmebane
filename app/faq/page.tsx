@@ -19,18 +19,16 @@ const tickets: QAItem[] = [
     q: "Må jeg bestille billett på forhånd?",
     a: (
       <>
-        Du kan sikre deg tribuneplass til 99 kr eller reservere bord på
-        forhånd. Billetter kan også kjøpes i inngangen dersom det fortsatt er
+        Du kan reservere bord for å få tilgang til gukvet forann storskjermen, eller sikre deg tribuneplass til 99 kr. Billettene vil ligge ute for salg så lenge det er
         ledig kapasitet.
       </>
     ),
   },
   {
-    q: "Om vi ikke klarer å fylle hele bordet på 8 personer, kan jeg da dele opp bordet?",
+    q: "Om vi er flere enn 8 personer, er det mulig at alle kan komme inn via bordbesteillingen?",
     a: (
       <>
-        Nei, vi selger kun bord for åtte personer, og det er ikke mulig å kjøpe
-        halve bord.
+        Hvert bord inkluderer 8 bånd som gir tilgang til bordområdet, og vi har dessverre ikke mulighet til å utstede flere enn 8 bånd per bordbestilling. Hvis dere er flere fordelt på ulike bord, er det selvfølgelig mulig å bytte på plassene underveis og sitte sammen slik det passer dere best.
       </>
     ),
   },
@@ -43,7 +41,7 @@ const tickets: QAItem[] = [
     ),
   },
   {
-    q: "Hva er forskjellen på tribuneplass, Fast Track, premium bord og VIP-restauranten?",
+    q: "Hva er forskjellen på familietribunen, nedre tribune og premium bord?",
     a: (
       <>
         Alle forhåndsbestilte billetter inkluderer Fast Track og tilgang til
@@ -95,8 +93,8 @@ const info: QAItem[] = [
     q: "Hvilke fotball-VM kamper vises på Jordal?",
     a: (
       <>
-        Vi viser Norges beste gruppespillkamper, og sluttspillet. Vi legger ut
-        billetter til de beste 16-delsfinalene løpende.{" "}
+        Vi viser alle Norges kamper, med forbehold om gunstig tidspunkt, og de beste kampene fra sluttspillet. Vi oppdaterer programmet, og legger ut
+        billetter løpende.{" "}
         <a
           href="https://vif-hockey.ticketco.shop/?tag=fotballVM"
           target="_blank"
@@ -114,6 +112,13 @@ const info: QAItem[] = [
 /* delt inn - arena og fasiliteter */
 const arena: QAItem[] = [
   {
+    q: "Vil det være mat og drikke tilgjengelig?",
+    a: (
+      <>
+Ja, det vil være servering både med og uten alkohol. Det blir en foodcourt utenfor arenaen, med mulighet for å bestille via QR-kode fra bordene. I tillegg selges det pizza i kioskene. På familietribunen serveres det ikke alkohol.      </>
+    ),
+  },
+  {
     q: "Er området tilrettelagt for rullestolbrukere?",
     a: (
       <>
@@ -125,16 +130,7 @@ const arena: QAItem[] = [
         .
       </>
     ),
-  },
-  {
-    q: "Vil det være mat og drikke tilgjengelig?",
-    a: (
-      <>
-        Ja. Det vil være servering både med og uten alkohol, samt flere
-        mattilbud. På familietribunen serveres det ikke alkohol.
-      </>
-    ),
-  },
+  }
 ];
 
 type SectionProps = {

@@ -70,7 +70,7 @@ export default function ProgramPage() {
       ticketUrl:
         "https://vif-hockey.ticketco.events/no/nb/e/fotball_paa_jordal/hjemmeside-%20",
     },
-
+    
     {
       slug: "19-juli",
       title: "Søndag 19. juli",
