@@ -171,10 +171,6 @@ export default function ProgramPage() {
   >
     Billetter kommer snart
   </div>
-
-  <div className="mt-2 text-xs text-black/60">
-    Billettsalget åpner når lagene er klare
-  </div>
 </div>
       );
     }
