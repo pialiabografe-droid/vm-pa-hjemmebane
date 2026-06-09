@@ -227,8 +227,8 @@ export default function ProgramPage() {
 
                 <div className="mt-2 text-sm leading-relaxed text-black/70">
                   Kom tidlig og få med deg mer enn selve kampen. Gratis
-                  aktiviteter, underholdning før avspark og uteservering når
-                  været tillater det. Opplevelser for både store og små! Se
+                  aktiviteter, DJ og oppsnakk før avspark!
+                  Opplevelser for både store og små! Se
                   billettsiden for hver kamp for detaljer og tidspunkt.
                 </div>
               </section>
