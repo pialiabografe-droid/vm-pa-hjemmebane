@@ -81,7 +81,7 @@ export default function OmPage() {
               </p>
 
               <p>
-                En del av inntektene fra billettsalget går tilbake til
+                En del av inntektene går tilbake til
                 breddeidrett og nærmiljøet. For oss handler dette om mer enn 90
                 minutter – det handler om å bruke VM til å styrke fellesskapet
                 lokalt.
@@ -91,7 +91,7 @@ export default function OmPage() {
                 Vi viser utvalgte kamper på storskjerm i Jordal Amfi.
                 For deg som lurer på hvor du kan se fotball-VM i Oslo, er dette et av de beste alternativene.
               </p>
-            </div>e
+            </div>
           </Reveal>
 
           {/* tilbakeknapp */}
