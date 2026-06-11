@@ -53,8 +53,8 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-black/10 bg-white text-[#071427]">
       <div className="mx-auto max-w-6xl px-4 py-3">
         {/* desktop */}
-        <div className="hidden grid-cols-3 items-center md:grid">
-          {/* logo */}
+        <div className="hidden grid-cols-[1fr_2fr_1fr] items-center md:grid">
+          {/* venstre logo */}
           <div className="flex items-center">
             <Link href="/" className="hover:opacity-75">
               <img
@@ -65,22 +65,38 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* nav */}
+          {/* midten */}
           <div className="flex justify-center">
-            {!isHome && (
-              <nav className="flex gap-6 text-sm text-black/70">
+            {isHome ? (
+              <img
+                src="/media/adidas-svart.png"
+                alt="adidas"
+                className="h-[72px] w-auto object-contain"
+              />
+            ) : (
+              <nav className="flex items-center gap-8 whitespace-nowrap text-sm text-black/70">
                 <Link href="/om">Om oss</Link>
                 <Link href="/program">Program</Link>
+
                 <button onClick={() => goSection(ticketsSectionId)}>
                   Plasser
                 </button>
+
                 <Link href="/faq">FAQ</Link>
               </nav>
             )}
           </div>
 
-          {/* cta */}
-          <div className="flex justify-end">
+          {/* høyre */}
+          <div className="flex items-center justify-end gap-6">
+            {!isHome && (
+              <img
+                src="/media/adidas-svart.png"
+                alt="adidas"
+                className="h-[72px] w-auto object-contain"
+              />
+            )}
+
             <Link
               href="/program"
               className="rounded-xl bg-[#BC1823] px-4 py-2 text-sm font-semibold text-white"
@@ -100,36 +116,33 @@ export default function Header() {
             />
           </Link>
 
-          <button onClick={() => setMobileOpen(!mobileOpen)}>
-            ☰
-          </button>
+          <button onClick={() => setMobileOpen(!mobileOpen)}>☰</button>
         </div>
 
         {mobileOpen && (
-  <div className="mt-3 border-t pt-4 md:hidden">
-    <div className="flex flex-col gap-3">
-      <Link href="/om">Om oss</Link>
+          <div className="mt-3 border-t pt-4 md:hidden">
+            <div className="flex flex-col gap-3">
+              <Link href="/om">Om oss</Link>
+              <Link href="/program">Program</Link>
 
-      <Link href="/program">Program</Link>
+              <button
+                onClick={() => goSection(ticketsSectionId)}
+                className="text-left text-black"
+              >
+                Plasser
+              </button>
 
-      <button
-        onClick={() => goSection(ticketsSectionId)}
-        className="text-left text-black"
-      >
-        Plasser
-      </button>
+              <Link href="/faq">FAQ</Link>
 
-      <Link href="/faq">FAQ</Link>
-
-      <Link
-        href="/program"
-        className="rounded-xl bg-[#BC1823] px-3 py-3 text-center text-white"
-      >
-        Billetter
-      </Link>
-    </div>
-  </div>
-)}
+              <Link
+                href="/program"
+                className="rounded-xl bg-[#BC1823] px-3 py-3 text-center text-white"
+              >
+                Billetter
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

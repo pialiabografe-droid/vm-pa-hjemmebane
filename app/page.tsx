@@ -136,13 +136,17 @@ export default function FotballVMJordal() {
                 </Link>
               </div>
 
-              {/* fpj + vif logo på hero */}
-              <div className="mt-10 text-center md:mt-12">
-                <img
-                  src="/media/logo-hvit-2.png"
-                  alt="Fotball på Jordal"
-                  className="mx-auto -mb-6 h-auto w-[260px] md:w-[420px]"
-                />
+              {/* adidas + fpj + vif logo på hero */}
+<div className="mt-10 text-center md:mt-12">
+  <img
+    src="/media/adidas-hvit.png"
+    alt="adidas"className="mx-auto -mb-3 h-16 w-auto scale-125 object-contain md:hidden"
+  />
+  <img
+    src="/media/logo-hvit-2.png"
+    alt="Fotball på Jordal"
+    className="mx-auto -mb-6 h-auto w-[260px] md:w-[420px]"
+  />
 
                 <h1 className="sr-only">
                   Fotball på Jordal – se fotball-VM på storskjerm i Oslo
