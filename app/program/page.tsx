@@ -204,8 +204,8 @@ export default function ProgramPage() {
 
               <p className="mt-3 text-black/70">
                 Her finner du programmet for fotball-VM visningen på Jordal Amfi
-                i Oslo. Vi viser utvalgte kamper og hele sluttspillet på
-                storskjerm, følg med for flere kampdager og nye oppsett. Sikre
+                i Oslo. Vi viser utvalgte kamper fra gruppespillet og sluttspillet på
+                storskjerm - følg med for flere kampdager og nye oppsett. Sikre
                 deg billetter til kampene du vil oppleve live sammen med andre
                 supportere!
               </p>
