@@ -19,7 +19,7 @@ const tickets: QAItem[] = [
     q: "Må jeg bestille billett på forhånd?",
     a: (
       <>
-        Du kan reservere bord for å få tilgang til gukvet forann storskjermen, eller sikre deg tribuneplass til 99 kr. Billettene vil ligge ute for salg så lenge det er
+        Du kan reservere bord for å få tilgang til gulvet forann storskjermen, eller sikre deg tribuneplass til 99 kr. Billettene vil ligge ute for salg så lenge det er
         ledig kapasitet.
       </>
     ),
