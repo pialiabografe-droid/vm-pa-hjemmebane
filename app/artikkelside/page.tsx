@@ -8,52 +8,61 @@ const VIF = {
 export default function ArticlePage() {
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
-      <main className="mx-auto max-w-4xl px-6 py-24">
+      <main className="mx-auto max-w-4xl px-6 pb-24 pt-16 md:pt-20">
         <Reveal>
-          <div className="text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#044EA2]">
-              Nyhet
-            </p>
+  <div className="text-center">
+    <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#044EA2]">
+      Kampdag
+    </p>
 
-            <h1 className="text-5xl font-semibold tracking-tight md:text-6xl">
-              Champions League-finalen LIVE i Jordal Amfi
-            </h1>
+    <h1 className="text-5xl font-semibold tracking-tight md:text-6xl">
+      Velkommen til Jordal Amfi!
+    </h1>
 
-            <p className="mt-6 text-xl text-black/70">
-              Over 3 000 har allerede sikret seg billett.
-            </p>
-          </div>
-        </Reveal>
+    <p className="mt-6 text-xl leading-relaxed text-black/70">
+      I dag skjer det. Norges åpningskamp i VM vises LIVE i kveld. 3 500 billetter er allerede solgt.
+      Bordene er utsolgt, men det er fortsatt ledige tribuneplasser!
+    </p>
+  </div>
+</Reveal>
 
         <Reveal delayMs={100}>
-          <article className="mx-auto mt-16 max-w-3xl space-y-8 text-lg leading-relaxed text-black/80">
-            <p>
-              I dag skjer det. PSG mot Arsenal. Champions League-finalen vises
-              LIVE i Jordal Amfi, og over 3 000 har allerede sikret seg billett.
-            </p>
-
-            <p>
-              Nå er det bare å gjøre seg klar for en dag ingen av oss kommer til
-              å glemme.
-            </p>
+          <article className="mx-auto mt-12 max-w-3xl space-y-7 text-lg leading-relaxed text-black/80">
+          
 
             <h2 className="text-3xl font-semibold text-[#1A2238]">
-              Kom tidlig – dørene åpner kl. 14:30
+              Kom tidlig – dørene og foodcourten åpner kl. 20:00
             </h2>
 
             <p>
-              Finn deg til rette i hallen og nyt stemningen fra første stund.
-              Alle kiosker og barer åpner samtidig med dørene, så det er
-              ingenting i veien for en kald drikke før det hele sparker i gang.
+            Finn deg godt til rette, slå deg til ro og nyt stemningen fra start.
+              Alle kiosker og barer åpner samtidig med dørene.
+            </p>
+
+            <p>
+              Før og etter Frankrike mot Senegal stiller Robin Grov og Sebastian
+              Jarl med oppsnakk for å varme opp til kveldens høydepunkt: Norges
+              åpningskamp mot Irak.
             </p>
 
             <div className="rounded-2xl bg-white p-6">
-              <h3 className="mb-3 text-xl font-semibold">Innganger</h3>
+              <h3 className="mb-3 text-xl font-semibold">
+                Praktisk informasjon
+              </h3>
 
-              <ul className="space-y-2">
-                <li>• Bordområdet og nedre tribune → Inngang 2A</li>
-                <li>• Øvre tribune → Inngang 4A</li>
-              </ul>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold">Innganger</h4>
+
+                  <ul className="mt-2 space-y-2">
+                    <li>
+                      • Bordområdet og nedre tribune → Inngang 2A (18-års
+                      aldersgrense)
+                    </li>
+                    <li>• Øvre tribune → Inngang 4B</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <h2 className="text-3xl font-semibold text-[#1A2238]">
@@ -79,43 +88,37 @@ export default function ArticlePage() {
             </p>
 
             <ul className="space-y-2">
-              <li>• Kiosker med pølser, snacks og drikke</li>
-              <li>• Uteområde ved inngang 2A med burger og pizza</li>
+              <li>
+                • Kiosker i hele hallen med pizza, snacks og drikke
+              </li>
+              <li>
+                • Eget uteområde utenfor inngang 2A med burger, pizza, gyros og
+                mer
+              </li>
               <li>• To egne barer for bordgjester</li>
-              <li>• Egen Pepsi-stand med Pepsi-drinker</li>
             </ul>
 
             <h2 className="text-3xl font-semibold text-[#1A2238]">
-              Norge mot Sveits på storskjerm
+              Kveldens program
             </h2>
 
-            <p>
-              Som oppvarming til Champions League-finalen sender vi direkte fra
-              Sveits når Norge møter Sveits i semifinalen i ishockey-VM.
+            <p className="text-2xl font-semibold text-[#1A2238]">
+              Frankrike – Senegal kl. 21:00
             </p>
 
             <p>
-              I pausene i hockeykampen har vi eget studio med Thomas Aune og
-              Kasper Wikestad som analyserer både PSG og Arsenal, og presenterer
-              lagoppstillingene så snart de er klare.
-            </p>
-
-            <h2 className="text-3xl font-semibold text-[#1A2238]">
-              Oppladning til finalen
-            </h2>
-
-            <p>
-              Fra kl. 17:50 setter vi direkte over til Budapest.
+              Vi starter VM-kvelden med et spennende oppgjør mellom Frankrike og
+              Senegal før fokuset rettes mot Norges første kamp i mesterskapet.
             </p>
 
             <p className="text-2xl font-semibold text-[#1A2238]">
-              To av verdens beste klubber. Én tittel.
+              Irak – Norge kl. 00:00
             </p>
 
             <p>
-              Vi setter over til finalen i god tid før avspark slik at du får
-              med deg hele opplevelsen – fra innmarsj og seremoniene til
-              pokalen løftes.
+              Når klokken slår midnatt er det endelig klart for Norges
+              åpningskamp i VM. Opplev kampen sammen med tusenvis av andre
+              fotballfans på storskjerm i Jordal Amfi.
             </p>
 
             <h2 className="text-3xl font-semibold text-[#1A2238]">
@@ -123,32 +126,55 @@ export default function ArticlePage() {
             </h2>
 
             <p>
-              Vi gleder oss enormt til å se dere alle på Jordal i dag. Dette
-              blir en dag for historiebøkene.
+              Vi gleder oss til å fylle Jordal med fotballfans og skape en
+              fantastisk ramme rundt Norges VM-start.
             </p>
 
             <div className="rounded-3xl bg-white p-8 text-center shadow-sm">
               <h3 className="text-2xl font-semibold">
-                Klar for kamp?
+                Kommende arrangement
               </h3>
 
-              <p className="mt-3 text-black/70">
-                Se programmet eller kjøp billetter til kommende arrangementer.
-              </p>
+              <div className="mt-6 space-y-6 text-left">
+                <div className="rounded-2xl border border-black/10 p-5">
+                  <div className="font-semibold text-xl">
+                    Nederland – Sverige
+                  </div>
+                  <div className="mt-1 text-black/70">
+                    Lørdag 20. juni fra kl. 18:00
+                  </div>
 
-              <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
-                <Link
-                  href="/program"
-                  className="rounded-2xl bg-[#044EA2] px-7 py-3 font-semibold text-white transition hover:opacity-90"
-                >
-                  Se program
-                </Link>
+                  <Link
+                    href="https://vif-hockey.ticketco.events/no/nb/e/tyskland__elfenbenskysten/4b48842c-9362-4260-b514-bd22894e99d7"
+                    className="mt-4 inline-flex rounded-xl bg-[#044EA2] px-5 py-2.5 font-semibold text-white transition hover:opacity-90"
+                  >
+                    Kjøp billetter
+                  </Link>
+                </div>
 
+                <div className="rounded-2xl border border-black/10 p-5">
+                  <div className="font-semibold text-xl">
+                    Norge – Frankrike
+                  </div>
+                  <div className="mt-1 text-black/70">
+                    Fredag 26. juni fra kl. 19:00
+                  </div>
+
+                  <Link
+                    href="https://vif-hockey.ticketco.events/no/nb/e/fotball_paa_jordal/hjemmeside-%20"
+                    className="mt-4 inline-flex rounded-xl bg-[#044EA2] px-5 py-2.5 font-semibold text-white transition hover:opacity-90"
+                  >
+                    Kjøp billetter
+                  </Link>
+                </div>
+              </div>
+
+              <div className="mt-8">
                 <Link
                   href="/program"
                   className="rounded-2xl border border-[#044EA2] px-7 py-3 font-semibold text-[#044EA2] transition hover:bg-[#044EA2]/5"
                 >
-                  Kjøp billetter
+                  Se hele programmet
                 </Link>
               </div>
             </div>

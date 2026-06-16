@@ -22,7 +22,6 @@ export default function FotballVMJordal() {
       title: "Se fotball-VM sammen med andre i Oslo",
       desc: "For Vålerenga handler det om å samle folk og bygge felleskap. Vi ønsker å ta samfunnsansvar og gi noe tilbake til nærmiljøet vårt.",
     },
-  
     {
       title: "VM-fest på ekte Jordal-vis",
       desc: (
@@ -117,7 +116,6 @@ export default function FotballVMJordal() {
             </div>
 
             <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-16">
-              {/* meny på desktop */}
               <div className="hidden justify-center gap-3 md:flex">
                 <Link href="/om" className="rounded-full border border-white bg-white px-5 py-2 text-sm font-medium shadow-md transition hover:bg-white/90">
                   Om oss
@@ -136,17 +134,18 @@ export default function FotballVMJordal() {
                 </Link>
               </div>
 
-              {/* adidas + fpj + vif logo på hero */}
-<div className="mt-10 text-center md:mt-12">
-  <img
-    src="/media/adidas-hvit.png"
-    alt="adidas"className="mx-auto -mb-3 h-16 w-auto scale-125 object-contain md:hidden"
-  />
-  <img
-    src="/media/logo-hvit-2.png"
-    alt="Fotball på Jordal"
-    className="mx-auto -mb-6 h-auto w-[260px] md:w-[420px]"
-  />
+              <div className="mt-10 text-center md:mt-12">
+                <img
+                  src="/media/adidas-hvit.png"
+                  alt="adidas"
+                  className="mx-auto -mb-3 h-16 w-auto scale-125 object-contain md:hidden"
+                />
+
+                <img
+                  src="/media/logo-hvit-2.png"
+                  alt="Fotball på Jordal"
+                  className="mx-auto -mb-6 h-auto w-[260px] md:w-[420px]"
+                />
 
                 <h1 className="sr-only">
                   Fotball på Jordal – se fotball-VM på storskjerm i Oslo
@@ -171,38 +170,58 @@ export default function FotballVMJordal() {
                   Uansett vær.
                 </p>
 
-                {/* cta knapper på hero */}
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                   <Link
-  href="/program"
-  className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
->
-  Kjøp billetter til fotball-VM
-</Link>
+                    href="/program"
+                    className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
+                  >
+                    Kjøp billetter til fotball-VM
+                  </Link>
 
-                  {/* CTA KNAPP - CHAMPIONS LEAGUE + HOCKEY VM */}
-
-<Link
-  href="/program"
-  className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
->
-  {/* MOBIL */}
-  <span className="md:hidden">
-    Se program
-  </span>
-
-  {/* DESKTOP */}
-  <span className="hidden md:inline">
-    Se program
-  </span>
-</Link>
+                  <Link
+                    href="/program"
+                    className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
+                  >
+                    <span className="md:hidden">Se program</span>
+                    <span className="hidden md:inline">Se program</span>
+                  </Link>
                 </div>
               </div>
             </div>
           </section>
         </Reveal>
 
+        {/* nyhetssak */}
+        <section className="mx-auto max-w-6xl px-4 pt-8">
+          <Reveal>
+            <Link
+              href="/artikkelside"
+              className="block overflow-hidden rounded-3xl border border-black/10 bg-white transition hover:shadow-lg"
+            >
+              <div className="border-b border-black/5 bg-[#044EA2] px-6 py-3">
+                <span className="text-sm font-semibold uppercase tracking-wide text-white">
+                  Kampdag
+                </span>
+              </div>
 
+              <div className="p-6">
+                <h2 className="text-2xl font-semibold text-[#1A2238]">
+                  Velkommen til Jordal Amfi!
+                </h2>
+
+                <p className="mt-3 text-black/70">
+                  Norges åpningskamp i VM vises LIVE i Jordal Amfi i kveld.
+                  Les praktisk informasjon om innganger, armbånd, mat og
+                  drikke, foodcourt og kveldens program.
+                </p>
+
+                <div className="mt-5 inline-flex rounded-xl bg-[#044EA2] px-4 py-2 font-semibold text-white">
+                  Les artikkelen →
+                </div>
+              </div>
+            </Link>
+          </Reveal>
+        </section>
 
         {/* pakkene */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-16">
