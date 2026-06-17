@@ -48,7 +48,7 @@ export default function FotballVMJordal() {
       price: "99",
       currency: "NOK",
       unit: "per person",
-      items: ["Inngang til familieområdet", "Tribune", "Kiosk", "Fast track"],
+      items: ["Inngang til familieområdet", "Tribune", "Kiosk"],
       href: "/program",
       cta: "VELG KAMP",
     },
@@ -58,7 +58,7 @@ export default function FotballVMJordal() {
       price: "99",
       currency: "NOK",
       unit: "per person",
-      items: ["Inngang til 18+ området", "Tribune", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
+      items: ["Inngang til 18+ området", "Tribune", "Bar", "Serveringstilbud", "Kiosk"],
       href: "/program",
       cta: "VELG KAMP",
     },
@@ -68,7 +68,7 @@ export default function FotballVMJordal() {
       price: "1 499",
       currency: "NOK",
       unit: "per bord",
-      items: ["Reservert langbord", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk", "Fast track"],
+      items: ["Reservert langbord", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk"],
       href: "/program",
       cta: "VELG KAMP",
     },
@@ -191,38 +191,6 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
-        {/* nyhetssak */}
-        <section className="mx-auto max-w-6xl px-4 pt-8">
-          <Reveal>
-            <Link
-              href="/artikkelside"
-              className="block overflow-hidden rounded-3xl border border-black/10 bg-white transition hover:shadow-lg"
-            >
-              <div className="border-b border-black/5 bg-[#044EA2] px-6 py-3">
-                <span className="text-sm font-semibold uppercase tracking-wide text-white">
-                  Kampdag
-                </span>
-              </div>
-
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold text-[#1A2238]">
-                  Velkommen til Jordal Amfi!
-                </h2>
-
-                <p className="mt-3 text-black/70">
-                  Norges åpningskamp i VM vises LIVE i Jordal Amfi i kveld.
-                  Les praktisk informasjon om innganger, armbånd, mat og
-                  drikke, foodcourt og kveldens program.
-                </p>
-
-                <div className="mt-5 inline-flex rounded-xl bg-[#044EA2] px-4 py-2 font-semibold text-white">
-                  Les artikkelen →
-                </div>
-              </div>
-            </Link>
-          </Reveal>
-        </section>
-
         {/* pakkene */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-16">
           <Reveal>
@@ -232,7 +200,7 @@ export default function FotballVMJordal() {
                 <p className="mt-2 text-sm text-black/60">
                   Velg billetter til fotball-VM visningen på Jordal Amfi i Oslo. Vi tilbyr alt
                   fra enkle plasser til premium bord nær skjermen.
-                  Kjøp billett allerede nå for å sikre deg plass, fast track og reservert
+                  Kjøp billett allerede nå for å sikre deg plass og reservert
                   bord <strong>hele</strong> dagen! <br /><br />
                   Alle kjøp går via TicketCo.
                 </p>

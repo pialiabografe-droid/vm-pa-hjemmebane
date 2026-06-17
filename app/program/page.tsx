@@ -27,12 +27,8 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner 20:00</div>
-          <div className="text-base font-semibold">
-            21:00 Senegal – Frankrike
-          </div>
-          <div className="text-base font-semibold">
-            00:00 Irak – Norge
-          </div>
+          <div className="text-base font-semibold">21:00 Senegal – Frankrike</div>
+          <div className="text-base font-semibold">00:00 Irak – Norge</div>
         </div>
       ),
       ticketUrl:
@@ -44,12 +40,8 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
-          <div className="text-base font-semibold">
-            19:00 Nederland – Sverige
-          </div>
-          <div className="text-base font-semibold">
-            22:00 Tyskland – Elfenbenskysten
-          </div>
+          <div className="text-base font-semibold">19:00 Nederland – Sverige</div>
+          <div className="text-base font-semibold">22:00 Tyskland – Elfenbenskysten</div>
         </div>
       ),
       ticketUrl:
@@ -62,68 +54,83 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">
-            21:00 Norge – Frankrike
-          </div>
+          <div className="text-base font-semibold">21:00 Norge – Frankrike</div>
         </div>
       ),
       ticketUrl:
         "https://vif-hockey.ticketco.events/no/nb/e/fotball_paa_jordal/hjemmeside-%20",
     },
     {
+  slug: "dato-kommer",
+  title: "Norges vei til VM",
+  isNorway: true,
+  ticketsComingSoon: true,
+  subtitle: (
+    <div className="space-y-2">
+      <div className="text-base font-semibold">Vi viser Norges 16.delsfinale!</div>
+      <div className="text-sm text-black/60">
+        
+        Med forbehold om kampstart før midnatt.
+      </div>
+    </div>
+  ),
+  ticketUrl:
+    "https://vif-hockey.ticketco.events/no/nb/e/",
+},
+    {
       slug: "9-juli",
       title: "Torsdag 9. juli",
-      ticketsComingSoon: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
           <div className="text-base font-semibold">22:00 Kvartfinale</div>
         </div>
       ),
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_1/hjemmeside",
     },
     {
       slug: "10-juli",
       title: "Fredag 10. juli",
-      ticketsComingSoon: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
           <div className="text-base font-semibold">21:00 Kvartfinale</div>
         </div>
       ),
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_2/hjemmeside",
     },
     {
       slug: "11-juli",
       title: "Lørdag 11. juli",
-      ticketsComingSoon: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 21:00</div>
           <div className="text-base font-semibold">23:00 Kvartfinale</div>
         </div>
       ),
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
     },
     {
       slug: "14-juli",
       title: "Tirsdag 14. juli",
-      ticketsComingSoon: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
           <div className="text-base font-semibold">21:00 Semifinale</div>
         </div>
       ),
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_1/hjemmeside",
     },
     {
       slug: "15-juli",
       title: "Onsdag 15. juli",
-      ticketsComingSoon: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
           <div className="text-base font-semibold">21:00 Semifinale</div>
         </div>
       ),
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_2/hjemmeside",
     },
     {
       slug: "19-juli",
@@ -135,8 +142,7 @@ export default function ProgramPage() {
           <div className="text-base font-semibold">21:00 Finale</div>
         </div>
       ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
     },
   ];
 
@@ -159,34 +165,32 @@ export default function ProgramPage() {
   };
 
   const TicketButton = ({ match }: { match: Match }) => {
-    if (match.ticketsComingSoon) {
-      return (
-        <div>
-  <div
-    className="inline-block rounded-2xl px-5 py-3 font-semibold"
-    style={{
-      backgroundColor: "#EAF3FF",
-      color: "#044EA2",
-    }}
-  >
-    Billetter kommer snart
-  </div>
-</div>
-      );
-    }
-
+  if (match.ticketsComingSoon) {
     return (
-      <a
-        href={match.ticketUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold text-white md:w-auto md:px-5"
-        style={{ backgroundColor: VIF.blue }}
+      <div
+        className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold md:w-auto md:px-5"
+        style={{
+          backgroundColor: "#EAF3FF",
+          color: "#044EA2",
+        }}
       >
-        Kjøp billett
-      </a>
+        Billetter kommer snart
+      </div>
     );
-  };
+  }
+
+  return (
+    <a
+      href={match.ticketUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold text-white md:w-auto md:px-5"
+      style={{ backgroundColor: VIF.blue }}
+    >
+      Kjøp billett
+    </a>
+  );
+};
 
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
@@ -204,10 +208,10 @@ export default function ProgramPage() {
 
               <p className="mt-3 text-black/70">
                 Her finner du programmet for fotball-VM visningen på Jordal Amfi
-                i Oslo. Vi viser utvalgte kamper fra gruppespillet og sluttspillet på
-                storskjerm. Følg med for flere kampdager og nye oppsett! Sikre
-                deg billetter til kampene du vil oppleve live sammen med andre
-                supportere!
+                i Oslo. Vi viser utvalgte kamper fra gruppespillet og
+                sluttspillet på storskjerm. Følg med for flere kampdager og nye
+                oppsett! Sikre deg billetter til kampene du vil oppleve live
+                sammen med andre supportere!
               </p>
             </div>
 
@@ -221,7 +225,6 @@ export default function ProgramPage() {
         </Reveal>
 
         <div className="mt-10">
-          {/* mobil */}
           <div className="space-y-4 md:hidden">
             {matches.map((match, index) => (
               <Reveal key={match.slug} delayMs={index * 90}>
@@ -263,7 +266,6 @@ export default function ProgramPage() {
             </Reveal>
           </div>
 
-          {/* desktop */}
           <div className="hidden items-stretch gap-6 md:grid md:grid-cols-3">
             {matches.map((match, index) => (
               <Reveal key={match.slug} delayMs={index * 90} className="h-full">

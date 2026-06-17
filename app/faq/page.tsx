@@ -44,7 +44,7 @@ const tickets: QAItem[] = [
     q: "Hva er forskjellen på familietribunen, nedre tribune og premium bord?",
     a: (
       <>
-        Alle forhåndsbestilte billetter inkluderer Fast Track og tilgang til
+        Alle forhåndsbestilte billetter gir inngang hele kampdagen, og tilgang til
         mat- og drikkeservering. På familietribunen serveres det ikke alkohol.
         Se billettinformasjonen for den enkelte kamp for detaljer.
       </>
@@ -89,6 +89,16 @@ const info: QAItem[] = [
       </>
     ),
   },
+  {
+  q: "Må jeg komme når dørene åpner?",
+  a: (
+    <>
+      Nei. Billetten din er gyldig hele dagen, og du kan komme når som helst
+      etter at dørene åpner. Det er fullt mulig å komme til kampstart. Vi anbefaler likevel å komme tidlig for å få med deg stadionstemning,
+      foodcourtene, DJ og oppsnakk før kamp!
+    </>
+  ),
+},
   {
     q: "Hvilke fotball-VM kamper vises på Jordal?",
     a: (
