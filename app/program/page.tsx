@@ -61,21 +61,20 @@ export default function ProgramPage() {
         "https://vif-hockey.ticketco.events/no/nb/e/fotball_paa_jordal/hjemmeside-%20",
     },
     {
-  slug: "dato-kommer",
-  title: "Norges vei til VM",
+  slug: "",
+  title: "Tirsdag 30.juni",
   isNorway: true,
-  ticketsComingSoon: true,
   subtitle: (
     <div className="space-y-2">
+       <div className="text-sm text-black/60">Dørene åpner kl. 17:00</div>
       <div className="text-base font-semibold">Vi viser Norges 16.delsfinale!</div>
       <div className="text-sm text-black/60">
-        
-        Med forbehold om kampstart før midnatt.
+ 
       </div>
     </div>
   ),
   ticketUrl:
-    "https://vif-hockey.ticketco.events/no/nb/e/",
+    "https://vif-hockey.ticketco.events/no/nb/e/16delsfinale",
 },
     {
       slug: "9-juli",
