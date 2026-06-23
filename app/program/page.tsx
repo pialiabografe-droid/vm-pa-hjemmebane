@@ -12,6 +12,7 @@ type Match = {
   isNorway?: boolean;
   isFinal?: boolean;
   ticketsComingSoon?: boolean;
+  soldOut?: boolean;
 };
 
 const VIF = {
@@ -24,31 +25,28 @@ export default function ProgramPage() {
       slug: "26-juni",
       title: "Fredag 26. juni",
       isNorway: true,
+      soldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
           <div className="text-base font-semibold">21:00 Norge – Frankrike</div>
         </div>
       ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/fotball_paa_jordal/hjemmeside-%20",
     },
     {
-  slug: "",
-  title: "Tirsdag 30.juni",
-  isNorway: true,
-  subtitle: (
-    <div className="space-y-2">
-       <div className="text-sm text-black/60">Dørene åpner kl. 17:00</div>
-      <div className="text-base font-semibold">Vi viser Norges 16-delsfinale!</div>
-      <div className="text-sm text-black/60">
- 
-      </div>
-    </div>
-  ),
-  ticketUrl:
-    "https://vif-hockey.ticketco.events/no/nb/e/16delsfinale",
-},
+      slug: "30-juni",
+      title: "Tirsdag 30. juni",
+      isNorway: true,
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner kl. 17:00</div>
+          <div className="text-base font-semibold">
+            Vi viser Norges 16-delsfinale!
+          </div>
+        </div>
+      ),
+      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/16delsfinale",
+    },
     {
       slug: "9-juli",
       title: "Torsdag 9. juli",
@@ -58,7 +56,8 @@ export default function ProgramPage() {
           <div className="text-base font-semibold">22:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_1/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_1/hjemmeside",
     },
     {
       slug: "10-juli",
@@ -69,7 +68,8 @@ export default function ProgramPage() {
           <div className="text-base font-semibold">21:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_2/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_2/hjemmeside",
     },
     {
       slug: "11-juli",
@@ -80,7 +80,8 @@ export default function ProgramPage() {
           <div className="text-base font-semibold">23:00 Kvartfinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
     },
     {
       slug: "14-juli",
@@ -91,7 +92,8 @@ export default function ProgramPage() {
           <div className="text-base font-semibold">21:00 Semifinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_1/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_1/hjemmeside",
     },
     {
       slug: "15-juli",
@@ -102,7 +104,8 @@ export default function ProgramPage() {
           <div className="text-base font-semibold">21:00 Semifinale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_2/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/semifinale_kamp_2/hjemmeside",
     },
     {
       slug: "19-juli",
@@ -119,50 +122,68 @@ export default function ProgramPage() {
   ];
 
   const Banner = ({ match }: { match: Match }) => {
-    if (match.isNorway) {
+    if (!match.isNorway) return null;
+
+    return (
+      <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[inherit]">
+        <div
+          className="absolute right-[-115px] top-[20px] h-6 w-[300px] rotate-[30deg] shadow-sm"
+          style={{
+            background:
+              "linear-gradient(to bottom, #BA0C2F 0%, #BA0C2F 28%, #FFFFFF 28%, #FFFFFF 36%, #00205B 36%, #00205B 64%, #FFFFFF 64%, #FFFFFF 72%, #BA0C2F 72%, #BA0C2F 100%)",
+          }}
+        />
+      </div>
+    );
+  };
+
+  const TicketButton = ({ match }: { match: Match }) => {
+    if (match.soldOut) {
       return (
-        <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[inherit]">
+        <div className="relative inline-block w-full md:w-auto">
           <div
-            className="absolute right-[-115px] top-[20px] h-6 w-[300px] rotate-[30deg] shadow-sm"
+            className="inline-block w-full cursor-not-allowed rounded-2xl px-4 py-3 text-center font-semibold md:w-auto md:px-5"
             style={{
-              background:
-                "linear-gradient(to bottom, #BA0C2F 0%, #BA0C2F 28%, #FFFFFF 28%, #FFFFFF 36%, #00205B 36%, #00205B 64%, #FFFFFF 64%, #FFFFFF 72%, #BA0C2F 72%, #BA0C2F 100%)",
+              backgroundColor: "#EAF3FF",
+              color: "#044EA2",
             }}
-          />
+          >
+            Kjøp billett
+          </div>
+
+          <div className="pointer-events-none absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 rotate-[-14deg] rounded-lg border-[4px] border-[#BA0C2F] bg-white px-5 py-1 text-sm font-black uppercase tracking-widest text-[#BA0C2F] shadow-sm md:px-6 md:text-base">
+            UTSOLGT
+          </div>
         </div>
       );
     }
 
-    return null;
-  };
+    if (match.ticketsComingSoon) {
+      return (
+        <div
+          className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold md:w-auto md:px-5"
+          style={{
+            backgroundColor: "#EAF3FF",
+            color: "#044EA2",
+          }}
+        >
+          Billetter kommer snart
+        </div>
+      );
+    }
 
-  const TicketButton = ({ match }: { match: Match }) => {
-  if (match.ticketsComingSoon) {
     return (
-      <div
-        className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold md:w-auto md:px-5"
-        style={{
-          backgroundColor: "#EAF3FF",
-          color: "#044EA2",
-        }}
+      <a
+        href={match.ticketUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold text-white md:w-auto md:px-5"
+        style={{ backgroundColor: VIF.blue }}
       >
-        Billetter kommer snart
-      </div>
+        Kjøp billett
+      </a>
     );
-  }
-
-  return (
-    <a
-      href={match.ticketUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold text-white md:w-auto md:px-5"
-      style={{ backgroundColor: VIF.blue }}
-    >
-      Kjøp billett
-    </a>
-  );
-};
+  };
 
   return (
     <div className="min-h-screen bg-[#F3F7FF] text-[#1A2238]">
