@@ -21,33 +21,6 @@ const VIF = {
 export default function ProgramPage() {
   const matches: Match[] = [
     {
-      slug: "16-juni",
-      title: "Tirsdag 16. juni",
-      isNorway: true,
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner 20:00</div>
-          <div className="text-base font-semibold">21:00 Senegal – Frankrike</div>
-          <div className="text-base font-semibold">00:00 Irak – Norge</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/norge__playoff_2/hjemmeside-%20fotballvm",
-    },
-    {
-      slug: "20-juni",
-      title: "Lørdag 20. juni",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
-          <div className="text-base font-semibold">19:00 Nederland – Sverige</div>
-          <div className="text-base font-semibold">22:00 Tyskland – Elfenbenskysten</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/tyskland__elfenbenskysten/4b48842c-9362-4260-b514-bd22894e99d7",
-    },
-    {
       slug: "26-juni",
       title: "Fredag 26. juni",
       isNorway: true,
@@ -67,7 +40,7 @@ export default function ProgramPage() {
   subtitle: (
     <div className="space-y-2">
        <div className="text-sm text-black/60">Dørene åpner kl. 17:00</div>
-      <div className="text-base font-semibold">Vi viser Norges 16.delsfinale!</div>
+      <div className="text-base font-semibold">Vi viser Norges 16-delsfinale!</div>
       <div className="text-sm text-black/60">
  
       </div>
