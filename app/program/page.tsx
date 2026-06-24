@@ -39,7 +39,7 @@ export default function ProgramPage() {
       isNorway: true,
       subtitle: (
         <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
+          <div className="text-sm text-black/60">Dørene åpner kl. 17:00</div>
           <div className="text-base font-semibold">
             Vi viser Norges 16-delsfinale!
           </div>
