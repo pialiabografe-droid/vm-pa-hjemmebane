@@ -182,8 +182,7 @@ export default function FotballVMJordal() {
                     href="/program"
                     className="rounded-2xl bg-white px-7 py-3 font-semibold text-[#1A2238] shadow-md transition hover:bg-white/90"
                   >
-                    <span className="md:hidden">Se program</span>
-                    <span className="hidden md:inline">Se program</span>
+                    Se program
                   </Link>
                 </div>
               </div>
@@ -191,8 +190,37 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
+        {/* artikkelboks */}
+        <section className="mx-auto max-w-6xl px-4 pb-4 pt-16">
+          <Reveal>
+            <div className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm md:flex md:items-center md:justify-between md:gap-8">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-[#044EA2]">
+                  Kampdag
+                </p>
+
+                <h2 className="mt-2 text-3xl font-semibold">
+                  Praktisk informasjon til Norge – Frankrike
+                </h2>
+
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-black/70">
+                  Jordal er utsolgt! Les alt du trenger å vite om innganger,
+                  program, mat og drikke før kveldens VM-kamp.
+                </p>
+              </div>
+
+              <Link
+                href="/artikkelside"
+                className="mt-6 inline-flex rounded-2xl bg-[#044EA2] px-6 py-3 font-semibold text-white transition hover:opacity-90 md:mt-0"
+              >
+                Les praktisk info
+              </Link>
+            </div>
+          </Reveal>
+        </section>
+
         {/* pakkene */}
-        <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-16">
+        <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-12">
           <Reveal>
             <div className="flex flex-wrap items-end justify-between gap-6">
               <div>
