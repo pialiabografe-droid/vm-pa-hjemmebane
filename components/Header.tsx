@@ -68,11 +68,19 @@ export default function Header() {
           {/* midten */}
           <div className="flex justify-center">
             {isHome ? (
-              <img
-                src="/media/adidas-svart.png"
-                alt="adidas"
-                className="h-[72px] w-auto object-contain"
-              />
+              <div className="flex items-center gap-8">
+                <img
+                  src="/media/adidas-svart.png"
+                  alt="adidas"
+                  className="h-[72px] w-auto object-contain"
+                />
+
+                <img
+                  src="/media/obos-logo2.png"
+                  alt="OBOS"
+                  className="h-[40px] w-auto object-contain"
+                />
+              </div>
             ) : (
               <nav className="flex items-center gap-8 whitespace-nowrap text-sm text-black/70">
                 <Link href="/om">Om oss</Link>
