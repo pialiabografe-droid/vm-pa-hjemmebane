@@ -22,26 +22,15 @@ const VIF = {
 export default function ProgramPage() {
   const matches: Match[] = [
     {
-      slug: "26-juni",
-      title: "Fredag 26. juni",
-      isNorway: true,
-      soldOut: true,
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
-          <div className="text-base font-semibold">21:00 Norge – Frankrike</div>
-        </div>
-      ),
-    },
-    {
       slug: "30-juni",
       title: "Tirsdag 30. juni",
       isNorway: true,
       subtitle: (
         <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 17:00</div>
-          <div className="text-base font-semibold">
-            Vi viser Norges 16-delsfinale!
+          <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
+          <div className="text-base font-semibold">19:00 Norge – Elfenbenskysten
+          </div>
+          <div className="text-base font-semibold">23:00 Frankrike – Sverige
           </div>
         </div>
       ),

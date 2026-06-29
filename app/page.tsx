@@ -135,17 +135,17 @@ export default function FotballVMJordal() {
               </div>
 
               <div className="mt-10 text-center md:mt-12">
-                <div className="mx-auto -mb-2 flex h-20 items-center justify-center gap-10 pl-6 md:hidden">
+                <div className="mx-auto mt-4 -mb-4 flex items-center justify-center translate-x-4 md:hidden">
   <img
     src="/media/adidas-hvit.png"
     alt="adidas"
-    className="h-12 w-auto object-contain"
+    className="h-16 w-auto object-contain"
   />
 
   <img
     src="/media/obos-logo-hvit.png"
     alt="OBOS"
-    className="h-20 w-auto -translate-y-1 object-contain"
+    className="-ml-4 h-24 w-auto -translate-y-1 object-contain"
   />
 </div>
 
