@@ -36,9 +36,7 @@ export default function Header() {
 
     scrollToId(id);
     window.history.replaceState(null, "", "/");
-  };
-
-  useEffect(() => {
+  };  useEffect(() => {
     if (!mobileOpen) return;
 
     const onKeyDown = (e: KeyboardEvent) => {
@@ -96,13 +94,21 @@ export default function Header() {
           </div>
 
           {/* høyre */}
-          <div className="flex items-center justify-end gap-6">
+          <div className="flex items-center justify-end gap-4">
             {!isHome && (
-              <img
-                src="/media/adidas-svart.png"
-                alt="adidas"
-                className="h-[72px] w-auto object-contain"
-              />
+              <>
+                <img
+                  src="/media/obos-logo2.png"
+                  alt="OBOS"
+                  className="h-[28px] w-auto object-contain"
+                />
+
+                <img
+                  src="/media/adidas-svart.png"
+                  alt="adidas"
+                  className="h-[42px] w-auto object-contain"
+                />
+              </>
             )}
 
             <Link
@@ -112,9 +118,7 @@ export default function Header() {
               Billetter
             </Link>
           </div>
-        </div>
-
-        {/* mobil */}
+        </div>        {/* mobil */}
         <div className="flex items-center justify-between md:hidden">
           <Link href="/" onClick={() => setMobileOpen(false)}>
             <img
