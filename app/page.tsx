@@ -198,7 +198,38 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
+{/* Artikkelboks */}
+<section className="mx-auto max-w-5xl px-6 pb-6 pt-16">
+  <Reveal>
+    <div className="rounded-3xl border border-[#044EA2]/10 bg-white p-8 shadow-sm">
+      <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[#E30613]">
+            Kampdag
+          </p>
 
+          <h2 className="mt-2 text-3xl font-semibold text-[#1A2238]">
+            Praktisk informasjon til 
+            <br/ > Norge – Elfenbenskysten
+          </h2>
+
+          <p className="mt-4 text-lg leading-relaxed text-black/70">
+            Alt du trenger å vite før kampstart – program, innganger, mat og
+            drikke, praktisk informasjon og hvordan du sikrer deg earlybird til
+            kvartfinalene.
+          </p>
+        </div>
+
+        <Link
+          href="/artikkelside"
+          className="inline-flex items-center justify-center rounded-xl bg-[#044EA2] px-6 py-3 font-semibold text-white transition hover:opacity-90"
+        >
+          Les praktisk info
+        </Link>
+      </div>
+    </div>
+  </Reveal>
+</section>
 
         {/* pakkene */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-12">
