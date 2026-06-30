@@ -37,6 +37,7 @@ export default function ProgramPage() {
       ),
       ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/16delsfinale",
     },
+    
     {
       slug: "9-juli",
       title: "Torsdag 9. juli",
