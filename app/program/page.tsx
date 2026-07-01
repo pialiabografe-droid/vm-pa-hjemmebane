@@ -12,7 +12,6 @@ type Match = {
   isNorway?: boolean;
   isEarlybird?: boolean;
   isFinal?: boolean;
-  ticketsComingSoon?: boolean;
   soldOut?: boolean;
 };
 
@@ -22,6 +21,21 @@ const VIF = {
 
 export default function ProgramPage() {
   const matches: Match[] = [
+    {
+      slug: "4-juli",
+      title: "Lørdag 4. juli",
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner 17:00</div>
+          <div className="text-base font-semibold">19:00 Canada – Marokko</div>
+          <div className="text-base font-semibold">
+            23:00 Paraguay – Frankrike
+          </div>
+        </div>
+      ),
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/8delsfinale_dag_1",
+    },
     {
       slug: "5-juli",
       title: "Søndag 5. juli",
@@ -35,6 +49,31 @@ export default function ProgramPage() {
       ),
       ticketUrl:
         "https://vif-hockey.ticketco.events/no/nb/e/norge__brasil_vm/031078e6-17f1-4e56-9d5d-14e9acdde98f",
+    },
+    {
+      slug: "6-juli",
+      title: "Mandag 6. juli",
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner 19:00</div>
+          <div className="text-base font-semibold">21:00 8-delsfinale</div>
+        </div>
+      ),
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/8delsfinale_dag_3",
+    },
+    {
+      slug: "7-juli",
+      title: "Tirsdag 7. juli",
+      subtitle: (
+        <div className="space-y-2">
+          <div className="text-sm text-black/60">Dørene åpner 16:00</div>
+          <div className="text-base font-semibold">18:00 8-delsfinale</div>
+          <div className="text-base font-semibold">22:00 8-delsfinale</div>
+        </div>
+      ),
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/8delsfinale_dag_4",
     },
     {
       slug: "9-juli",
@@ -74,8 +113,7 @@ export default function ProgramPage() {
       ),
       ticketUrl:
         "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
-    },
-    {
+    },    {
       slug: "14-juli",
       title: "Tirsdag 14. juli",
       subtitle: (
@@ -109,21 +147,27 @@ export default function ProgramPage() {
           <div className="text-base font-semibold">21:00 Finale</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/finale/hjemmeside",
     },
   ];
+
+  const isRoundOf16 = (match: Match) =>
+    match.slug === "4-juli" ||
+    match.slug === "6-juli" ||
+    match.slug === "7-juli";
 
   const Banner = ({ match }: { match: Match }) => {
     if (match.isEarlybird) {
       return (
         <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[inherit]">
-  <div
-    className="absolute right-[-92px] top-[25px] w-[280px] rotate-[30deg] py-1 text-center text-xs font-black uppercase tracking-[0.22em] text-white shadow-sm"
-    style={{ backgroundColor: "#BA0C2F" }}
-  >
-    EARLYBIRD
-  </div>
-</div>
+          <div
+            className="absolute right-[-92px] top-[25px] w-[280px] rotate-[30deg] py-1 text-center text-xs font-black uppercase tracking-[0.22em] text-white shadow-sm"
+            style={{ backgroundColor: "#BA0C2F" }}
+          >
+            EARLYBIRD
+          </div>
+        </div>
       );
     }
 
@@ -140,9 +184,7 @@ export default function ProgramPage() {
         />
       </div>
     );
-  };
-
-  const TicketButton = ({ match }: { match: Match }) => {
+  };  const TicketButton = ({ match }: { match: Match }) => {
     if (match.soldOut) {
       return (
         <div className="relative inline-block w-full md:w-auto">
@@ -163,23 +205,9 @@ export default function ProgramPage() {
       );
     }
 
-    if (match.ticketsComingSoon) {
-      return (
-        <div
-          className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold md:w-auto md:px-5"
-          style={{
-            backgroundColor: "#EAF3FF",
-            color: "#044EA2",
-          }}
-        >
-          Billetter kommer snart
-        </div>
-      );
-    }
-
     return (
       <a
-        href={match.ticketUrl}
+        href={match.ticketUrl || "#"}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block w-full rounded-2xl px-4 py-3 text-center font-semibold text-white md:w-auto md:px-5"
@@ -205,11 +233,9 @@ export default function ProgramPage() {
               </h2>
 
               <p className="mt-3 text-black/70">
-                Her finner du programmet for fotball-VM visningen på Jordal Amfi
-                i Oslo. Vi viser utvalgte kamper fra gruppespillet og
-                sluttspillet på storskjerm. Følg med for flere kampdager og nye
-                oppsett! Sikre deg billetter til kampene du vil oppleve live
-                sammen med andre supportere!
+                Her finner du programmet for fotball-VM-visningen på Jordal
+                Amfi i Oslo. Vi viser utvalgte kamper fra sluttspillet på
+                storskjerm. Følg med for flere kampdager og nye oppsett!
               </p>
             </div>
 
@@ -235,38 +261,37 @@ export default function ProgramPage() {
                 >
                   <Banner match={match} />
 
-                  <div className="text-base font-semibold">{match.title}</div>
+                  <div className="text-base font-semibold">
+                    {match.title}
+                  </div>
 
-                  {match.subtitle ? (
+                  {match.subtitle && (
                     <div className="mt-3 text-sm text-black/70">
                       {match.subtitle}
                     </div>
-                  ) : null}
-
-                  <div className="mt-4">
+                  )}                  <div className="mt-6 flex items-center gap-3">
                     <TicketButton match={match} />
+
+                    {(match.slug === "4-juli" ||
+                      match.slug === "6-juli" ||
+                      match.slug === "7-juli") && (
+                      <span className="text-sm font-semibold whitespace-nowrap text-[#044EA2]">
+                        Fra 39,-
+                      </span>
+                    )}
                   </div>
                 </section>
               </Reveal>
             ))}
-
-            <Reveal delayMs={120}>
-              <section className="rounded-2xl border border-black/10 bg-white p-5">
-                <div className="text-base font-semibold">Øvrig program</div>
-
-                <div className="mt-2 text-sm leading-relaxed text-black/70">
-                  Kom tidlig og få med deg mer enn selve kampen. Gratis
-                  aktiviteter, underholdning før avspark. Opplevelser for både
-                  store og små! Se billettsiden for hver kamp for detaljer og
-                  tidspunkt.
-                </div>
-              </section>
-            </Reveal>
           </div>
 
           <div className="hidden items-stretch gap-6 md:grid md:grid-cols-3">
             {matches.map((match, index) => (
-              <Reveal key={match.slug} delayMs={index * 90} className="h-full">
+              <Reveal
+                key={match.slug}
+                delayMs={index * 90}
+                className="h-full"
+              >
                 <section
                   className={`relative flex h-full flex-col overflow-hidden rounded-3xl bg-white p-8 ${
                     match.isFinal
@@ -276,16 +301,26 @@ export default function ProgramPage() {
                 >
                   <Banner match={match} />
 
-                  <div className="text-lg font-semibold">{match.title}</div>
+                  <div className="text-lg font-semibold">
+                    {match.title}
+                  </div>
 
-                  {match.subtitle ? (
+                  {match.subtitle && (
                     <div className="mt-2 flex-1 text-sm text-black/70">
                       {match.subtitle}
                     </div>
-                  ) : null}
+                  )}
 
-                  <div className="mt-6">
+                  <div className="mt-6 flex items-center gap-3">
                     <TicketButton match={match} />
+
+                    {(match.slug === "4-juli" ||
+                      match.slug === "6-juli" ||
+                      match.slug === "7-juli") && (
+                      <span className="text-sm font-semibold whitespace-nowrap text-[#044EA2]">
+                        Fra 39,-
+                      </span>
+                    )}
                   </div>
                 </section>
               </Reveal>
@@ -297,16 +332,17 @@ export default function ProgramPage() {
 
                 <div className="mt-2 text-sm leading-relaxed text-black/70">
                   Kom tidlig og få med deg mer enn selve kampen. Gratis
-                  aktiviteter, DJ og oppsnakk før avspark! Opplevelser for både
-                  store og små! Se billettsiden for hver kamp for detaljer og
-                  tidspunkt.
+                  aktiviteter, DJ og oppsnakk før avspark! Opplevelser for
+                  både store og små! Se billettsiden for hver kamp for
+                  detaljer og tidspunkt.
                 </div>
               </section>
             </Reveal>
           </div>
 
           <p className="mt-8 max-w-3xl text-sm leading-relaxed text-black/70">
-            Dette er et av de største arrangementene for å se fotball-VM i Oslo.
+            Dette er et av de største arrangementene for å se fotball-VM i
+            Oslo.
             <br />
             <b>
               Programmet oppdateres fortløpende med nye kamper og
