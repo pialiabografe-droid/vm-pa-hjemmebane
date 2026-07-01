@@ -10,6 +10,7 @@ type Match = {
   subtitle?: ReactNode;
   ticketUrl?: string;
   isNorway?: boolean;
+  isEarlybird?: boolean;
   isFinal?: boolean;
   ticketsComingSoon?: boolean;
   soldOut?: boolean;
@@ -29,31 +30,34 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
-          <div className="text-base font-semibold">19:00 Norge – Elfenbenskysten
+          <div className="text-base font-semibold">
+            19:00 Norge – Elfenbenskysten
           </div>
-          <div className="text-base font-semibold">23:00 Frankrike – Sverige
+          <div className="text-base font-semibold">
+            23:00 Frankrike – Sverige
           </div>
         </div>
       ),
       ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/16delsfinale",
     },
     {
-      slug: "30-juni",
+      slug: "5-juli",
       title: "Søndag 5. juli",
       isNorway: true,
       soldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
-          <div className="text-base font-semibold">22:00 Norge – Brasil
-          </div>
+          <div className="text-base font-semibold">22:00 Norge – Brasil</div>
         </div>
       ),
-      ticketUrl: "https://vif-hockey.ticketco.events/no/nb/e/norge__brasil_vm/031078e6-17f1-4e56-9d5d-14e9acdde98f",
+      ticketUrl:
+        "https://vif-hockey.ticketco.events/no/nb/e/norge__brasil_vm/031078e6-17f1-4e56-9d5d-14e9acdde98f",
     },
     {
       slug: "9-juli",
       title: "Torsdag 9. juli",
+      isEarlybird: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
@@ -66,6 +70,7 @@ export default function ProgramPage() {
     {
       slug: "10-juli",
       title: "Fredag 10. juli",
+      isEarlybird: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
@@ -78,6 +83,7 @@ export default function ProgramPage() {
     {
       slug: "11-juli",
       title: "Lørdag 11. juli",
+      isEarlybird: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 21:00</div>
@@ -126,6 +132,19 @@ export default function ProgramPage() {
   ];
 
   const Banner = ({ match }: { match: Match }) => {
+    if (match.isEarlybird) {
+      return (
+        <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-[inherit]">
+  <div
+    className="absolute right-[-92px] top-[25px] w-[280px] rotate-[30deg] py-1 text-center text-xs font-black uppercase tracking-[0.22em] text-white shadow-sm"
+    style={{ backgroundColor: "#BA0C2F" }}
+  >
+    EARLYBIRD
+  </div>
+</div>
+      );
+    }
+
     if (!match.isNorway) return null;
 
     return (
