@@ -40,7 +40,6 @@ export default function ProgramPage() {
       slug: "5-juli",
       title: "Søndag 5. juli",
       isNorway: true,
-      soldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
