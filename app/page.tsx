@@ -198,6 +198,36 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
+        {/* kampdag-artikkel */}
+<section className="mx-auto max-w-6xl px-4 pt-10">
+  <Reveal>
+    <Link href="/artikkelside">
+      <div className="rounded-3xl border border-[#044EA2]/10 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md md:p-8">
+        <p className="text-sm font-semibold uppercase tracking-wider text-[#E30613]">
+          Kampdag
+        </p>
+
+        <div className="mt-3 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              Velkommen til Jordal Amfi!
+            </h2>
+
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-black/70 md:text-base">
+              Norge møter Brasil i VM. Her finner du program, innganger,
+              praktisk informasjon og alt du trenger å vite før kamp.
+            </p>
+          </div>
+
+          <div className="shrink-0 rounded-2xl bg-[#E30613] px-5 py-3 text-sm font-semibold text-white">
+            Les kampinfo
+          </div>
+        </div>
+      </div>
+    </Link>
+  </Reveal>
+</section>
+
         {/* pakkene */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-12">
           <Reveal>

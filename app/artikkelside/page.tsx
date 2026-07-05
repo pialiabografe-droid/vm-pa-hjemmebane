@@ -16,23 +16,22 @@ export default function ArticlePage() {
             </h1>
 
             <p className="mt-6 text-xl leading-relaxed text-black/70">
-              Norge møter Elfenbenskysten i VM – og Jordal er klar for
-              folkefest!
+              Norge møter Brasil i VM – og Jordal er klar for folkefest!
             </p>
 
             <p className="mt-4 text-lg leading-relaxed text-black/70">
-              I dag fylles Jordal Amfi med tusenvis av fotballsupportere til
-              en kveld med allsang, spenning og ekte VM-stemning. Har du
-              billett, er det bare å glede seg!
+              I dag fylles Jordal Amfi med tusenvis av fotballsupportere til en
+              kveld med allsang, spenning og ekte VM-stemning. Har du billett,
+              er det bare å glede seg!
             </p>
 
             <div className="mt-8 rounded-3xl border border-[#044EA2]/10 bg-white p-7 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-wider text-[#044EA2]">
-                Dagens kamper
+                Dagens kamp
               </p>
 
               <h3 className="mt-1 text-2xl font-semibold">
-                Tirsdag 30. juni
+                Søndag 5. juli
               </h3>
 
               <div className="mt-6 space-y-5 text-lg">
@@ -43,17 +42,10 @@ export default function ArticlePage() {
                   </span>
                 </div>
 
-                <div className="flex items-center justify-between border-b border-black/10 pb-5">
-                  <span>Norge – Elfenbenskysten</span>
-                  <span className="text-xl font-bold text-[#044EA2]">
-                    19:00
-                  </span>
-                </div>
-
                 <div className="flex items-center justify-between">
-                  <span>Frankrike – Sverige</span>
+                  <span>Norge – Brasil</span>
                   <span className="text-xl font-bold text-[#044EA2]">
-                    23:00
+                    22:00
                   </span>
                 </div>
               </div>
@@ -70,7 +62,7 @@ export default function ArticlePage() {
             <p>
               Vi anbefaler alle å komme tidlig og få med seg stemningen fra
               start. Allerede fra kl. 16:00 åpner vi området utenfor Jordal med
-              afterwork, foodcourt og uteservering.
+              foodcourt, uteservering og oppladning før kamp.
             </p>
 
             <p>
@@ -79,40 +71,42 @@ export default function ArticlePage() {
             </p>
 
             <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <h3 className="mb-3 text-xl font-semibold">
+              <h3 className="mb-5 text-xl font-semibold">
                 Program for dagen
               </h3>
 
-              <ul className="space-y-3">
-                <li>
-                  <strong>Fra 16:00:</strong> Afterwork med foodcourt og
-                  uteservering
-                </li>
-                <li>
-                  <strong>Fra 18:00:</strong> DJ og oppladning inne
-                </li>
-                <li>
-                  <strong>18:15:</strong> Oppsnakk med Robin Grov
-                </li>
-                <li>
-                  <strong>18:30:</strong> Olaf Tufte tar roret
-                </li>
-                <li>
-                  <strong>19:00:</strong> Norge – Elfenbenskysten
-                </li>
-                <li>
-                  <strong>21:00:</strong> Afterparty med DJ og adidas-quiz
-                </li>
-                <li>
-                  <strong>23:00:</strong> Frankrike – Sverige
-                </li>
-                <li>
-                  <strong>01:00:</strong> Takk for i kveld!
-                </li>
-              </ul>
-            </div>
+              <div className="space-y-3">
+                <div className="grid grid-cols-[110px_1fr] gap-4">
+                  <span className="font-semibold">16:00</span>
+                  <span>Foodcourt og uteservering åpner</span>
+                </div>
 
-            <div className="rounded-2xl bg-white p-6 shadow-sm">
+                <div className="grid grid-cols-[110px_1fr] gap-4">
+                  <span className="font-semibold">18:00</span>
+                  <span>DJ og oppladning inne</span>
+                </div>
+
+                <div className="grid grid-cols-[110px_1fr] gap-4">
+                  <span className="font-semibold">21:00</span>
+                  <span>Oppsnakk og konkurranser med Robin Grov</span>
+                </div>
+
+                <div className="grid grid-cols-[110px_1fr] gap-4">
+                  <span className="font-semibold">21:45</span>
+                  <span>Hele Jordal ror</span>
+                </div>
+
+                <div className="grid grid-cols-[110px_1fr] gap-4">
+                  <span className="font-semibold">22:00</span>
+                  <span>Norge – Brasil</span>
+                </div>
+
+                <div className="grid grid-cols-[110px_1fr] gap-4">
+                  <span className="font-semibold">Etter kamp</span>
+                  <span>Afterparty med DJ</span>
+                </div>
+              </div>
+            </div>            <div className="rounded-2xl bg-white p-6 shadow-sm">
               <h3 className="mb-3 text-xl font-semibold">
                 Praktisk informasjon
               </h3>
@@ -121,17 +115,35 @@ export default function ArticlePage() {
                 <div>
                   <h4 className="font-semibold">Innganger</h4>
 
-                  <ul className="mt-2 space-y-3">
-                    <li>
-                      • Bordområdet → Inngang 1 (18-års aldersgrense).
-                      Inngangen ligger nederst på anlegget, på
-                      fotballbane-nivå, vendt mot fotballbanene.
-                    </li>
-                    <li>
-                      • Nedre tribune → Inngang 2A (18-års aldersgrense)
-                    </li>
-                    <li>• Øvre tribune → Inngang 4B</li>
-                  </ul>
+                  <div className="mt-3 space-y-3">
+                    <div className="grid grid-cols-[190px_24px_1fr] gap-3">
+                      <span className="font-semibold">Bordområdet</span>
+                      <span className="text-[#044EA2]">→</span>
+                      <span>
+                        Inngang 1. 18-års aldersgrense. Inngangen ligger
+                        nederst på anlegget, på fotballbane-nivå, vendt mot
+                        fotballbanen.
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-[190px_24px_1fr] gap-3">
+                      <span className="font-semibold">Nedre tribune 18+</span>
+                      <span className="text-[#044EA2]">→</span>
+                      <span>Inngang 2A</span>
+                    </div>
+
+                    <div className="grid grid-cols-[190px_24px_1fr] gap-3">
+                      <span className="font-semibold">Øvre tribune 18+</span>
+                      <span className="text-[#044EA2]">→</span>
+                      <span>Inngang 4A</span>
+                    </div>
+
+                    <div className="grid grid-cols-[190px_24px_1fr] gap-3">
+                      <span className="font-semibold">Familietribunene</span>
+                      <span className="text-[#044EA2]">→</span>
+                      <span>Inngang 4B</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div>
@@ -148,42 +160,33 @@ export default function ArticlePage() {
                 <div>
                   <h4 className="font-semibold">Mat og drikke</h4>
 
-                  <ul className="mt-2 space-y-2">
-                    <li>• Kiosker i hele hallen med snacks og drikke</li>
-                    <li>
-                      • Utenfor inngang 2A er det eget uteområde med burger,
+                  <div className="mt-2 space-y-2">
+                    <p>Kiosker i hele hallen med snacks og drikke.</p>
+                    <p>
+                      Utenfor inngang 2A er det eget uteområde med burger,
                       pizza, gyros m.m.
-                    </li>
-                    <li>• To egne barer for bordgjester i bordområdet</li>
-                  </ul>
+                    </p>
+                    <p>To egne barer for bordgjester i bordområdet.</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-3xl bg-white p-8 text-center shadow-sm">
+                       <div className="rounded-3xl bg-white p-8 text-center shadow-sm">
               <h3 className="text-2xl font-semibold">
                 Klarer Norge å ro til kvartfinalen?
               </h3>
 
               <p className="mx-auto mt-4 max-w-2xl text-black/70">
-                Tar Norge seg videre i kveld, er det bare én kamp unna
-                kvartfinale!
-              </p>
-
-              <p className="mx-auto mt-4 max-w-2xl text-black/70">
-                <strong>
-                  Før utfallet av 8-delsfinalen er klart har vi lagt ut et
-                  begrenset antall earlybird-billetter til kvartfinalene. Sikre
-                  deg plass før prisen øker!
-                </strong>
+                Sikre deg billett nå!
               </p>
 
               <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
-                  href="https://vif-hockey.ticketco.events/no/nb/events/1158423/seating_arrangement?item_type_id=27954610"
+                  href="/program"
                   className="rounded-xl bg-[#E30613] px-6 py-3 font-semibold text-white transition hover:opacity-90"
                 >
-                  Sikre deg billett nå!
+                  Se programmet
                 </Link>
               </div>
             </div>
