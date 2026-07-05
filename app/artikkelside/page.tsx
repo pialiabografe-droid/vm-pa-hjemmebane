@@ -106,45 +106,44 @@ export default function ArticlePage() {
                   <span>Afterparty med DJ</span>
                 </div>
               </div>
-            </div>            <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <h3 className="mb-3 text-xl font-semibold">
-                Praktisk informasjon
-              </h3>
+            </div>           <div className="rounded-2xl bg-white p-6 shadow-sm">
+  <h3 className="mb-3 text-xl font-semibold">
+    Praktisk informasjon
+  </h3>
 
-              <div className="space-y-5">
-                <div>
-                  <h4 className="font-semibold">Innganger</h4>
+  <div className="space-y-5">
+    <div>
+      <h4 className="font-semibold">Innganger</h4>
 
-                  <div className="mt-3 space-y-3">
-                    <div className="grid grid-cols-[190px_24px_1fr] gap-3">
-                      <span className="font-semibold">Bordområdet</span>
-                      <span className="text-[#044EA2]">→</span>
-                      <span>
-                        Inngang 1. 18-års aldersgrense. Inngangen ligger
-                        nederst på anlegget, på fotballbane-nivå, vendt mot
-                        fotballbanen.
-                      </span>
-                    </div>
+      <div className="mt-3 space-y-3">
+        <div className="grid gap-2 md:grid-cols-[190px_24px_1fr] md:gap-3">
+          <span className="font-semibold">Bordområdet</span>
+          <span className="hidden text-[#044EA2] md:block">→</span>
+          <span>
+            Inngang 1. 18-års aldersgrense. Inngangen ligger nederst på
+            anlegget, på fotballbane-nivå, vendt mot fotballbanen.
+          </span>
+        </div>
 
-                    <div className="grid grid-cols-[190px_24px_1fr] gap-3">
-                      <span className="font-semibold">Nedre tribune 18+</span>
-                      <span className="text-[#044EA2]">→</span>
-                      <span>Inngang 2A</span>
-                    </div>
+        <div className="grid gap-2 md:grid-cols-[190px_24px_1fr] md:gap-3">
+          <span className="font-semibold">Nedre tribune 18+</span>
+          <span className="hidden text-[#044EA2] md:block">→</span>
+          <span>Inngang 2A</span>
+        </div>
 
-                    <div className="grid grid-cols-[190px_24px_1fr] gap-3">
-                      <span className="font-semibold">Øvre tribune 18+</span>
-                      <span className="text-[#044EA2]">→</span>
-                      <span>Inngang 4A</span>
-                    </div>
+        <div className="grid gap-2 md:grid-cols-[190px_24px_1fr] md:gap-3">
+          <span className="font-semibold">Øvre tribune 18+</span>
+          <span className="hidden text-[#044EA2] md:block">→</span>
+          <span>Inngang 4A</span>
+        </div>
 
-                    <div className="grid grid-cols-[190px_24px_1fr] gap-3">
-                      <span className="font-semibold">Familietribunene</span>
-                      <span className="text-[#044EA2]">→</span>
-                      <span>Inngang 4B</span>
-                    </div>
-                  </div>
-                </div>
+        <div className="grid gap-2 md:grid-cols-[190px_24px_1fr] md:gap-3">
+          <span className="font-semibold">Familietribunene</span>
+          <span className="hidden text-[#044EA2] md:block">→</span>
+          <span>Inngang 4B</span>
+        </div>
+      </div>
+    </div>
 
                 <div>
                   <h4 className="font-semibold">Bordgjester og armbånd</h4>
