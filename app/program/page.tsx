@@ -29,7 +29,7 @@ export default function ProgramPage() {
       soldOut: true,
       subtitle: (
         <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
+          <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
           <div className="text-base font-semibold">22:00 Norge – Brasil</div>
         </div>
       ),

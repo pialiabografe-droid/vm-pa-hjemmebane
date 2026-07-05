@@ -198,37 +198,6 @@ export default function FotballVMJordal() {
           </section>
         </Reveal>
 
-{/* Kampanjeboks */}
-<section className="mx-auto max-w-5xl px-6 pb-6 pt-16">
-  <Reveal>
-    <div className="rounded-3xl border border-[#E30613]/20 bg-white p-8 shadow-sm">
-      <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#E30613]">
-            Earlybird
-          </p>
-
-          <h2 className="mt-2 text-3xl font-semibold text-[#1A2238]">
-            Norge – Brasil utsolgt på under 1 minutt!
-          </h2>
-
-          <p className="mt-4 text-lg leading-relaxed text-black/70">
-            Sikre deg billett til kvartfinalen nå. Vi har earlybirdtilbud frem
-            til søndag!
-          </p>
-        </div>
-
-        <Link
-          href="/program"
-          className="inline-flex items-center justify-center rounded-xl bg-[#E30613] px-6 py-3 font-semibold text-white transition hover:opacity-90"
-        >
-          Kjøp kvartfinalebillett
-        </Link>
-      </div>
-    </div>
-  </Reveal>
-</section>
-
         {/* pakkene */}
         <section id="pakker" className="mx-auto max-w-6xl px-4 pb-16 pt-12">
           <Reveal>
