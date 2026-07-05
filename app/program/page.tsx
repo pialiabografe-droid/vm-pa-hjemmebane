@@ -21,25 +21,12 @@ const VIF = {
 
 export default function ProgramPage() {
   const matches: Match[] = [
-    {
-      slug: "4-juli",
-      title: "Lørdag 4. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner 17:00</div>
-          <div className="text-base font-semibold">19:00 Canada – Marokko</div>
-          <div className="text-base font-semibold">
-            23:00 Paraguay – Frankrike
-          </div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/8delsfinale_dag_1",
-    },
+    
     {
       slug: "5-juli",
       title: "Søndag 5. juli",
       isNorway: true,
+      soldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 18:00</div>
@@ -55,7 +42,7 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner 19:00</div>
-          <div className="text-base font-semibold">21:00 8-delsfinale</div>
+          <div className="text-base font-semibold">21:00 Portugal – Spania</div>
         </div>
       ),
       ticketUrl:
@@ -67,8 +54,8 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner 16:00</div>
-          <div className="text-base font-semibold">18:00 8-delsfinale</div>
-          <div className="text-base font-semibold">22:00 8-delsfinale</div>
+          <div className="text-base font-semibold">18:00 Argentina – Egypt</div>
+          <div className="text-base font-semibold">22:00 Sveits – Colombia</div>
         </div>
       ),
       ticketUrl:
@@ -77,7 +64,6 @@ export default function ProgramPage() {
     {
       slug: "9-juli",
       title: "Torsdag 9. juli",
-      isEarlybird: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
@@ -90,7 +76,6 @@ export default function ProgramPage() {
     {
       slug: "10-juli",
       title: "Fredag 10. juli",
-      isEarlybird: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
@@ -103,7 +88,6 @@ export default function ProgramPage() {
     {
       slug: "11-juli",
       title: "Lørdag 11. juli",
-      isEarlybird: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 21:00</div>
