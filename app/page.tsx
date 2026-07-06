@@ -45,9 +45,7 @@ export default function FotballVMJordal() {
     {
       title: "FAMILIETRIBUNEN",
       subtitle: "Fri aldersgrense. Barn under 12 år i følge med voksen.",
-      price: "99",
-      currency: "NOK",
-      unit: "per person",
+      
       items: ["Inngang til familieområdet", "Tribune", "Kiosk"],
       href: "/program",
       cta: "VELG KAMP",
@@ -55,9 +53,7 @@ export default function FotballVMJordal() {
     {
       title: "VOKSEN",
       subtitle: "Aldersgrense 18+.",
-      price: "99",
-      currency: "NOK",
-      unit: "per person",
+      
       items: ["Inngang til 18+ området", "Tribune", "Bar", "Serveringstilbud", "Kiosk"],
       href: "/program",
       cta: "VELG KAMP",
@@ -65,9 +61,7 @@ export default function FotballVMJordal() {
     {
       title: "PREMIUM BORD",
       subtitle: "8 personer. Aldersgrense 18+.",
-      price: "1 499",
-      currency: "NOK",
-      unit: "per bord",
+      
       items: ["Reservert langbord", "Nærmest skjermen", "Bar", "Serveringstilbud", "Kiosk"],
       href: "/program",
       cta: "VELG KAMP",
@@ -214,7 +208,7 @@ export default function FotballVMJordal() {
             </h2>
 
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-black/70 md:text-base">
-              Norge møter Brasil i VM. Her finner du program, innganger,
+              Portugal og Spania møtes i 8-delsfinale i VM. Her finner du program, innganger,
               praktisk informasjon og alt du trenger å vite før kamp.
             </p>
           </div>
@@ -256,7 +250,7 @@ export default function FotballVMJordal() {
             {packages.map((item, index) => (
               <Reveal key={item.title} delayMs={index * 110}>
                 <div className="flex h-full flex-col rounded-3xl border border-black/10 bg-white p-8">
-                  <div className="min-h-[96px]">
+                  <div>
                     <div className="text-sm font-semibold tracking-wide text-[#1A2238]">
                       {item.title}
                     </div>
@@ -265,29 +259,8 @@ export default function FotballVMJordal() {
                     </div>
                   </div>
 
-                  <div className="mt-6">
-                    <div className="h-[18px] text-sm font-semibold leading-none text-black/50">
-                      {item.title === "VIP RESTAURANT" ? "Fra" : "\u00A0"}
-                    </div>
 
-                    <div className="mt-1 whitespace-nowrap text-5xl font-semibold leading-none tracking-tight tabular-nums text-[#0E2433]">
-                      {item.price}
-                    </div>
-
-                    <div className="mt-0.5 flex items-end justify-between">
-                      <span className="text-5xl font-semibold leading-none tracking-tight text-[#0E2433]">
-                        {item.currency}
-                      </span>
-
-                      <span className="pb-1 text-sm text-black/60">
-                        {item.unit}
-                      </span>
-                    </div>
-
-                    <div className="mt-5 h-px bg-black/10" />
-                  </div>
-
-                  <div className="mt-6 space-y-4">
+                  <div className="mt-8 space-y-4 border-t border-black/10 pt-6">
                     {item.items.map((feature) => (
                       <div key={feature} className="flex items-start gap-4">
                         <span className="mt-1 h-6 w-6 shrink-0 rounded-full bg-[#044EA2]" />

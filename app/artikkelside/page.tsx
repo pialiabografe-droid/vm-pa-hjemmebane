@@ -16,13 +16,7 @@ export default function ArticlePage() {
             </h1>
 
             <p className="mt-6 text-xl leading-relaxed text-black/70">
-              Norge møter Brasil i VM – og Jordal er klar for folkefest!
-            </p>
-
-            <p className="mt-4 text-lg leading-relaxed text-black/70">
-              I dag fylles Jordal Amfi med tusenvis av fotballsupportere til en
-              kveld med allsang, spenning og ekte VM-stemning. Har du billett,
-              er det bare å glede seg!
+              Portugal og Spania møtes i VM – og Jordal er klar for fotballfest!
             </p>
 
             <div className="mt-8 rounded-3xl border border-[#044EA2]/10 bg-white p-7 shadow-sm">
@@ -31,19 +25,19 @@ export default function ArticlePage() {
               </p>
 
               <h3 className="mt-1 text-2xl font-semibold">
-                Søndag 5. juli
+                Mandag 6. juli
               </h3>
 
               <div className="mt-6 space-y-5 text-lg">
                 <div className="flex items-center justify-between border-b border-black/10 pb-5">
                   <span>Dørene åpner</span>
                   <span className="text-xl font-bold text-[#044EA2]">
-                    16:00
+                    19:00
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span>Norge – Brasil</span>
+                  <span>Portugal – Spania</span>
                   <span className="text-xl font-bold text-[#044EA2]">
                     22:00
                   </span>
@@ -56,19 +50,10 @@ export default function ArticlePage() {
         <Reveal delayMs={100}>
           <article className="mx-auto mt-20 max-w-4xl space-y-8 text-lg leading-relaxed text-black/80">
             <h2 className="text-3xl font-semibold text-[#1A2238]">
-              Kom tidlig – dørene og foodcourten åpner kl. 16:00
+              Kom tidlig – dørene og foodcourten åpner kl. 19:00
             </h2>
 
-            <p>
-              Vi anbefaler alle å komme tidlig og få med seg stemningen fra
-              start. Allerede fra kl. 16:00 åpner vi området utenfor Jordal med
-              foodcourt, uteservering og oppladning før kamp.
-            </p>
-
-            <p>
-              Oppladningen fortsetter inne i hallen med DJ, oppsnakk og allsang
-              før avspark.
-            </p>
+            
 
             <div className="rounded-2xl bg-white p-6 shadow-sm">
               <h3 className="mb-5 text-xl font-semibold">
@@ -77,34 +62,21 @@ export default function ArticlePage() {
 
               <div className="space-y-3">
                 <div className="grid grid-cols-[110px_1fr] gap-4">
-                  <span className="font-semibold">16:00</span>
-                  <span>Foodcourt og uteservering åpner</span>
+                  <span className="font-semibold">19:00</span>
+                  <span>Dørene åpner</span>
                 </div>
 
                 <div className="grid grid-cols-[110px_1fr] gap-4">
-                  <span className="font-semibold">18:00</span>
-                  <span>DJ og oppladning inne</span>
+                  <span className="font-semibold">19:00</span>
+                  <span>Oppladning</span>
                 </div>
 
                 <div className="grid grid-cols-[110px_1fr] gap-4">
                   <span className="font-semibold">21:00</span>
-                  <span>Oppsnakk og konkurranser med Robin Grov</span>
+                  <span>Portugal – Spania</span>
                 </div>
 
-                <div className="grid grid-cols-[110px_1fr] gap-4">
-                  <span className="font-semibold">21:45</span>
-                  <span>Hele Jordal ror</span>
-                </div>
-
-                <div className="grid grid-cols-[110px_1fr] gap-4">
-                  <span className="font-semibold">22:00</span>
-                  <span>Norge – Brasil</span>
-                </div>
-
-                <div className="grid grid-cols-[110px_1fr] gap-4">
-                  <span className="font-semibold">Etter kamp</span>
-                  <span>Afterparty med DJ</span>
-                </div>
+  
               </div>
             </div>           <div className="rounded-2xl bg-white p-6 shadow-sm">
   <h3 className="mb-3 text-xl font-semibold">
@@ -129,12 +101,6 @@ export default function ArticlePage() {
           <span className="font-semibold">Nedre tribune 18+</span>
           <span className="hidden text-[#044EA2] md:block">→</span>
           <span>Inngang 2A</span>
-        </div>
-
-        <div className="grid gap-2 md:grid-cols-[190px_24px_1fr] md:gap-3">
-          <span className="font-semibold">Øvre tribune 18+</span>
-          <span className="hidden text-[#044EA2] md:block">→</span>
-          <span>Inngang 4A</span>
         </div>
 
         <div className="grid gap-2 md:grid-cols-[190px_24px_1fr] md:gap-3">
@@ -173,7 +139,7 @@ export default function ArticlePage() {
 
                        <div className="rounded-3xl bg-white p-8 text-center shadow-sm">
               <h3 className="text-2xl font-semibold">
-                Klarer Norge å ro til kvartfinalen?
+                Klarer Norge å ro helt til semifinalen?
               </h3>
 
               <p className="mx-auto mt-4 max-w-2xl text-black/70">
