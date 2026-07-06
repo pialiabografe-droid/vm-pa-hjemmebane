@@ -67,7 +67,7 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
-          <div className="text-base font-semibold">22:00 Kvartfinale</div>
+          <div className="text-base font-semibold">22:00 Frankrike - Marokko</div>
         </div>
       ),
       ticketUrl:
@@ -88,10 +88,11 @@ export default function ProgramPage() {
     {
       slug: "11-juli",
       title: "Lørdag 11. juli",
+      isNorway: true,
       subtitle: (
         <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 21:00</div>
-          <div className="text-base font-semibold">23:00 Kvartfinale</div>
+          <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
+          <div className="text-base font-semibold">23:00 Norge - England</div>
         </div>
       ),
       ticketUrl:
