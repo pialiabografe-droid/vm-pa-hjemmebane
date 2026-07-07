@@ -13,6 +13,7 @@ type Match = {
   isEarlybird?: boolean;
   isFinal?: boolean;
   soldOut?: boolean;
+  presaleSoldOut?: boolean;
 };
 
 const VIF = {
@@ -64,7 +65,7 @@ export default function ProgramPage() {
       slug: "11-juli",
       title: "Lørdag 11. juli",
       isNorway: true,
-      soldOut: true,
+      presaleSoldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
@@ -145,27 +146,27 @@ export default function ProgramPage() {
       </div>
     );
   };  const TicketButton = ({ match }: { match: Match }) => {
-    if (match.soldOut) {
-      return (
-        <div className="relative inline-block w-full md:w-auto">
-          <div
-            className="inline-block w-full cursor-not-allowed rounded-2xl px-4 py-3 text-center font-semibold md:w-auto md:px-5"
-            style={{
-              backgroundColor: "#EAF3FF",
-              color: "#044EA2",
-            }}
-          >
-            Kjøp billett
-          </div>
-
-          <div className="pointer-events-none absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 rotate-[-14deg] rounded-lg border-[4px] border-[#BA0C2F] bg-white px-5 py-1 text-sm font-black uppercase tracking-widest text-[#BA0C2F] shadow-sm md:px-6 md:text-base">
-            UTSOLGT
-          </div>
-        </div>
-      );
-    }
-
+  if (match.soldOut || match.presaleSoldOut) {
     return (
+      <div className="relative inline-block w-full md:w-auto">
+        <div
+          className="inline-block w-full cursor-not-allowed rounded-2xl px-4 py-3 text-center font-semibold md:w-auto md:px-5"
+          style={{
+            backgroundColor: "#EAF3FF",
+            color: "#044EA2",
+          }}
+        >
+          Kjøp billett
+        </div>
+
+        <div className="pointer-events-none absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 rotate-[-14deg] rounded-lg border-[4px] border-[#BA0C2F] bg-white px-5 py-1 text-xs font-black uppercase tracking-widest text-[#BA0C2F] shadow-sm md:px-6 md:text-sm">
+          {match.presaleSoldOut ? "PRESALE UTSOLGT" : "UTSOLGT"}
+        </div>
+      </div>
+    );
+  }
+
+  return (
       <a
         href={match.ticketUrl || "#"}
         target="_blank"
