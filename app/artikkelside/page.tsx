@@ -20,40 +20,37 @@ export default function ArticlePage() {
 </p>
 
             <div className="mt-8 rounded-3xl border border-[#044EA2]/10 bg-white p-7 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[#044EA2]">
-                Dagens kamper
-              </p>
+  <p className="text-sm font-semibold uppercase tracking-wider text-[#044EA2]">
+    Dagens kamper
+  </p>
 
-              <h3 className="mt-1 text-2xl font-semibold">
-                Tirsdag 7. juli
-              </h3>
+  <h3 className="mt-1 text-2xl font-semibold">
+    Tirsdag 7. juli
+  </h3>
 
-              <div className="mt-6 space-y-4 text-lg">
-                <div className="flex items-center justify-between border-b border-black/8 pb-5">
-                  <span>Dørene åpner</span>
-                  <span className="text-xl font-bold text-[#044EA2]">
-                    16:00
-                  </span>
-                </div>
+  <div className="mt-6 text-lg">
+    <div className="flex items-center justify-between border-b border-black/8 py-5">
+      <span>Dørene åpner</span>
+      <span className="text-xl font-bold text-[#044EA2]">
+        16:00
+      </span>
+    </div>
 
-                <div className="flex items-center justify-between">
-                  <span>Argentina – Egypt</span>
-                  <span className="text-xl font-bold text-[#044EA2]">
-                    18:00
-                  </span>
-                </div>
+    <div className="flex items-center justify-between border-b border-black/8 py-5">
+      <span>Argentina – Egypt</span>
+      <span className="text-xl font-bold text-[#044EA2]">
+        18:00
+      </span>
+    </div>
 
-               
-                <div className="flex items-center justify-between border-b border-black/8 pb-5"></div>
-                <div className="flex items-center justify-between">
-                  <span>Sveits – Colombia</span>
-                  <span className="text-xl font-bold text-[#044EA2]">
-                    22:00
-                  </span>
-                </div>
-
-              </div>
-            </div>
+    <div className="flex items-center justify-between py-5">
+      <span>Sveits – Colombia</span>
+      <span className="text-xl font-bold text-[#044EA2]">
+        22:00
+      </span>
+    </div>
+  </div>
+</div>
           </div>
         </Reveal>
 
