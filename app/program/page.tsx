@@ -22,32 +22,7 @@ const VIF = {
 export default function ProgramPage() {
   const matches: Match[] = [
     
-    {
-      slug: "5-juli",
-      title: "Søndag 5. juli",
-      isNorway: true,
-      soldOut: true,
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
-          <div className="text-base font-semibold">22:00 Norge – Brasil</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/norge__brasil_vm/031078e6-17f1-4e56-9d5d-14e9acdde98f",
-    },
-    {
-      slug: "6-juli",
-      title: "Mandag 6. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner 19:00</div>
-          <div className="text-base font-semibold">21:00 Portugal – Spania</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/8delsfinale_dag_3",
-    },
+    
     {
       slug: "7-juli",
       title: "Tirsdag 7. juli",
@@ -79,7 +54,7 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">21:00 Kvartfinale</div>
+          <div className="text-base font-semibold">21:00 Spania - England</div>
         </div>
       ),
       ticketUrl:
@@ -89,6 +64,7 @@ export default function ProgramPage() {
       slug: "11-juli",
       title: "Lørdag 11. juli",
       isNorway: true,
+      soldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>

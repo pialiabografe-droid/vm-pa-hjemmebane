@@ -15,33 +15,43 @@ export default function ArticlePage() {
               Velkommen til Jordal Amfi!
             </h1>
 
-            <p className="mt-6 text-xl leading-relaxed text-black/70">
-              Portugal og Spania møtes i VM – og Jordal er klar for fotballfest!
-            </p>
+           <p className="mt-6 text-xl leading-relaxed text-black/70">
+  Argentina møter Egypt, før Sveits møter Colombia i kampen om en plass i kvartfinalen – og Jordal er klar for fotballfest!
+</p>
 
             <div className="mt-8 rounded-3xl border border-[#044EA2]/10 bg-white p-7 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-wider text-[#044EA2]">
-                Dagens kamp
+                Dagens kamper
               </p>
 
               <h3 className="mt-1 text-2xl font-semibold">
-                Mandag 6. juli
+                Tirsdag 7. juli
               </h3>
 
-              <div className="mt-6 space-y-5 text-lg">
-                <div className="flex items-center justify-between border-b border-black/10 pb-5">
+              <div className="mt-6 space-y-4 text-lg">
+                <div className="flex items-center justify-between border-b border-black/8 pb-5">
                   <span>Dørene åpner</span>
                   <span className="text-xl font-bold text-[#044EA2]">
-                    19:00
+                    16:00
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span>Portugal – Spania</span>
+                  <span>Argentina – Egypt</span>
                   <span className="text-xl font-bold text-[#044EA2]">
                     22:00
                   </span>
                 </div>
+
+               
+                <div className="flex items-center justify-between border-b border-black/8 pb-5"></div>
+                <div className="flex items-center justify-between">
+                  <span>Sveits – Colombia</span>
+                  <span className="text-xl font-bold text-[#044EA2]">
+                    22:00
+                  </span>
+                </div>
+
               </div>
             </div>
           </div>
@@ -50,7 +60,7 @@ export default function ArticlePage() {
         <Reveal delayMs={100}>
           <article className="mx-auto mt-20 max-w-4xl space-y-8 text-lg leading-relaxed text-black/80">
             <h2 className="text-3xl font-semibold text-[#1A2238]">
-              Kom tidlig – dørene og foodcourten åpner kl. 19:00
+              Kom tidlig – dørene og foodcourten åpner kl. 16:00
             </h2>
 
             
@@ -62,18 +72,23 @@ export default function ArticlePage() {
 
               <div className="space-y-3">
                 <div className="grid grid-cols-[110px_1fr] gap-4">
-                  <span className="font-semibold">19:00</span>
+                  <span className="font-semibold">16:00</span>
                   <span>Dørene åpner</span>
                 </div>
 
                 <div className="grid grid-cols-[110px_1fr] gap-4">
-                  <span className="font-semibold">19:00</span>
+                  <span className="font-semibold">16:00</span>
                   <span>Oppladning</span>
                 </div>
 
                 <div className="grid grid-cols-[110px_1fr] gap-4">
-                  <span className="font-semibold">21:00</span>
-                  <span>Portugal – Spania</span>
+                  <span className="font-semibold">18:00</span>
+                  <span>Argentina – Egypt</span>
+                </div>
+
+                <div className="grid grid-cols-[110px_1fr] gap-4">
+                  <span className="font-semibold">22:00</span>
+                  <span>Sveits – Colombia</span>
                 </div>
 
   

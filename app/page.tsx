@@ -208,9 +208,9 @@ export default function FotballVMJordal() {
             </h2>
 
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-black/70 md:text-base">
-              Portugal og Spania møtes i 8-delsfinale i VM. Her finner du program, innganger,
-              praktisk informasjon og alt du trenger å vite før kamp.
-            </p>
+  To åttedelsfinaler står på programmet når Argentina møter Egypt og Sveits møter Colombia. Begge kampene spilles om en plass i kvartfinalen. 
+   <br /><br />Her finner du program, innganger, praktisk informasjon og alt du trenger å vite før kamp.
+</p>
           </div>
 
           <div className="shrink-0 rounded-2xl bg-[#E30613] px-5 py-3 text-sm font-semibold text-white">
