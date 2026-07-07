@@ -159,10 +159,20 @@ export default function ProgramPage() {
         >
           Kjøp billett
         </div>
-
-        <div className="pointer-events-none absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 rotate-[-14deg] rounded-lg border-[4px] border-[#BA0C2F] bg-white px-5 py-1 text-xs font-black uppercase tracking-widest text-[#BA0C2F] shadow-sm md:px-6 md:text-sm">
-          {match.presaleSoldOut ? "PRESALE UTSOLGT" : "UTSOLGT"}
-        </div>
+<div
+  className={`pointer-events-none absolute left-1/2 top-1/2 z-30
+    -translate-x-1/2 -translate-y-1/2
+    ${match.presaleSoldOut ? "rotate-[-12deg]" : "rotate-[-14deg]"}
+    rounded-lg border-[4px] border-[#BA0C2F] bg-white
+    ${
+      match.presaleSoldOut
+        ? "px-4 py-1 text-[11px] tracking-[0.18em] whitespace-nowrap md:px-5 md:text-xs"
+        : "px-5 py-1 text-xs tracking-widest md:px-6 md:text-sm"
+    }
+    font-black uppercase text-[#BA0C2F] shadow-sm`}
+>
+  {match.presaleSoldOut ? "PRESALE UTSOLGT" : "UTSOLGT"}
+</div>
       </div>
     );
   }
