@@ -55,7 +55,7 @@ export default function ProgramPage() {
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">21:00 Spania - England</div>
+          <div className="text-base font-semibold">21:00 Spania - Belgia</div>
         </div>
       ),
       ticketUrl:
