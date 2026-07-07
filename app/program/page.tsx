@@ -65,7 +65,7 @@ export default function ProgramPage() {
       slug: "11-juli",
       title: "Lørdag 11. juli",
       isNorway: true,
-      presaleSoldOut: true,
+      soldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 16:00</div>
@@ -89,6 +89,7 @@ export default function ProgramPage() {
     {
       slug: "15-juli",
       title: "Onsdag 15. juli",
+      presaleSoldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
