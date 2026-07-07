@@ -39,7 +39,7 @@ export default function ArticlePage() {
                 <div className="flex items-center justify-between">
                   <span>Argentina – Egypt</span>
                   <span className="text-xl font-bold text-[#044EA2]">
-                    22:00
+                    18:00
                   </span>
                 </div>
 
