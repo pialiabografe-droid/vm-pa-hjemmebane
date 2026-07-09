@@ -24,19 +24,7 @@ export default function ProgramPage() {
   const matches: Match[] = [
     
     
-    {
-      slug: "7-juli",
-      title: "Tirsdag 7. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner 16:00</div>
-          <div className="text-base font-semibold">18:00 Argentina – Egypt</div>
-          <div className="text-base font-semibold">22:00 Sveits – Colombia</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/8delsfinale_dag_4",
-    },
+    
     {
       slug: "9-juli",
       title: "Torsdag 9. juli",
