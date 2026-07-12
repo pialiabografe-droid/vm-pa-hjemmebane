@@ -22,53 +22,13 @@ const VIF = {
 
 export default function ProgramPage() {
   const matches: Match[] = [
-    
-    
-    
-    {
-      slug: "9-juli",
-      title: "Torsdag 9. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 20:00</div>
-          <div className="text-base font-semibold">22:00 Frankrike - Marokko</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_1/hjemmeside",
-    },
-    {
-      slug: "10-juli",
-      title: "Fredag 10. juli",
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">21:00 Spania - Belgia</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_2/hjemmeside",
-    },
-    {
-      slug: "11-juli",
-      title: "Lørdag 11. juli",
-      isNorway: true,
-      soldOut: true,
-      subtitle: (
-        <div className="space-y-2">
-          <div className="text-sm text-black/60">Dørene åpner kl. 17:00</div>
-          <div className="text-base font-semibold">23:00 Norge - England</div>
-        </div>
-      ),
-      ticketUrl:
-        "https://vif-hockey.ticketco.events/no/nb/e/kvartfinale_kamp_3/hjemmeside",
-    },    {
+  {
       slug: "14-juli",
       title: "Tirsdag 14. juli",
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">21:00 Semifinale</div>
+          <div className="text-base font-semibold">21:00 Frankrike - Spania</div>
         </div>
       ),
       ticketUrl:
@@ -77,11 +37,10 @@ export default function ProgramPage() {
     {
       slug: "15-juli",
       title: "Onsdag 15. juli",
-      presaleSoldOut: true,
       subtitle: (
         <div className="space-y-2">
           <div className="text-sm text-black/60">Dørene åpner kl. 19:00</div>
-          <div className="text-base font-semibold">21:00 Semifinale</div>
+          <div className="text-base font-semibold">21:00 England - Argentina</div>
         </div>
       ),
       ticketUrl:
